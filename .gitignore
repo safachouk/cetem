@@ -1,0 +1,10 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CetemLibrary/v16
+/bin/Debug
+/obj/Debug
+/packages
+/interface/obj/Debug
+/interface/bin/Debug

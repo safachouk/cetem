@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D49B960-365F-4070-89D2-EC3BB57C8C2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>interface</RootNamespace>
+    <AssemblyName>@interface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjoutEquipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutEquipement.Designer.cs">
+      <DependentUpon>AjoutEquipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajoutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajoutform.Designer.cs">
+      <DependentUpon>Ajoutform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutIntervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutIntervention.Designer.cs">
+      <DependentUpon>AjoutIntervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutPersonnel.Designer.cs">
+      <DependentUpon>AjoutPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginform.Designer.cs">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierIntervention .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierIntervention .Designer.cs">
+      <DependentUpon>ModifierIntervention .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages.Designer.cs">
+      <DependentUpon>Pages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjoutEquipement.resx">
+      <DependentUpon>AjoutEquipement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajoutform.resx">
+      <DependentUpon>Ajoutform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutIntervention.resx">
+      <DependentUpon>AjoutIntervention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutPersonnel.resx">
+      <DependentUpon>AjoutPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform.resx">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierIntervention .resx">
+      <DependentUpon>ModifierIntervention .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages.resx">
+      <DependentUpon>Pages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centembh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargement.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwwwww.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jfhgsohg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\+++++.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CetemLibrary.csproj">
+      <Project>{0dd7f439-0000-409b-bdb4-15f1267ddcf3}</Project>
+      <Name>CetemLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
