@@ -18,7 +18,7 @@ namespace CetemLibrary
         static string database = "ctm_bh_application";
         static string username = "root";
         static string password = "";
-        public static void   DBConnect()
+        public static void DBConnect()
         {
             // Connection String.
             String connectionString = "SERVER=" + host + ";" + "DATABASE=" +
@@ -27,36 +27,43 @@ namespace CetemLibrary
             // + ";port=" + port + ";User Id=" + username + ";password=" + password;
 
             conn = new MySqlConnection(connectionString);
-                   
+
         }
-        public static bool se_connecter(string mat,string pass)
+        public static bool se_connecter(string nom, string pass)
         {
             if (conn == null)
                 DBConnect();
             try
             {
                 conn.Open();
-                var cmd = new MySqlCommand("SELECT * FROM techniciens WHERE matricule=@mat AND password=@pass", conn);
-                cmd.Parameters.AddWithValue("@mat", mat);
+                var cmd = new MySqlCommand("SELECT * FROM techniciens WHERE Nom_technicien=@mat AND password=@pass", conn);
+                cmd.Parameters.AddWithValue("@mat", nom);
                 cmd.Parameters.AddWithValue("@pass", pass);
                 cmd.Prepare();
                 var reader = cmd.ExecuteReader();
-                if(reader.HasRows)
+                if (reader.HasRows)
                 {
-                    while(reader.Read())
+                    while (reader.Read())
                     {
-                        Utilisateur_courant = new Utilisateur(reader.GetString("matricule"),
+                        Utilisateur_courant = new Utilisateur(
                             reader.GetString("nom_technicien"),
                             reader.GetString("prenom_technicen"),
-                            reader.GetString("poste"),
                             reader.GetString("e_mail"));
+                        reader.Close();
+                        conn.Close();
+
                         return true;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Erreur de connexion \nVeuillez vérifier votre matricule/Mot de pass", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 conn.Close();
+
             }
-            catch(Exception e)
-            { 
+            catch (Exception ex)
+            {
                 conn.Close();
                 return false;
             }
@@ -64,89 +71,201 @@ namespace CetemLibrary
         }
 
 
-        public static bool Ajouter_equipement(string marq,string Ty,string nu,string nahop,string naserv,string nareg)
+        public static bool Ajouter_equipement(string Ty, string marq,string mod, string nu, string nareg, string nahop, string naserv)
         {
 
             if (conn == null)
                 DBConnect();
             try
             {
+                if(conn.State != System.Data.ConnectionState.Open)
                 conn.Open();
-                var aequip = new MySqlCommand("INSERT INTO equipements (marque,type,num_serie,nom_de_hopital , nom_de_service,nom_region)"+"VALUES(@marque, @type, @num_serie, @nom_de_hopital, @nom_de_service, @nom_region)",conn);
-                aequip.Parameters.AddWithValue("@marque",marq);
+                var aequip = new MySqlCommand("INSERT INTO equipements (MARQUE,TYPE,Modéle,NUM_SERIE,nom_de_hopital ,Nom_de_service,Nom_region)" + "VALUES(@marque, @type,@modele, @num_serie, @nom_de_hopital, @nom_de_service, @nom_region)", conn);
                 aequip.Parameters.AddWithValue("@type", Ty);
+                aequip.Parameters.AddWithValue("@marque", marq);
+                aequip.Parameters.AddWithValue("@modele", mod);
                 aequip.Parameters.AddWithValue("@num_serie", nu);
-                aequip.Parameters.AddWithValue("@nom_de_hopital", nahop);
-                aequip.Parameters.AddWithValue("@nom_de_service", naserv);
                 aequip.Parameters.AddWithValue("@nom_region", nareg);
                 aequip.Parameters.AddWithValue("@nom_de_hopital", nahop);
+                aequip.Parameters.AddWithValue("@nom_de_service", naserv);
+               
 
-                
+
                 int rowCount = aequip.ExecuteNonQuery();
-                MessageBox.Show("Row Count affected = " + rowCount);
+                
                 conn.Close();
                 return rowCount == 1;
-
-
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                conn.Close();
                 return false;
             }
+
         }
 
 
-        public static bool  Modifier_equipmement (string marq1, string Ty1, string nu1, string nahop1, string naserv1, string nareg1)
+        public static bool Ajouter_demande(string numbane,string numrea,string numpouss, string  numdef , string numtranspo , string numbistou , string dattt , string etatt , string numerooo , string nomregionnn , string nomhopitalll)
         {
+
             if (conn == null)
                 DBConnect();
             try
             {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var ademand = new MySqlCommand("INSERT INTO demandes (Nombre_Respirateur_anesthesie,Nombre_respirateur_réanimation,nombre_pousse_seringe,nombre_defibrillateur,Nombre_respirateur_transport,Nombre_bistouri,Date_Demande ,Etat_demande , Numéro_demande , region_demande , Hopital_demande)" + "VALUES(@numberanest,@numberrea,@numberpouss,@numberdef,@numbertranspo,@numberbist, @Date , @Etat, @num, @nomregion, @nomhopital)", conn);
+                ademand.Parameters.AddWithValue("@numberanest", numbane);
+                ademand.Parameters.AddWithValue("@numberrea", numrea);
+                ademand.Parameters.AddWithValue("@numberpouss", numpouss);
+                ademand.Parameters.AddWithValue("@numberdef", numdef);
+                ademand.Parameters.AddWithValue("@numbertranspo", numtranspo);
+                ademand.Parameters.AddWithValue("@numberbist", numbistou);
+                ademand.Parameters.AddWithValue("@Date", dattt);
+                ademand.Parameters.AddWithValue("@Etat", etatt);
+                ademand.Parameters.AddWithValue("@num", numerooo);
+                ademand.Parameters.AddWithValue("@nomregion", nomregionnn);
+                ademand.Parameters.AddWithValue("@nomhopital", nomhopitalll);
+                int rowCount = ademand.ExecuteNonQuery();
 
-                conn.Open();
-                var Mequip = new MySqlCommand("update equipements set marque=@marq ,type=@typ,num_serie= @numero ,nom_de_hopital=@hopital , nom_de_service=@service , nom_region=@region where ID_EQUIPEMENT= @id", conn);
-
-                Mequip.Parameters.AddWithValue("@marq",marq1);
-                Mequip.Parameters.AddWithValue("@typ", Ty1);
-                Mequip.Parameters.AddWithValue("@numero", nu1);
-                Mequip.Parameters.AddWithValue("@hopital",nahop1);
-                Mequip.Parameters.AddWithValue("@service",naserv1);
-                Mequip.Parameters.AddWithValue("@region", nareg1);
-                Mequip.Parameters.AddWithValue("@id", 5);//e.id
-                int rowCount = Mequip.ExecuteNonQuery();
-                MessageBox.Show("Row Count affected = " + rowCount);
                 conn.Close();
                 return rowCount == 1;
 
+            }
+            catch
+
+            {
+
+                conn.Close();
+                return false;
 
             }
-            catch (Exception e)
-            {
-                return false;
-            }
+
         }
 
-        public static bool supprimer_equipement(int id)
+        public static bool Ajouter_intervenant(string nom, string prenom, string email, string password)
         {
+
             if (conn == null)
                 DBConnect();
             try
             {
-                conn.Open();
-                var Dequip = new MySqlCommand("delete from equipements where ID_EQUIPEMENT= @id", conn);
-                Dequip.Parameters.AddWithValue("@id",id);
-                int rowCount = Dequip.ExecuteNonQuery();
-                MessageBox.Show("Row Count affected = " + rowCount);
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var ajpers = new MySqlCommand("INSERT INTO  techniciens (Nom_technicien,prenom_technicen,e_mail,password)" + "VALUES(@nomtech , @prenomtech , @mail , @pass)", conn);
+                ajpers.Parameters.AddWithValue("@nomtech", nom);
+                ajpers.Parameters.AddWithValue("@prenomtech", prenom);
+                ajpers.Parameters.AddWithValue("@mail", email);
+                ajpers.Parameters.AddWithValue("@pass", password);
+                int rowCount = ajpers.ExecuteNonQuery();
+
                 conn.Close();
                 return rowCount == 1;
 
+            }
+            catch (Exception ex)
+            {
+
+                conn.Close();
+                return false;
+
 
             }
-            catch (Exception e)
-            {
-                return false;
-            }
         }
+
+
+            public static bool Ajouter_Hopital(string Nomregion , string nomHopital)
+            {
+
+            if (conn == null)
+                DBConnect();
+            try
+          
+                {
+
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                    var aequip = new MySqlCommand("INSERT INTO hopitaux (NOM_HOPITAL,NOM_REGION)" + "VALUES(@nom_de_hopital, @nom_de_region)", conn);
+                    aequip.Parameters.AddWithValue("@nom_de_hopital", nomHopital);
+                    aequip.Parameters.AddWithValue("@nom_de_region", Nomregion);
+
+
+                    int rowCount = aequip.ExecuteNonQuery();
+
+                    conn.Close();
+                    return rowCount == 1;
+
+
+                }
+                catch (Exception ex)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+
+
+
+        public static bool Ajouter_intervention_pousse_seringe ()
+        {
+            if (conn == null)
+                DBConnect();
+            try
+
+            {
+
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var ajpoussse = new MySqlCommand("INSERT INTO intervention_pousse_seringe ()" + "VALUES(@nom_de_hopital, @nom_de_region)", conn);
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,4 +277,50 @@ namespace CetemLibrary
 
 
     }
-}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+

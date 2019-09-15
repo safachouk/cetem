@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace @interface 
-    
-    {
-    public partial class AjoutIntervention : Form
+namespace @interface
 {
-    public AjoutIntervention()
+    public partial class Ajouterintervention_defibrillateur : Form
+{
+    public Ajouterintervention_defibrillateur()
     {
-            InitializeComponent();
-
-    }
-
-    private void AjoutIntervention_Load(object sender, EventArgs e)
-    {
-
+        InitializeComponent();
     }
 
     private void Button1_Click(object sender, EventArgs e)

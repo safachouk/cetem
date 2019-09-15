@@ -47,23 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AjoutEquipement.cs">
+    <Compile Include="Ajouterintervention_bistouri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AjoutEquipement.Designer.cs">
-      <DependentUpon>AjoutEquipement.cs</DependentUpon>
+    <Compile Include="Ajouterintervention_bistouri.Designer.cs">
+      <DependentUpon>Ajouterintervention_bistouri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ajoutform.cs">
+    <Compile Include="Ajouterintervention_defibrillateur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ajoutform.Designer.cs">
-      <DependentUpon>Ajoutform.cs</DependentUpon>
+    <Compile Include="Ajouterintervention_defibrillateur.Designer.cs">
+      <DependentUpon>Ajouterintervention_defibrillateur.cs</DependentUpon>
     </Compile>
-    <Compile Include="AjoutIntervention.cs">
+    <Compile Include="Ajouterintervention_Pousse_seringe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AjoutIntervention.Designer.cs">
-      <DependentUpon>AjoutIntervention.cs</DependentUpon>
+    <Compile Include="Ajouterintervention_Pousse_seringe.Designer.cs">
+      <DependentUpon>Ajouterintervention_Pousse_seringe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_equipement.Designer.cs">
+      <DependentUpon>Ajouter_equipement.cs</DependentUpon>
     </Compile>
     <Compile Include="AjoutPersonnel.cs">
       <SubType>Form</SubType>
@@ -77,11 +83,11 @@
     <Compile Include="loginform.Designer.cs">
       <DependentUpon>loginform.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModifierIntervention .cs">
+    <Compile Include="AjouterIntervention_Respirateur .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifierIntervention .Designer.cs">
-      <DependentUpon>ModifierIntervention .cs</DependentUpon>
+    <Compile Include="AjouterIntervention_Respirateur .Designer.cs">
+      <DependentUpon>AjouterIntervention_Respirateur .cs</DependentUpon>
     </Compile>
     <Compile Include="Pages.cs">
       <SubType>Form</SubType>
@@ -91,14 +97,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AjoutEquipement.resx">
-      <DependentUpon>AjoutEquipement.cs</DependentUpon>
+    <EmbeddedResource Include="Ajouterintervention_bistouri.resx">
+      <DependentUpon>Ajouterintervention_bistouri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ajoutform.resx">
-      <DependentUpon>Ajoutform.cs</DependentUpon>
+    <EmbeddedResource Include="Ajouterintervention_defibrillateur.resx">
+      <DependentUpon>Ajouterintervention_defibrillateur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AjoutIntervention.resx">
-      <DependentUpon>AjoutIntervention.cs</DependentUpon>
+    <EmbeddedResource Include="Ajouterintervention_Pousse_seringe.resx">
+      <DependentUpon>Ajouterintervention_Pousse_seringe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter_equipement.resx">
+      <DependentUpon>Ajouter_equipement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutPersonnel.resx">
       <DependentUpon>AjoutPersonnel.cs</DependentUpon>
@@ -106,8 +115,8 @@
     <EmbeddedResource Include="loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifierIntervention .resx">
-      <DependentUpon>ModifierIntervention .cs</DependentUpon>
+    <EmbeddedResource Include="AjouterIntervention_Respirateur .resx">
+      <DependentUpon>AjouterIntervention_Respirateur .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages.resx">
       <DependentUpon>Pages.cs</DependentUpon>

@@ -9,23 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace @interface
-
-    {
-    public partial class ModifierIntervention : Form
 {
-    public ModifierIntervention()
+    public partial class Ajouterintervention_Pousse_seringe : Form
+{
+    public Ajouterintervention_Pousse_seringe()
     {
         InitializeComponent();
     }
 
-    private void ModifierIntervention_Load(object sender, EventArgs e)
-    {
+        private void Button1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
-
-    private void Label3_Click(object sender, EventArgs e)
-    {
-
-    }
-}
 }

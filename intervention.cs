@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CetemLibrary
 {
-    class intervention
+    public class intervention 
     {
+        public static intervention interventionSelectionner;
+        int Id;
+
+        public int Id1 { get => Id; set => Id = value; }
     }
+
+   
 }

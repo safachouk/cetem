@@ -9,22 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace @interface
-
-    {
-    public partial class Ajoutform : Form
 {
-    public Ajoutform()
+    public partial class Ajouterintervention_bistouri : Form
+{
+    public Ajouterintervention_bistouri()
     {
             InitializeComponent();
+        }
 
-    }
-
-        private void Button8_Click(object sender, EventArgs e)
-    {
-
-    }
-
-        private void Ajoutform_Load(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }

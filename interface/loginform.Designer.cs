@@ -68,9 +68,9 @@
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(116, 271);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 36);
+            this.label2.Size = new System.Drawing.Size(237, 36);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Matricule : ";
+            this.label2.Text = "Nom  utilisateur  : ";
             // 
             // label3
             // 
@@ -85,6 +85,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(361, 271);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -122,11 +123,13 @@
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(361, 328);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(266, 42);
-            this.textBox2.TabIndex = 8;
+            this.textBox2.TabIndex = 5;
             // 
             // loginpage
             // 

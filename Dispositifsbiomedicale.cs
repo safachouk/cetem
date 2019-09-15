@@ -8,6 +8,9 @@ namespace CetemLibrary
 {
    public  class Dispositifsbiomedicale
     {
+        public static Dispositifsbiomedicale DispositifSelectionne;
+
+        int id;
         string Marque;
         string Type;
         string Numero_serie;
@@ -21,9 +24,9 @@ namespace CetemLibrary
         public string Nom_hopital1 { get => Nom_hopital; set => Nom_hopital = value; }
         public string Nom_service1 { get => Nom_service; set => Nom_service = value; }
         public string Nom_region1 { get => Nom_region; set => Nom_region = value; }
+        public int Id { get => id; set => id = value; }
 
-
-        public Dispositifsbiomedicale(string typ , string marq , string numse, string hop , string serv,string reg)
+        public Dispositifsbiomedicale(string typ , string marq , string numse, string hop , string serv,string reg , int id)
         {
             Marque1 = marq;
             Type1 = typ;
@@ -31,7 +34,7 @@ namespace CetemLibrary
             Nom_hopital1 = hop;
             Nom_service1 = serv;
             Nom_region1 = reg;
-
+            Id = id;
 
         }
     }
