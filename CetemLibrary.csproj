@@ -67,6 +67,13 @@
     <Compile Include="hopital .cs" />
     <Compile Include="intervention.cs" />
     <Compile Include="Interventions.cs" />
+    <Compile Include="Modeles\Demande_class.cs" />
+    <Compile Include="Modeles\Equipement_class.cs" />
+    <Compile Include="Modeles\Intervention_bistouri.cs" />
+    <Compile Include="Modeles\Intervention_defibrillateur.cs" />
+    <Compile Include="Modeles\Intervention_pousse_seringue.cs" />
+    <Compile Include="Modeles\Intervention_respirateur_class.cs" />
+    <Compile Include="Modeles\Personnel_class.cs" />
     <Compile Include="myaccoumpt.cs" />
     <Compile Include="Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

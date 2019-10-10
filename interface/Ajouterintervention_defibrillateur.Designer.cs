@@ -28,39 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox29 = new System.Windows.Forms.ComboBox();
@@ -69,291 +38,68 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label18 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.radioButton15 = new System.Windows.Forms.RadioButton();
+            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.radioButton17 = new System.Windows.Forms.RadioButton();
+            this.radioButton18 = new System.Windows.Forms.RadioButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.radioButton19 = new System.Windows.Forms.RadioButton();
+            this.radioButton20 = new System.Windows.Forms.RadioButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox19.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox19.Location = new System.Drawing.Point(715, 463);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(66, 17);
-            this.checkBox19.TabIndex = 204;
-            this.checkBox19.Text = "mauvais ";
-            this.checkBox19.UseVisualStyleBackColor = false;
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox20.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox20.Location = new System.Drawing.Point(616, 463);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(46, 17);
-            this.checkBox20.TabIndex = 203;
-            this.checkBox20.Text = "Bon ";
-            this.checkBox20.UseVisualStyleBackColor = false;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox17.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox17.Location = new System.Drawing.Point(715, 433);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(66, 17);
-            this.checkBox17.TabIndex = 202;
-            this.checkBox17.Text = "mauvais ";
-            this.checkBox17.UseVisualStyleBackColor = false;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox18.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox18.Location = new System.Drawing.Point(616, 433);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(46, 17);
-            this.checkBox18.TabIndex = 201;
-            this.checkBox18.Text = "Bon ";
-            this.checkBox18.UseVisualStyleBackColor = false;
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox15.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox15.Location = new System.Drawing.Point(715, 405);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(66, 17);
-            this.checkBox15.TabIndex = 200;
-            this.checkBox15.Text = "mauvais ";
-            this.checkBox15.UseVisualStyleBackColor = false;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox16.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox16.Location = new System.Drawing.Point(616, 405);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(46, 17);
-            this.checkBox16.TabIndex = 199;
-            this.checkBox16.Text = "Bon ";
-            this.checkBox16.UseVisualStyleBackColor = false;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox13.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox13.Location = new System.Drawing.Point(715, 379);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(66, 17);
-            this.checkBox13.TabIndex = 198;
-            this.checkBox13.Text = "mauvais ";
-            this.checkBox13.UseVisualStyleBackColor = false;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox14.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox14.Location = new System.Drawing.Point(616, 379);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(46, 17);
-            this.checkBox14.TabIndex = 197;
-            this.checkBox14.Text = "Bon ";
-            this.checkBox14.UseVisualStyleBackColor = false;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox9.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(715, 341);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(66, 17);
-            this.checkBox9.TabIndex = 196;
-            this.checkBox9.Text = "mauvais ";
-            this.checkBox9.UseVisualStyleBackColor = false;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox10.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(616, 341);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(46, 17);
-            this.checkBox10.TabIndex = 195;
-            this.checkBox10.Text = "Bon ";
-            this.checkBox10.UseVisualStyleBackColor = false;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox7.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(715, 304);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(66, 17);
-            this.checkBox7.TabIndex = 194;
-            this.checkBox7.Text = "mauvais ";
-            this.checkBox7.UseVisualStyleBackColor = false;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox8.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(616, 304);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(46, 17);
-            this.checkBox8.TabIndex = 193;
-            this.checkBox8.Text = "Bon ";
-            this.checkBox8.UseVisualStyleBackColor = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(715, 275);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(66, 17);
-            this.checkBox2.TabIndex = 192;
-            this.checkBox2.Text = "mauvais ";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox6.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(616, 275);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(46, 17);
-            this.checkBox6.TabIndex = 191;
-            this.checkBox6.Text = "Bon ";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label15.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(335, 461);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(232, 28);
-            this.label15.TabIndex = 190;
-            this.label15.Text = "Test enregistrement sur papier ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label14.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(335, 433);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(221, 28);
-            this.label14.TabIndex = 189;
-            this.label14.Text = "Test moniteur et module ECG";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label12.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(335, 369);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(144, 28);
-            this.label12.TabIndex = 188;
-            this.label12.Text = "Test taux de perte  ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label9.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(335, 331);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 28);
-            this.label9.TabIndex = 187;
-            this.label9.Text = "Test des énergies   ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(335, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 28);
-            this.label7.TabIndex = 186;
-            this.label7.Text = "Test temps de charge  ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(335, 397);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 28);
-            this.label6.TabIndex = 185;
-            this.label6.Text = "Test indicateur normale ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(335, 265);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 28);
-            this.label5.TabIndex = 184;
-            this.label5.Text = "Test indicateur synchro ";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(326, 545);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(718, 186);
-            this.listBox1.TabIndex = 183;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label13.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 21.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.label13.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 21.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(85, 545);
+            this.label13.Location = new System.Drawing.Point(45, 488);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(235, 40);
             this.label13.TabIndex = 182;
@@ -369,117 +115,6 @@
             this.button1.TabIndex = 181;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox4.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(715, 238);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(66, 17);
-            this.checkBox4.TabIndex = 180;
-            this.checkBox4.Text = "mauvais ";
-            this.checkBox4.UseVisualStyleBackColor = false;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox5.Font = new System.Drawing.Font("PMingLiU-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(616, 238);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(46, 17);
-            this.checkBox5.TabIndex = 179;
-            this.checkBox5.Text = "Bon ";
-            this.checkBox5.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(335, 228);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 28);
-            this.label4.TabIndex = 178;
-            this.label4.Text = "Test sécurite électrique ";
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox11.Font = new System.Drawing.Font("PMingLiU-ExtB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(797, 187);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(97, 20);
-            this.checkBox11.TabIndex = 177;
-            this.checkBox11.Text = "Mauvaise ";
-            this.checkBox11.UseVisualStyleBackColor = false;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox12.Font = new System.Drawing.Font("PMingLiU-ExtB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox12.Location = new System.Drawing.Point(561, 188);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(75, 20);
-            this.checkBox12.TabIndex = 176;
-            this.checkBox12.Text = "Bonne ";
-            this.checkBox12.UseVisualStyleBackColor = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label8.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(274, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 30);
-            this.label8.TabIndex = 175;
-            this.label8.Text = "Etat équipement  ";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox3.Font = new System.Drawing.Font("PMingLiU-ExtB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(797, 141);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(96, 20);
-            this.checkBox3.TabIndex = 174;
-            this.checkBox3.Text = "Terminée ";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("PMingLiU-ExtB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(561, 141);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(92, 20);
-            this.checkBox1.TabIndex = 173;
-            this.checkBox1.Text = "En cours ";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(274, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 30);
-            this.label3.TabIndex = 172;
-            this.label3.Text = "Etat Intervention ";
             // 
             // dateTimePicker1
             // 
@@ -570,24 +205,455 @@
             this.label2.TabIndex = 164;
             this.label2.Text = "Numéro Intervention ";
             // 
-            // dateTimePicker2
+            // textBox5
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(558, 99);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(286, 20);
-            this.dateTimePicker2.TabIndex = 212;
-            this.dateTimePicker2.Value = new System.DateTime(2019, 8, 1, 0, 0, 0, 0);
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(619, 99);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(168, 35);
+            this.textBox5.TabIndex = 222;
             // 
-            // label18
+            // comboBox3
             // 
-            this.label18.AutoSize = true;
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label18.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(368, 89);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(168, 30);
-            this.label18.TabIndex = 211;
-            this.label18.Text = "Date Intervention ";
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.ItemHeight = 30;
+            this.comboBox3.Items.AddRange(new object[] {
+            "safa",
+            "anoir",
+            "salah"});
+            this.comboBox3.Location = new System.Drawing.Point(538, 35);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(171, 38);
+            this.comboBox3.TabIndex = 220;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label16.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(414, 38);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 30);
+            this.label16.TabIndex = 219;
+            this.label16.Text = "Intervenant ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ItemHeight = 30;
+            this.comboBox2.Items.AddRange(new object[] {
+            "058265879"});
+            this.comboBox2.Location = new System.Drawing.Point(886, 35);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(169, 38);
+            this.comboBox2.TabIndex = 218;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label17.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(420, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(183, 30);
+            this.label17.TabIndex = 217;
+            this.label17.Text = "Type Défibrillateur ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label22.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(718, 38);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(176, 30);
+            this.label22.TabIndex = 216;
+            this.label22.Text = "Numéro Demande  ";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(221, 38);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(168, 35);
+            this.textBox6.TabIndex = 215;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label23.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(18, 104);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(168, 30);
+            this.label23.TabIndex = 214;
+            this.label23.Text = "Date Intervention ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label24.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(17, 38);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(198, 30);
+            this.label24.TabIndex = 213;
+            this.label24.Text = "Numéro Intervention ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox1.Location = new System.Drawing.Point(101, 202);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(114, 62);
+            this.groupBox1.TabIndex = 223;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Etat Intervention ";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(13, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(72, 17);
+            this.radioButton2.TabIndex = 148;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Terminée ";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(13, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(70, 17);
+            this.radioButton1.TabIndex = 147;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "En cours ";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Location = new System.Drawing.Point(320, 202);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(124, 62);
+            this.groupBox2.TabIndex = 224;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Etat équipement ";
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(20, 42);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(74, 17);
+            this.radioButton4.TabIndex = 150;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Mauvaise ";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(20, 19);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(59, 17);
+            this.radioButton3.TabIndex = 149;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Bonne ";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.radioButton11);
+            this.groupBox6.Controls.Add(this.radioButton12);
+            this.groupBox6.Location = new System.Drawing.Point(520, 202);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(152, 59);
+            this.groupBox6.TabIndex = 225;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Test sècurite électrique ";
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(20, 36);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(68, 17);
+            this.radioButton11.TabIndex = 150;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "Mauvais ";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(20, 16);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(44, 17);
+            this.radioButton12.TabIndex = 149;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "Bon";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton5);
+            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Location = new System.Drawing.Point(723, 202);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(152, 59);
+            this.groupBox3.TabIndex = 226;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Test indicateur synchro ";
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(20, 36);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(68, 17);
+            this.radioButton5.TabIndex = 150;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Mauvais ";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(20, 16);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(44, 17);
+            this.radioButton6.TabIndex = 149;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Bon";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton7);
+            this.groupBox4.Controls.Add(this.radioButton8);
+            this.groupBox4.Location = new System.Drawing.Point(751, 306);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(152, 59);
+            this.groupBox4.TabIndex = 227;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Test temps de charge ";
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(20, 36);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(68, 17);
+            this.radioButton7.TabIndex = 150;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Mauvais ";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(20, 16);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(44, 17);
+            this.radioButton8.TabIndex = 149;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Bon";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton9);
+            this.groupBox5.Controls.Add(this.radioButton10);
+            this.groupBox5.Location = new System.Drawing.Point(450, 312);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(152, 59);
+            this.groupBox5.TabIndex = 228;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Test des énergies  ";
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(20, 36);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(68, 17);
+            this.radioButton9.TabIndex = 150;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "Mauvais ";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(20, 16);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(44, 17);
+            this.radioButton10.TabIndex = 149;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Bon";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.radioButton13);
+            this.groupBox7.Controls.Add(this.radioButton14);
+            this.groupBox7.Location = new System.Drawing.Point(450, 393);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(152, 59);
+            this.groupBox7.TabIndex = 229;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Test taux de perte  ";
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(20, 36);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(68, 17);
+            this.radioButton13.TabIndex = 150;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "Mauvais ";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Location = new System.Drawing.Point(20, 16);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(44, 17);
+            this.radioButton14.TabIndex = 149;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "Bon";
+            this.radioButton14.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.radioButton15);
+            this.groupBox8.Controls.Add(this.radioButton16);
+            this.groupBox8.Location = new System.Drawing.Point(150, 393);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(152, 59);
+            this.groupBox8.TabIndex = 230;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Test indicateur normale   ";
+            // 
+            // radioButton15
+            // 
+            this.radioButton15.AutoSize = true;
+            this.radioButton15.Location = new System.Drawing.Point(20, 36);
+            this.radioButton15.Name = "radioButton15";
+            this.radioButton15.Size = new System.Drawing.Size(68, 17);
+            this.radioButton15.TabIndex = 150;
+            this.radioButton15.TabStop = true;
+            this.radioButton15.Text = "Mauvais ";
+            this.radioButton15.UseVisualStyleBackColor = true;
+            // 
+            // radioButton16
+            // 
+            this.radioButton16.AutoSize = true;
+            this.radioButton16.Location = new System.Drawing.Point(20, 16);
+            this.radioButton16.Name = "radioButton16";
+            this.radioButton16.Size = new System.Drawing.Size(44, 17);
+            this.radioButton16.TabIndex = 149;
+            this.radioButton16.TabStop = true;
+            this.radioButton16.Text = "Bon";
+            this.radioButton16.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.radioButton17);
+            this.groupBox9.Controls.Add(this.radioButton18);
+            this.groupBox9.Location = new System.Drawing.Point(150, 318);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(162, 59);
+            this.groupBox9.TabIndex = 231;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Test moniteur et module ECG    ";
+            // 
+            // radioButton17
+            // 
+            this.radioButton17.AutoSize = true;
+            this.radioButton17.Location = new System.Drawing.Point(20, 36);
+            this.radioButton17.Name = "radioButton17";
+            this.radioButton17.Size = new System.Drawing.Size(68, 17);
+            this.radioButton17.TabIndex = 150;
+            this.radioButton17.TabStop = true;
+            this.radioButton17.Text = "Mauvais ";
+            this.radioButton17.UseVisualStyleBackColor = true;
+            // 
+            // radioButton18
+            // 
+            this.radioButton18.AutoSize = true;
+            this.radioButton18.Location = new System.Drawing.Point(20, 16);
+            this.radioButton18.Name = "radioButton18";
+            this.radioButton18.Size = new System.Drawing.Size(44, 17);
+            this.radioButton18.TabIndex = 149;
+            this.radioButton18.TabStop = true;
+            this.radioButton18.Text = "Bon";
+            this.radioButton18.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.radioButton19);
+            this.groupBox10.Controls.Add(this.radioButton20);
+            this.groupBox10.Location = new System.Drawing.Point(751, 393);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(177, 59);
+            this.groupBox10.TabIndex = 231;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Test enregistrement sur papier ";
+            // 
+            // radioButton19
+            // 
+            this.radioButton19.AutoSize = true;
+            this.radioButton19.Location = new System.Drawing.Point(20, 36);
+            this.radioButton19.Name = "radioButton19";
+            this.radioButton19.Size = new System.Drawing.Size(68, 17);
+            this.radioButton19.TabIndex = 150;
+            this.radioButton19.TabStop = true;
+            this.radioButton19.Text = "Mauvais ";
+            this.radioButton19.UseVisualStyleBackColor = true;
+            // 
+            // radioButton20
+            // 
+            this.radioButton20.AutoSize = true;
+            this.radioButton20.Location = new System.Drawing.Point(20, 16);
+            this.radioButton20.Name = "radioButton20";
+            this.radioButton20.Size = new System.Drawing.Size(44, 17);
+            this.radioButton20.TabIndex = 149;
+            this.radioButton20.TabStop = true;
+            this.radioButton20.Text = "Bon";
+            this.radioButton20.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.richTextBox1.Location = new System.Drawing.Point(120, 531);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(851, 187);
+            this.richTextBox1.TabIndex = 232;
+            this.richTextBox1.Text = "";
             // 
             // comboBox1
             // 
@@ -599,65 +665,32 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 30;
             this.comboBox1.Items.AddRange(new object[] {
-            "En instance",
-            "En cours",
-            "Terminé "});
-            this.comboBox1.Location = new System.Drawing.Point(936, 23);
+            "08975/ss"});
+            this.comboBox1.Location = new System.Drawing.Point(962, 96);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(215, 38);
-            this.comboBox1.TabIndex = 210;
+            this.comboBox1.TabIndex = 234;
             // 
-            // label19
+            // label12
             // 
-            this.label19.AutoSize = true;
-            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label19.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(778, 26);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(165, 30);
-            this.label19.TabIndex = 209;
-            this.label19.Text = "Type équipement ";
+            this.label12.AutoSize = true;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label12.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(803, 104);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 30);
+            this.label12.TabIndex = 233;
+            this.label12.Text = "Numéro série ";
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(601, 24);
+            this.textBox3.Location = new System.Drawing.Point(203, 104);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 35);
-            this.textBox3.TabIndex = 208;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label20.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(419, 29);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(176, 30);
-            this.label20.TabIndex = 207;
-            this.label20.Text = "Numéro Demande  ";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(236, 27);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 35);
-            this.textBox4.TabIndex = 206;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label21.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(32, 29);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(198, 30);
-            this.label21.TabIndex = 205;
-            this.label21.Text = "Numéro Intervention ";
+            this.textBox3.Size = new System.Drawing.Size(168, 35);
+            this.textBox3.TabIndex = 235;
             // 
             // Ajouterintervention_defibrillateur
             // 
@@ -665,47 +698,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1210, 749);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.checkBox19);
-            this.Controls.Add(this.checkBox20);
-            this.Controls.Add(this.checkBox17);
-            this.Controls.Add(this.checkBox18);
-            this.Controls.Add(this.checkBox15);
-            this.Controls.Add(this.checkBox16);
-            this.Controls.Add(this.checkBox13);
-            this.Controls.Add(this.checkBox14);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox9);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox11);
-            this.Controls.Add(this.checkBox12);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox29);
@@ -716,46 +733,35 @@
             this.Controls.Add(this.label2);
             this.Name = "Ajouterintervention_defibrillateur";
             this.Text = "Ajouterintervention_defibrillateur";
+            this.Load += new System.EventHandler(this.Ajouterintervention_defibrillateur_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox29;
@@ -764,13 +770,48 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.RadioButton radioButton15;
+        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RadioButton radioButton17;
+        private System.Windows.Forms.RadioButton radioButton18;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.RadioButton radioButton19;
+        private System.Windows.Forms.RadioButton radioButton20;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label21;
     }
 }

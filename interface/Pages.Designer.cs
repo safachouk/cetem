@@ -70,43 +70,20 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.listView4 = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox28 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox29 = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBox29 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox28 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -583,7 +560,7 @@
             this.travail.Controls.Add(this.tabPage2);
             this.travail.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
             this.travail.ItemSize = new System.Drawing.Size(300, 30);
-            this.travail.Location = new System.Drawing.Point(5, 3);
+            this.travail.Location = new System.Drawing.Point(5, 2);
             this.travail.Name = "travail";
             this.travail.SelectedIndex = 0;
             this.travail.Size = new System.Drawing.Size(1074, 771);
@@ -687,30 +664,9 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.White;
-            this.tabPage7.Controls.Add(this.textBox15);
             this.tabPage7.Controls.Add(this.button10);
-            this.tabPage7.Controls.Add(this.textBox14);
-            this.tabPage7.Controls.Add(this.label30);
-            this.tabPage7.Controls.Add(this.textBox13);
-            this.tabPage7.Controls.Add(this.label29);
-            this.tabPage7.Controls.Add(this.textBox12);
-            this.tabPage7.Controls.Add(this.label28);
-            this.tabPage7.Controls.Add(this.textBox11);
-            this.tabPage7.Controls.Add(this.label27);
-            this.tabPage7.Controls.Add(this.textBox10);
-            this.tabPage7.Controls.Add(this.label24);
-            this.tabPage7.Controls.Add(this.label23);
-            this.tabPage7.Controls.Add(this.textBox6);
+            this.tabPage7.Controls.Add(this.listView4);
             this.tabPage7.Controls.Add(this.label6);
-            this.tabPage7.Controls.Add(this.comboBox8);
-            this.tabPage7.Controls.Add(this.label22);
-            this.tabPage7.Controls.Add(this.label20);
-            this.tabPage7.Controls.Add(this.comboBox9);
-            this.tabPage7.Controls.Add(this.comboBox6);
-            this.tabPage7.Controls.Add(this.label17);
-            this.tabPage7.Controls.Add(this.label21);
-            this.tabPage7.Controls.Add(this.textBox8);
-            this.tabPage7.Controls.Add(this.label18);
             this.tabPage7.Location = new System.Drawing.Point(4, 34);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -719,303 +675,54 @@
             this.tabPage7.Text = "Demande ";
             this.tabPage7.Click += new System.EventHandler(this.TabPage7_Click);
             // 
-            // textBox15
-            // 
-            this.textBox15.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox15.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox15.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(355, 251);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(274, 35);
-            this.textBox15.TabIndex = 137;
-            this.textBox15.Text = "jj  -  mm  -  aa";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.Image = global::@interface.Properties.Resources._____;
-            this.button10.Location = new System.Drawing.Point(640, 480);
+            this.button10.BackColor = System.Drawing.Color.Aqua;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button10.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button10.Location = new System.Drawing.Point(106, 528);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(164, 128);
-            this.button10.TabIndex = 136;
+            this.button10.Size = new System.Drawing.Size(201, 45);
+            this.button10.TabIndex = 23;
+            this.button10.Text = "Ajouter  une demande ";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.Button10_Click);
+            this.button10.Click += new System.EventHandler(this.Button10_Click_1);
             // 
-            // textBox14
+            // listView4
             // 
-            this.textBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox14.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(112, 630);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(75, 35);
-            this.textBox14.TabIndex = 135;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(207, 630);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(88, 28);
-            this.label30.TabIndex = 134;
-            this.label30.Text = "Bistouri ";
-            // 
-            // textBox13
-            // 
-            this.textBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox13.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(112, 573);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(75, 35);
-            this.textBox13.TabIndex = 133;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(207, 573);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(138, 28);
-            this.label29.TabIndex = 132;
-            this.label29.Text = "Défibrillateur ";
-            // 
-            // textBox12
-            // 
-            this.textBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox12.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(112, 518);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(75, 35);
-            this.textBox12.TabIndex = 131;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(207, 518);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(158, 28);
-            this.label28.TabIndex = 130;
-            this.label28.Text = "Pousse seringe ";
-            // 
-            // textBox11
-            // 
-            this.textBox11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox11.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(112, 457);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(75, 35);
-            this.textBox11.TabIndex = 129;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(207, 457);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(246, 28);
-            this.label27.TabIndex = 128;
-            this.label27.Text = "Respirateur de transport ";
-            // 
-            // textBox10
-            // 
-            this.textBox10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox10.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(112, 400);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(75, 35);
-            this.textBox10.TabIndex = 127;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(207, 400);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(273, 28);
-            this.label24.TabIndex = 126;
-            this.label24.Text = "Respirateur de réanimation ";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label23.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label23.Location = new System.Drawing.Point(108, 318);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(79, 23);
-            this.label23.TabIndex = 125;
-            this.label23.Text = "Nombre ";
-            // 
-            // textBox6
-            // 
-            this.textBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(112, 344);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(75, 35);
-            this.textBox6.TabIndex = 124;
+            this.listView4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.listView4.HideSelection = false;
+            this.listView4.Location = new System.Drawing.Point(175, 127);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(735, 328);
+            this.listView4.TabIndex = 11;
+            this.listView4.UseCompatibleStateImageBehavior = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(207, 344);
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 27.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(295, 38);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 28);
-            this.label6.TabIndex = 123;
-            this.label6.Text = "Respirateur d\'anesthésie  ";
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox8.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.ItemHeight = 30;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Sahloul "});
-            this.comboBox8.Location = new System.Drawing.Point(316, 171);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(272, 38);
-            this.comboBox8.TabIndex = 122;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label22.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(86, 166);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(114, 42);
-            this.label22.TabIndex = 121;
-            this.label22.Text = "Hopital ";
-            this.label22.Click += new System.EventHandler(this.Label22_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label20.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(75, 102);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 42);
-            this.label20.TabIndex = 120;
-            this.label20.Text = "Région ";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.comboBox9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox9.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.ItemHeight = 30;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Sousse",
-            "Monastir",
-            "Mahdia",
-            "Kiarouan"});
-            this.comboBox9.Location = new System.Drawing.Point(316, 102);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(272, 38);
-            this.comboBox9.TabIndex = 93;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox6.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.ItemHeight = 30;
-            this.comboBox6.Items.AddRange(new object[] {
-            "En instance",
-            "En cours",
-            "Terminé "});
-            this.comboBox6.Location = new System.Drawing.Point(680, 81);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(214, 38);
-            this.comboBox6.TabIndex = 83;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label17.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(689, 24);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(188, 42);
-            this.label17.TabIndex = 79;
-            this.label17.Text = "Etat demande ";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label21.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(105, 245);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(226, 42);
-            this.label21.TabIndex = 72;
-            this.label21.Text = "Date de demande ";
-            // 
-            // textBox8
-            // 
-            this.textBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox8.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(316, 43);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(274, 35);
-            this.textBox8.TabIndex = 64;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label18.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(75, 33);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(235, 42);
-            this.label18.TabIndex = 63;
-            this.label18.Text = "Numéro Demande ";
+            this.label6.Size = new System.Drawing.Size(380, 50);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Liste des demandes : \r\n";
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.comboBox7);
             this.tabPage2.Controls.Add(this.comboBox28);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.comboBox29);
             this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.textBox9);
             this.tabPage2.Controls.Add(this.label25);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
@@ -1026,54 +733,6 @@
             this.tabPage2.Text = "Intervention ";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.TabPage2_Click_1);
-            // 
-            // comboBox28
-            // 
-            this.comboBox28.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox28.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.comboBox28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox28.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox28.FormattingEnabled = true;
-            this.comboBox28.ItemHeight = 30;
-            this.comboBox28.Items.AddRange(new object[] {
-            "Safa "});
-            this.comboBox28.Location = new System.Drawing.Point(477, 247);
-            this.comboBox28.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.comboBox28.Name = "comboBox28";
-            this.comboBox28.Size = new System.Drawing.Size(290, 38);
-            this.comboBox28.TabIndex = 104;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label9.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(186, 247);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 42);
-            this.label9.TabIndex = 103;
-            this.label9.Text = "Intervenant ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(477, 190);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 40);
-            this.textBox1.TabIndex = 102;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label8.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(186, 187);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(182, 42);
-            this.label8.TabIndex = 101;
-            this.label8.Text = "Numéro série ";
             // 
             // button7
             // 
@@ -1120,6 +779,39 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click_1);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label19.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(167, 81);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(235, 42);
+            this.label19.TabIndex = 91;
+            this.label19.Text = "Numéro Demande ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label25.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(167, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(270, 42);
+            this.label25.TabIndex = 92;
+            this.label25.Text = "Numéro Interevntion ";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label26.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(176, 140);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(226, 42);
+            this.label26.TabIndex = 94;
+            this.label26.Text = "Type équipement ";
+            // 
             // comboBox29
             // 
             this.comboBox29.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
@@ -1143,47 +835,44 @@
             this.comboBox29.TabIndex = 95;
             this.comboBox29.SelectedIndexChanged += new System.EventHandler(this.ComboBox29_SelectedIndexChanged);
             // 
-            // label26
+            // label8
             // 
-            this.label26.AutoSize = true;
-            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label26.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(176, 140);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(226, 42);
-            this.label26.TabIndex = 94;
-            this.label26.Text = "Type équipement ";
+            this.label8.AutoSize = true;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label8.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(186, 187);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(182, 42);
+            this.label8.TabIndex = 101;
+            this.label8.Text = "Numéro série ";
             // 
-            // textBox9
+            // label9
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(477, 17);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(290, 40);
-            this.textBox9.TabIndex = 93;
+            this.label9.AutoSize = true;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label9.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(186, 247);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(162, 42);
+            this.label9.TabIndex = 103;
+            this.label9.Text = "Intervenant ";
             // 
-            // label25
+            // comboBox28
             // 
-            this.label25.AutoSize = true;
-            this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label25.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(167, 17);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(270, 42);
-            this.label25.TabIndex = 92;
-            this.label25.Text = "Numéro Interevntion ";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label19.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(167, 81);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(235, 42);
-            this.label19.TabIndex = 91;
-            this.label19.Text = "Numéro Demande ";
+            this.comboBox28.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBox28.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.comboBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox28.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox28.FormattingEnabled = true;
+            this.comboBox28.ItemHeight = 30;
+            this.comboBox28.Items.AddRange(new object[] {
+            "Safa "});
+            this.comboBox28.Location = new System.Drawing.Point(477, 247);
+            this.comboBox28.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
+            this.comboBox28.Name = "comboBox28";
+            this.comboBox28.Size = new System.Drawing.Size(290, 38);
+            this.comboBox28.TabIndex = 104;
             // 
             // comboBox7
             // 
@@ -1280,43 +969,20 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox29;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox28;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox29;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label19;
     }
 }

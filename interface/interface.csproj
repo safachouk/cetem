@@ -77,6 +77,12 @@
     <Compile Include="AjoutPersonnel.Designer.cs">
       <DependentUpon>AjoutPersonnel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ajout_une_demande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajout_une_demande.Designer.cs">
+      <DependentUpon>ajout_une_demande.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutPersonnel.resx">
       <DependentUpon>AjoutPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajout_une_demande.resx">
+      <DependentUpon>ajout_une_demande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>

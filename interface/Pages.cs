@@ -232,13 +232,20 @@ namespace @interface
 
         }
 
-        private void Button10_Click(object sender, EventArgs e)
+       
+
+        private void UpdateLists()
         {
-          
-                MessageBox.Show(
-          Databaseconnection.Ajouter_demande(textBox6.Text , textBox10.Text, textBox12.Text, textBox13.Text, textBox11.Text, textBox14.Text , textBox15.Text, comboBox6.Text, textBox8.Text, comboBox9.Text, comboBox8.Text) ?
-           "Demande ajouté avec succée" :
-           "Problem d'ajout de la demande");
+            //throw new NotImplementedException();
+            listView1.Items.Clear();
+            listView1.Items.Add(new ListViewItem());
+        }
+
+        private void Button10_Click_1(object sender, EventArgs e)
+        {
+            ajout_une_demande Adem = new ajout_une_demande();
+            Adem.Tag = this;
+            Adem.Show(this);
 
         }
     }
