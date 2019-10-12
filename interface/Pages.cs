@@ -1,4 +1,5 @@
 ﻿using CetemLibrary;
+using CetemLibrary.Modeles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,19 +35,19 @@ namespace @interface
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            /*Ajouter_equipement Mequipement = new Ajouter_equipement();
+            Ajouter_equipement Mequipement = new Ajouter_equipement();
             Mequipement.Tag = this;
-            Mequipement.Show(this);*/
+            Mequipement.Show(this);
 
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            /*bool? result = null;
+            bool? result = null;
             if (Dispositifsbiomedicale.DispositifSelectionne != null)
                 result = Databaseconnection.supprimer_equipement(Dispositifsbiomedicale.DispositifSelectionne.Id);
             if (result.HasValue)
-                MessageBox.Show(result.Value ? "élement supprimé." : "erreur de supprission d'élément.");*/
+                MessageBox.Show(result.Value ? "équipement supprimé." : "erreur de suppression de l'equipement.");
 
         }
 
@@ -91,12 +92,12 @@ namespace @interface
 
         private void Button11_Click(object sender, EventArgs e)
         {
-         /*   bool? result = null;
-            if (Utilisateur.utiliSelection != null)
-                result = Databaseconnection.supprimer_personnel(Utilisateur.utiliSelection.Id);
+           bool? result = null;
+            if (Personnel_class.personnctem != null)
+                result = Databaseconnection.supprimer_personnel(Personnel_class.personnctem.ID_Tech);
             if (result.HasValue)
-                MessageBox.Show(result.Value ? "Personnel supprimé." : "erreur de supprission de personnel.");
-                */
+                MessageBox.Show(result.Value ? "Personnel supprimé." : "erreur de suppression de personnel.");
+                
         }
 
        // private void Button14_Click(object sender, EventArgs e)
@@ -246,6 +247,27 @@ namespace @interface
             ajout_une_demande Adem = new ajout_une_demande();
             Adem.Tag = this;
             Adem.Show(this);
+
+        }
+
+        private void Button13_Click(object sender, EventArgs e)
+        {
+            ajout_une_demande Mdem = new ajout_une_demande();
+            Mdem.Tag = this;
+            Mdem.Show(this);
+        }
+
+        private void Button14_Click(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (Demande_class.demandecetem != null)
+                result = Databaseconnection.supprimer_demande(Demande_class.demandecetem.ID_DEMANDE);
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "Demande supprimé avec succes ." : "erreur de suppression de la demande.");
+        }
+
+        private void TabPage5_Click(object sender, EventArgs e)
+        {
 
         }
     }

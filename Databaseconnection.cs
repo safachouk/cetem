@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CetemLibrary.Modeles;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace CetemLibrary
                         Utilisateur_courant = new Utilisateur(
                             reader.GetString("nom_technicien"),
                             reader.GetString("prenom_technicen"),
-                            reader.GetString("e_mail"));
+                            reader.GetString("e_mail"), reader.GetInt32("id_tech"));
                         reader.Close();
                         conn.Close();
 
@@ -229,15 +230,6 @@ namespace CetemLibrary
                 aintervresp.Parameters.AddWithValue("@testpc", testpc);
                 aintervresp.Parameters.AddWithValue("@testvac", tetsvac);
                 aintervresp.Parameters.AddWithValue("@comm", comm);
-                
-
-                
-
-
-
-
-
-
                 int rowCount = aintervresp.ExecuteNonQuery();
 
                 conn.Close();
@@ -250,17 +242,6 @@ namespace CetemLibrary
                 conn.Close();
                 return false;
             }
-
-
-
-        
-
-
-
-
-
-
-
         }
 
 
@@ -288,11 +269,6 @@ namespace CetemLibrary
                 aintervrpouss.Parameters.AddWithValue("@Numero_demande", numdemand1);
                 aintervrpouss.Parameters.AddWithValue("@etat_equip", etatequip1);
                 aintervrpouss.Parameters.AddWithValue("@num_ser_equip", num_ser_equip1);
-
-
-
-
-
                 int rowCount = aintervrpouss.ExecuteNonQuery();
 
                 conn.Close();
@@ -305,20 +281,6 @@ namespace CetemLibrary
                 conn.Close();
                 return false;
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
         
 
@@ -346,11 +308,7 @@ namespace CetemLibrary
                 aintervrbistouri.Parameters.AddWithValue("@test_fuite_partie_active2", testfuiteactive);
                 aintervrbistouri.Parameters.AddWithValue("@test_fuite_partie_neutre2", testfuiteneutre);
                 aintervrbistouri.Parameters.AddWithValue("@etat_equip2", etat_equip2);
-
                 aintervrbistouri.Parameters.AddWithValue("@Numero_intervention2", numintervention2);
-
-
-
                 int rowCount = aintervrbistouri.ExecuteNonQuery();
 
                 conn.Close();
@@ -401,8 +359,6 @@ namespace CetemLibrary
                 aintervrdefib.Parameters.AddWithValue("@Numero_demande6", numdemand6);
                 aintervrdefib.Parameters.AddWithValue("@type_equip6", typequip6);
                 aintervrdefib.Parameters.AddWithValue("@etat_equip6", etatequip6);
-                
-
                 int rowCount = aintervrdefib.ExecuteNonQuery();
                 conn.Close();
                 return rowCount == 1;
@@ -414,43 +370,488 @@ namespace CetemLibrary
                 conn.Close();
                 return false;
             }
+        }
+
+
+        public static bool Modifier_equipmement(string marq1, string Ty1, string mod1, string numserie1 , string hopital2 , string nomservice1 , string region1 , int id )
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Mequip = new MySqlCommand("update equipements set MARQUE=@marqeq , TYPE=@typeq , Modéle = @modeq , NUM_SERIE = @serieequ , nom_de_hopital = @nohopeq , Nom_de_service = @nservequ , Nom_region = @nregeq  where ID_EQUIPEMENT= @id", conn);
+
+                Equipement_class e; 
+
+                Mequip.Parameters.AddWithValue("@marqeq", marq1);
+                Mequip.Parameters.AddWithValue("@typeq", Ty1);
+                Mequip.Parameters.AddWithValue("@modeq", mod1);
+                Mequip.Parameters.AddWithValue("@serieequ", numserie1);
+                Mequip.Parameters.AddWithValue("@nohopeq", hopital2);
+                Mequip.Parameters.AddWithValue("@nservequ", nomservice1);
+                Mequip.Parameters.AddWithValue("@nregeq", region1);
+                Mequip.Parameters.AddWithValue("@id", id);//e.id
+                int rowCount = Mequip.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
 
 
 
 
+        public static bool supprimer_equipement(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Dequip = new MySqlCommand("delete from equipements where ID_EQUIPEMENT= @id", conn);
+                Dequip.Parameters.AddWithValue("@id", id);
+                int rowCount = Dequip.ExecuteNonQuery();
 
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
+
+
+            public static bool Modifier_Personnel(string nomtech12, string prenomtech123 , string @mail23 , string password123 , int id )
+
+        {
+
+
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Mpersonn = new MySqlCommand("update techniciens set Nom_technicien=@nomtech1 , prenom_technicen=@prenomtech1 , e_mail = @mail23 , password = @password123 where ID_Tech= @id", conn);
+
+                Personnel_class u ; 
+
+                Mpersonn.Parameters.AddWithValue("@nomtech1", nomtech12);
+                Mpersonn.Parameters.AddWithValue("@prenomtech1", prenomtech123);
+                Mpersonn.Parameters.AddWithValue("@mail23", @mail23);
+                Mpersonn.Parameters.AddWithValue("@password123", password123);
+                Mpersonn.Parameters.AddWithValue("@id", id);
+                int rowCount = Mpersonn.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
 
         }
 
 
 
 
+        public static bool supprimer_personnel(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Dpersonn = new MySqlCommand("delete from techniciens where ID_Tech= @id", conn);
+                Dpersonn.Parameters.AddWithValue("@id", id);
+                int rowCount = Dpersonn.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
+
+
+
+        public static bool Modifier_Demande( int nresan , string datedem , string etatdem , string numdemand , string regdeman , string hopdeman , int nrerea , int nbrpou , int nbrdeb , int nbrresptra , int nbrbist , int id )
+
+        {
+
+
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Mdemand = new MySqlCommand("update demandes set Nombre_Respirateur_anesthesie =@nran , Date_Demande =@dateres , Etat_demande =@etatdem , Numéro_demande = @numdem , region_demande = @regideman , Hopital_demande = @hopidem , Nombre_respirateur_réanimation = @nrr , nombre_pousse_seringe =@nps , nombre_defibrillateur=@npd , Nombre_respirateur_transport =@nrt , Nombre_bistouri=@nbs where ID_DEMANDE= @id", conn);
+
+                Demande_class d;
+
+                Mdemand.Parameters.AddWithValue("@nran", nresan);
+                Mdemand.Parameters.AddWithValue("@dateres", datedem);
+                Mdemand.Parameters.AddWithValue("@etatdem", etatdem);
+                Mdemand.Parameters.AddWithValue("@numdem", numdemand);
+                Mdemand.Parameters.AddWithValue("@regideman", regdeman);
+                Mdemand.Parameters.AddWithValue("@hopidem", hopdeman);
+                Mdemand.Parameters.AddWithValue("@nrr", nrerea);
+                Mdemand.Parameters.AddWithValue("@nps", nbrpou);
+                Mdemand.Parameters.AddWithValue("@npd", nbrdeb);
+                Mdemand.Parameters.AddWithValue("@nrt", nbrresptra);
+                Mdemand.Parameters.AddWithValue("@nbs", nbrbist);
+                Mdemand.Parameters.AddWithValue("@id", id);
+                int rowCount = Mdemand.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
+
+
+        public static bool supprimer_demande(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Ddemand = new MySqlCommand("delete from demandes where ID_DEMANDE= @id", conn);
+                Ddemand.Parameters.AddWithValue("@id", id);
+                int rowCount = Ddemand.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
 
 
 
 
+        public static bool Modifier_interv_bistouri(string numintbi , string datinb , string etatintb , string interb , string typb1 , string tseb2 , string tsm , string commbstri , string numdem , string tspa , string tpn , string etbost , int id)
+
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Minterbi = new MySqlCommand("update intervention_bistouri set Numero_intervention=@numinterven , Date_intervention=@datintb , Etat_intervention = @etatinterb , Intervenant = @interb , typ_equipement =@typb , Test_securit_electrique=@tseb , Test_des_modes=@tsm1 , Commentaire =@combstr , Numero_demande =@nudemab , test_fuite_partie_active = @tfab , 	test_fuite_partie_neutre=@tfpnb , etat_equip=@etb  where id_intervention= @id", conn);
+                Intervention_bistouri IB;
+
+                Minterbi.Parameters.AddWithValue("@numinterven", numintbi);
+                Minterbi.Parameters.AddWithValue("@datintb", datinb);
+                Minterbi.Parameters.AddWithValue("@etatinterb", etatintb);
+                Minterbi.Parameters.AddWithValue("@interb", interb);
+                Minterbi.Parameters.AddWithValue("@typb", typb1);
+                Minterbi.Parameters.AddWithValue("@tseb", tseb2);
+                Minterbi.Parameters.AddWithValue("@tsm1", tsm);
+                Minterbi.Parameters.AddWithValue("@combstr", commbstri);
+                Minterbi.Parameters.AddWithValue("@nudemab", numdem);
+                Minterbi.Parameters.AddWithValue("@tfab", tspa);
+                Minterbi.Parameters.AddWithValue("@tfpnb", tpn);
+                Minterbi.Parameters.AddWithValue("@etb", etbost);
+                int rowCount = Minterbi.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
 
 
 
+        public static bool supprimer_interv_bistouri(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_bistouri x; 
+                var Dinb = new MySqlCommand("delete from intervention_bistouri where id_intervention= @id", conn);
+                Dinb.Parameters.AddWithValue("@id", id);
+                int rowCount = Dinb.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
+
+
+        public static bool Modifier_interv_defibrillateur(string numinterdef , string datedef , string etatdef , string intdef , string tsedef , string timsddef , string timnddef , string ttcddef , string tmeddef , string ttpddef , string tmecgddef , string tepddef , string comdef , string nmdeddef , string typdef , string etaadef , int id)
+
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_defibrillateur Interdef;
+                var Minterde = new MySqlCommand("update intervention_defibrillateur set Numero_intervention6=@nintd , Date_intervention=@dated , Etat_intervention=@etatd , Intervenant=@intde , Test_securit_electrique =@tsed , Test_indicateur_mode_synchro =@timsd1 , Test_indicateur_mode_normale=@timnd , Test_temps_charge =@ttcd , Testmesureenergie =@tmed , Test_taux_de_perte=@ttpd , Testmoniteurecg=@tmecgd , Testenregistrementpapier=@tepd , Commentaire=@comd , Numero_demande10=@nmded , type_equip2=@tydef , etat_equip25=@etdef where id_defib= @id", conn);
+                Intervention_bistouri IB;
+
+                Minterde.Parameters.AddWithValue("@nintd", numinterdef);
+                Minterde.Parameters.AddWithValue("@dated", datedef);
+                Minterde.Parameters.AddWithValue("@etatd", etatdef);
+                Minterde.Parameters.AddWithValue("@intde", intdef);
+                Minterde.Parameters.AddWithValue("@tsed", tsedef);
+                Minterde.Parameters.AddWithValue("@timsd1", timsddef);
+                Minterde.Parameters.AddWithValue("@timnd", timnddef);
+                Minterde.Parameters.AddWithValue("@ttcd", ttcddef);
+                Minterde.Parameters.AddWithValue("@tmed", tmeddef);
+                Minterde.Parameters.AddWithValue("@ttpd", ttpddef);
+                Minterde.Parameters.AddWithValue("@tmecgd", tmecgddef);
+                Minterde.Parameters.AddWithValue("@tepd", tepddef);
+                Minterde.Parameters.AddWithValue("@comd", comdef);
+                Minterde.Parameters.AddWithValue("@nmded", nmdeddef);
+                Minterde.Parameters.AddWithValue("@tydef", typdef);
+                Minterde.Parameters.AddWithValue("@etdef", etaadef);
+
+                int rowCount = Minterde.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
+
+
+        public static bool supprimer_interv_defibrillateur(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_defibrillateur Interdef;
+                var Dind = new MySqlCommand("delete from intervention_defibrillateur where id_defib= @id", conn);
+                Dind.Parameters.AddWithValue("@id", id);
+                int rowCount = Dind.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
 
 
 
+        public static bool Modifier_interv_pousse_seringue(string numpousse , string datepousse1 , string etatpouss1 , string iterpouss1 , string tspouss1 , string tspvpou1 , string tsp2pouss1 , string compouss1 , string numpousse1 , string etatequip , string seriepouss1 , int id)
+
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_pousse_seringue inpser;
+
+                var Minterpouss = new MySqlCommand("update intervention_pousse_seringe set numéro_intervention=@nintpous , date_intervention=@datpouss , Etat_intervention=@etatpouss , Intervenant=@intervpouss , Test_sécurit_électrique=@tsepouss , Test_performance_prémiere_voie=@tspvpou , Test_performance_déuxieme_voie=@tsp2pouss , Commentaire=@compouss , Numero_demande=@numpouss , etat_equip=@etatequip , num_ser_equip=@seriepouss where id_pousse= @id", conn);
+                Intervention_bistouri IB;
+
+                Minterpouss.Parameters.AddWithValue("@nintpous", numpousse);
+                Minterpouss.Parameters.AddWithValue("@datpouss", datepousse1);
+                Minterpouss.Parameters.AddWithValue("@etatpouss", etatpouss1);
+                Minterpouss.Parameters.AddWithValue("@intervpouss", iterpouss1);
+                Minterpouss.Parameters.AddWithValue("@tsepouss", tspouss1);
+                Minterpouss.Parameters.AddWithValue("@tspvpou", tspvpou1);
+                Minterpouss.Parameters.AddWithValue("@tsp2pouss", tsp2pouss1);
+                Minterpouss.Parameters.AddWithValue("@compouss", compouss1);
+                Minterpouss.Parameters.AddWithValue("@numpouss", numpousse1);
+                Minterpouss.Parameters.AddWithValue("@etatequip", etatequip);
+                Minterpouss.Parameters.AddWithValue("seriepouss", seriepouss1);
 
 
+                int rowCount = Minterpouss.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
 
 
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
 
 
+        public static bool supprimer_interv_pousse_seringue(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_pousse_seringue inpser;
+                var Dpouss = new MySqlCommand("delete from intervention_pousse_seringe where id_pousse= @id", conn);
+                Dpouss.Parameters.AddWithValue("@id", id);
+                int rowCount = Dpouss.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
 
 
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
 
 
+        public static bool Modifier_interv_respirateur( string numresp , string datresp , string interresp1 , string numresp123 , string typresp , string numinresp1 , string etatresp1 , string testresp1 , string vcresp , string etatequipresp1 , string oxygresp , string pcresp , string vacresp , string comresp , int id)
+
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_respirateur_class respx;
 
 
+                var Minterresp = new MySqlCommand("update  intervention_respirateur set Numero_intervention=@nintresp , Date_intervention=@datresp , Intervenant=@interresp , Numero_demande=@numdresp , type_equip=@typres , num_ser_interv=@numinresp , Etat_intervention=@etatresp , test_securite_electrique=@teresp ,test_vc=@vcresp , Etat_equip=@etatequiresp , test_oxygene=@oxygresp , test_pc=@pcresp , test_vac=@vacresp , Commentaire=@comresp where ID_intervention_resp= @id", conn);
 
+                Minterresp.Parameters.AddWithValue("@nintresp", numresp);
+                Minterresp.Parameters.AddWithValue("@datresp", datresp);
+                Minterresp.Parameters.AddWithValue("@interresp", interresp1);
+                Minterresp.Parameters.AddWithValue("@numdresp", numresp123);
+                Minterresp.Parameters.AddWithValue("@typres", typresp);
+                Minterresp.Parameters.AddWithValue("@numinresp", numinresp1);
+                Minterresp.Parameters.AddWithValue("@etatresp", etatresp1);
+                Minterresp.Parameters.AddWithValue("@teresp", testresp1);
+                Minterresp.Parameters.AddWithValue("vcresp", vcresp);
+                Minterresp.Parameters.AddWithValue("@etatequiresp", etatequipresp1);
+                Minterresp.Parameters.AddWithValue("@oxygresp", oxygresp);
+                Minterresp.Parameters.AddWithValue("@pcresp", pcresp);
+                Minterresp.Parameters.AddWithValue("@vacresp", vacresp);
+                Minterresp.Parameters.AddWithValue("@comresp", comresp);
+
+
+                int rowCount = Minterresp.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
+
+
+        public static bool supprimer_interv_respirateur(int id)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                Intervention_respirateur_class respx;
+
+                var Dresp = new MySqlCommand("delete from intervention_respirateur where ID_intervention_resp= @id", conn);
+                Dresp.Parameters.AddWithValue("@id", id);
+                int rowCount = Dresp.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+        }
 
     }
-    }
+}
     
 
 

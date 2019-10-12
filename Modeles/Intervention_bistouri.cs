@@ -19,10 +19,11 @@ namespace CetemLibrary.Modeles
         public string Numero_demande;
         public string test_fuite_partie_active;
         public string test_fuite_partie_neutre;
-        public string etat_equip; 
+        public string etat_equip;
 
+        public int idintervention; 
 
-        public Intervention_bistouri (string numb , string datb , string etatb , string intb , string typb , string tseb , string tmb , string cb , string ndb , string tfpab , string tfpnb , string etb)
+        public Intervention_bistouri (string numb , string datb , string etatb , string intb , string typb , string tseb , string tmb , string cb , string ndb , string tfpab , string tfpnb , string etb , int idinterv)
         {
             Numero_intervention = numb;
             Date_intervention = datb;
@@ -35,18 +36,14 @@ namespace CetemLibrary.Modeles
             Numero_demande = ndb;
             test_fuite_partie_active = tfpab;
             test_fuite_partie_neutre = tfpnb;
-            etat_equip = etb; 
-
-
-
-
-
-
-
-
+            etat_equip = etb;
+            idintervention = idinterv; 
 
 
         }
+
+
+
 
     }
 }

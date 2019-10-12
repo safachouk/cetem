@@ -8,6 +8,7 @@ namespace CetemLibrary.Modeles
 {
    public class Demande_class
     {
+        public static Demande_class demandecetem; 
         public int Nombre_Respirateur_anesthesie;
         public string Date_Demande;
         public string Etat_demande;
@@ -18,9 +19,10 @@ namespace CetemLibrary.Modeles
         public int nombre_pousse_seringe;
         public int nombre_defibrillateur;
         public int Nombre_respirateur_transport;
-        public int Nombre_bistouri ; 
+        public int Nombre_bistouri ;
+        public int ID_DEMANDE; 
 
-        public Demande_class(int nra, string date, string etat, string num, string region_dema , string hopital_de , int nrr , int nps , int nd , int nrt , int nb)
+        public Demande_class(int nra, string date, string etat, string num, string region_dema , string hopital_de , int nrr , int nps , int nd , int nrt , int nb , int iddem)
         {
             Nombre_Respirateur_anesthesie = nra;
             Date_Demande = date ;
@@ -32,7 +34,8 @@ namespace CetemLibrary.Modeles
             nombre_pousse_seringe = nps ;
             nombre_defibrillateur = nd ;
             Nombre_respirateur_transport = nrt;
-            Nombre_bistouri = nb ; 
+            Nombre_bistouri = nb ;
+            ID_DEMANDE = iddem; 
 
 
         }

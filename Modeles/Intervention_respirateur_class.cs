@@ -21,9 +21,9 @@ namespace CetemLibrary.Modeles
         public string test_oxygene;
         public string test_pc;
         public string test_vac;
-        public string Commentaire; 
-
-        public Intervention_respirateur_class (string nure , string datere , string intre , string numre , string tyres , string seriere , string etatre , string tsere , string vcre , string etatres , string oxyres , string pcre , string vacre , string comre)
+        public string Commentaire;
+        public int ID_intervention_resp;
+        public Intervention_respirateur_class (string nure , string datere , string intre , string numre , string tyres , string seriere , string etatre , string tsere , string vcre , string etatres , string oxyres , string pcre , string vacre , string comre , int idresp)
         {
             Numero_intervention = nure;
             Date_intervention = datere;
@@ -38,8 +38,8 @@ namespace CetemLibrary.Modeles
             test_oxygene = oxyres;
             test_pc = pcre;
             test_vac = vacre;
-            Commentaire = comre; 
-
+            Commentaire = comre;
+            ID_intervention_resp = idresp; 
 
         }
     }

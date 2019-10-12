@@ -178,7 +178,7 @@
             this.label12.AutoSize = true;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label12.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(655, 36);
+            this.label12.Location = new System.Drawing.Point(644, 44);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 30);
             this.label12.TabIndex = 140;
@@ -554,6 +554,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::@interface.Properties.Resources.images1;
             this.ClientSize = new System.Drawing.Size(1205, 749);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.richTextBox1);

@@ -81,5 +81,10 @@ namespace @interface
         {
 
         }
+
+        private void Ajouterintervention_bistouri_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

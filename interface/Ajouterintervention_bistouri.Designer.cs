@@ -514,6 +514,7 @@
             this.Controls.Add(this.label13);
             this.Name = "Ajouterintervention_bistouri";
             this.Text = "Ajouterintervention_bistouri";
+            this.Load += new System.EventHandler(this.Ajouterintervention_bistouri_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -15,10 +15,12 @@ namespace CetemLibrary.Modeles
         public string nom_de_hopital;
         public string Nom_de_service;
         public string Nom_region;
+        public int ID_EQUIPEMENT; 
 
 
 
-        public Equipement_class (string marqueq , string typequi , string modeequip , string serieequi , string hopiteq , string serviequi , string regionequi)
+
+        public Equipement_class (string marqueq , string typequi , string modeequip , string serieequi , string hopiteq , string serviequi , string regionequi , int idequip)
         {
             MARQUE = marqueq;
             TYPE = typequi;
@@ -26,7 +28,9 @@ namespace CetemLibrary.Modeles
             NUM_SERIE = serieequi;
             nom_de_hopital = hopiteq;
             Nom_de_service = serviequi;
-            Nom_region = regionequi; 
+            Nom_region = regionequi;
+            ID_EQUIPEMENT = idequip; 
+
 
         }
 
