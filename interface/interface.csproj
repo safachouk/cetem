@@ -195,5 +195,32 @@
   <ItemGroup>
     <None Include="Resources\images %281%291.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_bkg_left_text_cmyk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_bkg_left_text_cmyk1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_bkg_left_text_cmyk2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargement2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%291.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

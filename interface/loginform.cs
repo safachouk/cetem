@@ -34,5 +34,10 @@ namespace @interface
                 Hide();
             }
         }
+
+        private void Loginpage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

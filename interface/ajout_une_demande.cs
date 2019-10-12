@@ -40,6 +40,11 @@ namespace @interface
           //  listView1.Items.Clear();
            // listView1.Items.Add(new ListViewItem());
         }
+
+        private void Label22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

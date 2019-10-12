@@ -52,44 +52,47 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox8
             // 
             this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox8.BackColor = System.Drawing.Color.White;
             this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox8.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.ItemHeight = 30;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Sahloul "});
-            this.comboBox8.Location = new System.Drawing.Point(301, 156);
+            this.comboBox8.ItemHeight = 21;
+            this.comboBox8.Location = new System.Drawing.Point(486, 103);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(272, 38);
+            this.comboBox8.Size = new System.Drawing.Size(191, 29);
             this.comboBox8.TabIndex = 128;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label22.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(71, 151);
+            this.label22.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(247, 103);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(114, 42);
+            this.label22.Size = new System.Drawing.Size(83, 30);
             this.label22.TabIndex = 127;
-            this.label22.Text = "Hopital ";
+            this.label22.Text = "Hôpital ";
+            this.label22.Click += new System.EventHandler(this.Label22_Click);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label20.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(60, 87);
+            this.label20.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(247, 59);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 42);
+            this.label20.Size = new System.Drawing.Size(77, 30);
             this.label20.TabIndex = 126;
             this.label20.Text = "Région ";
             // 
@@ -97,30 +100,26 @@
             // 
             this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox9.BackColor = System.Drawing.Color.White;
             this.comboBox9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox9.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.ItemHeight = 30;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Sousse",
-            "Monastir",
-            "Mahdia",
-            "Kiarouan"});
-            this.comboBox9.Location = new System.Drawing.Point(301, 87);
+            this.comboBox9.ItemHeight = 21;
+            this.comboBox9.Location = new System.Drawing.Point(486, 59);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(272, 38);
+            this.comboBox9.Size = new System.Drawing.Size(191, 29);
             this.comboBox9.TabIndex = 125;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label18.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(60, 18);
+            this.label18.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(247, 147);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(235, 42);
+            this.label18.Size = new System.Drawing.Size(173, 30);
             this.label18.TabIndex = 123;
             this.label18.Text = "Numéro Demande ";
             // 
@@ -128,21 +127,22 @@
             // 
             this.textBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox8.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(301, 25);
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.Font = new System.Drawing.Font("Nirmala UI Semilight", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(486, 147);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(274, 35);
+            this.textBox8.Size = new System.Drawing.Size(191, 27);
             this.textBox8.TabIndex = 129;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label21.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(37, 225);
+            this.label21.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(247, 191);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(226, 42);
+            this.label21.Size = new System.Drawing.Size(165, 30);
             this.label21.TabIndex = 138;
             this.label21.Text = "Date de demande ";
             // 
@@ -150,111 +150,119 @@
             // 
             this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(299, 225);
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI Semilight", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(486, 191);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 35);
+            this.textBox1.Size = new System.Drawing.Size(191, 27);
             this.textBox1.TabIndex = 139;
             // 
             // comboBox6
             // 
             this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox6.BackColor = System.Drawing.Color.White;
             this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox6.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.ItemHeight = 30;
+            this.comboBox6.ItemHeight = 21;
             this.comboBox6.Items.AddRange(new object[] {
             "En instance",
             "En cours",
             "Terminé "});
-            this.comboBox6.Location = new System.Drawing.Point(677, 100);
+            this.comboBox6.Location = new System.Drawing.Point(486, 235);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(214, 38);
+            this.comboBox6.Size = new System.Drawing.Size(191, 29);
             this.comboBox6.TabIndex = 141;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label17.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(686, 43);
+            this.label17.Font = new System.Drawing.Font("Sitka Banner", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(247, 235);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(188, 42);
+            this.label17.Size = new System.Drawing.Size(137, 30);
             this.label17.TabIndex = 140;
             this.label17.Text = "Etat demande ";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(186, 611);
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(291, 608);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(88, 28);
+            this.label30.Size = new System.Drawing.Size(95, 28);
             this.label30.TabIndex = 153;
             this.label30.Text = "Bistouri ";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(186, 554);
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(290, 551);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(138, 28);
+            this.label29.Size = new System.Drawing.Size(151, 28);
             this.label29.TabIndex = 151;
             this.label29.Text = "Défibrillateur ";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(186, 499);
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(279, 505);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(158, 28);
+            this.label28.Size = new System.Drawing.Size(169, 28);
             this.label28.TabIndex = 149;
             this.label28.Text = "Pousse seringe ";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(186, 438);
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(276, 447);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(246, 28);
+            this.label27.Size = new System.Drawing.Size(264, 28);
             this.label27.TabIndex = 147;
             this.label27.Text = "Respirateur de transport ";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(186, 381);
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(276, 396);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(273, 28);
+            this.label24.Size = new System.Drawing.Size(294, 28);
             this.label24.TabIndex = 145;
             this.label24.Text = "Respirateur de réanimation ";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label23.Font = new System.Drawing.Font("Sitka Small", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label23.Location = new System.Drawing.Point(87, 299);
+            this.label23.Font = new System.Drawing.Font("Sitka Text", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.label23.Location = new System.Drawing.Point(154, 308);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(79, 23);
+            this.label23.Size = new System.Drawing.Size(125, 16);
             this.label23.TabIndex = 144;
-            this.label23.Text = "Nombre ";
+            this.label23.Text = " Nombre équipement ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(186, 325);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(276, 338);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 28);
+            this.label6.Size = new System.Drawing.Size(272, 28);
             this.label6.TabIndex = 142;
             this.label6.Text = "Respirateur d\'anesthésie  ";
             // 
@@ -262,85 +270,96 @@
             // 
             this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(91, 325);
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(183, 338);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(66, 35);
+            this.textBox2.Size = new System.Drawing.Size(67, 30);
             this.textBox2.TabIndex = 154;
             // 
             // textBox3
             // 
             this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(91, 381);
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(183, 396);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(66, 35);
+            this.textBox3.Size = new System.Drawing.Size(66, 30);
             this.textBox3.TabIndex = 155;
             // 
             // textBox4
             // 
             this.textBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox4.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(91, 433);
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(184, 447);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(66, 35);
+            this.textBox4.Size = new System.Drawing.Size(66, 30);
             this.textBox4.TabIndex = 156;
             // 
             // textBox5
             // 
             this.textBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox5.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(91, 499);
+            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(184, 503);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(66, 35);
+            this.textBox5.Size = new System.Drawing.Size(66, 30);
             this.textBox5.TabIndex = 157;
             // 
             // textBox6
             // 
             this.textBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(91, 554);
+            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(184, 551);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(66, 35);
+            this.textBox6.Size = new System.Drawing.Size(66, 30);
             this.textBox6.TabIndex = 158;
             // 
             // textBox7
             // 
             this.textBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox7.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(91, 611);
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(184, 608);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(66, 35);
+            this.textBox7.Size = new System.Drawing.Size(66, 30);
             this.textBox7.TabIndex = 159;
             // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.White;
             this.button10.Image = global::@interface.Properties.Resources._____;
-            this.button10.Location = new System.Drawing.Point(652, 299);
+            this.button10.Location = new System.Drawing.Point(830, 294);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(164, 128);
             this.button10.TabIndex = 160;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.Button10_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::@interface.Properties.Resources.centembh;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 122);
+            this.pictureBox1.TabIndex = 161;
+            this.pictureBox1.TabStop = false;
+            // 
             // ajout_une_demande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::@interface.Properties.Resources.learning_bkg_left_text_cmyk;
             this.ClientSize = new System.Drawing.Size(1019, 698);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -368,6 +387,7 @@
             this.Name = "ajout_une_demande";
             this.Text = "ajout_une_demande";
             this.Load += new System.EventHandler(this.Ajout_une_demande_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,5 +419,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

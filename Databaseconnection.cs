@@ -12,7 +12,7 @@ namespace CetemLibrary
     public class Databaseconnection
     {
         static MySqlConnection conn;
-        static Utilisateur Utilisateur_courant = null;
+        public static Utilisateur Utilisateur_courant = null;
 
         static string host = "localhost";
         static int port = 3306;
@@ -448,8 +448,7 @@ namespace CetemLibrary
                     conn.Open();
                 var Mpersonn = new MySqlCommand("update techniciens set Nom_technicien=@nomtech1 , prenom_technicen=@prenomtech1 , e_mail = @mail23 , password = @password123 where ID_Tech= @id", conn);
 
-                Personnel_class u ; 
-
+                
                 Mpersonn.Parameters.AddWithValue("@nomtech1", nomtech12);
                 Mpersonn.Parameters.AddWithValue("@prenomtech1", prenomtech123);
                 Mpersonn.Parameters.AddWithValue("@mail23", @mail23);
@@ -850,6 +849,42 @@ namespace CetemLibrary
             }
         }
 
+
+
+
+        public static bool Modifier_mon_compte( string nomtech12123 , string prenomtech12312356 , string mail2389654 , string password123145238, int id )
+
+        {
+
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Mcompte = new MySqlCommand("update techniciens set Nom_technicien=@nomtech2 , prenom_technicen=@prenomtech2 , e_mail = @mail59867 , password = @passwor89754632 where ID_Tech= @id", conn);
+
+
+           
+                Mcompte.Parameters.AddWithValue("@nomtech2", nomtech12123);
+                Mcompte.Parameters.AddWithValue("@prenomtech2", prenomtech12312356);
+                Mcompte.Parameters.AddWithValue("@mail59867", mail2389654);
+                Mcompte.Parameters.AddWithValue("@passwor89754632", password123145238);
+                Mcompte.Parameters.AddWithValue("@id", id);
+                int rowCount = Mcompte.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
     }
 }
     

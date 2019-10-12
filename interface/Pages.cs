@@ -22,9 +22,18 @@ namespace @interface
         public Pages()
     {
             InitializeComponent();
-
+            remplirMonCompte();
     }
+      public void remplirMonCompte()
+        {
+            if (Databaseconnection.Utilisateur_courant != null)
+            {
+                textBox4.Text = Databaseconnection.Utilisateur_courant.Nom;
+                textBox5.Text = Databaseconnection.Utilisateur_courant.Prenom;
+                textBox3.Text = Databaseconnection.Utilisateur_courant.Email;
+            }
 
+        }
         private void Button3_Click(object sender, EventArgs e)
         {
             Ajouter_equipement  Aequipement = new Ajouter_equipement();
@@ -93,8 +102,8 @@ namespace @interface
         private void Button11_Click(object sender, EventArgs e)
         {
            bool? result = null;
-            if (Personnel_class.personnctem != null)
-                result = Databaseconnection.supprimer_personnel(Personnel_class.personnctem.ID_Tech);
+            if (Utilisateur.utiliSelection != null)
+                result = Databaseconnection.supprimer_personnel(Utilisateur.utiliSelection.Id);
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "Personnel supprimé." : "erreur de suppression de personnel.");
                 
@@ -268,6 +277,20 @@ namespace @interface
 
         private void TabPage5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+          Databaseconnection.Modifier_mon_compte(textBox4.Text , textBox5.Text , textBox3.Text , maskedTextBox1.Text,Databaseconnection.Utilisateur_courant.Id) ?
+           "personnelle modifié avec succée" :
+           "Problem de modification");
 
         }
     }

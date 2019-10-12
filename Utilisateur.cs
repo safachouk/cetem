@@ -11,7 +11,7 @@ namespace CetemLibrary
         public static Utilisateur utiliSelection;
 
 
-        int Id; 
+        public int Id; 
         string nom;
         string prenom;
         string email;
