@@ -9,7 +9,7 @@ namespace CetemLibrary.Modeles
   public class Intervention_pousse_seringue
 
     {
-        public string numéro_intervention;
+        public string numero_intervention;
         public string date_intervention;
         public string Etat_intervention;
         public string Intervenant;
@@ -22,9 +22,13 @@ namespace CetemLibrary.Modeles
         public string num_ser_equip;
         public int id_pousse;
 
+        public Intervention_pousse_seringue()
+        {
+        }
+
         public Intervention_pousse_seringue (string numps , string dateps , string etatps , string interps , string tseps , string tppvps , string tpdvps , string cps , string ndps , string etps , string sps , int idpouss )
         {
-            numéro_intervention = numps;
+            numero_intervention = numps;
             date_intervention = dateps;
             Etat_intervention = etatps;
             Intervenant = interps;

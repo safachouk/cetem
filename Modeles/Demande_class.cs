@@ -8,29 +8,33 @@ namespace CetemLibrary.Modeles
 {
    public class Demande_class
     {
-        public static Demande_class demandecetem; 
-        public int Nombre_Respirateur_anesthesie;
+    
+        public string Nombre_Respirateur_anesthesie;
         public string Date_Demande;
         public string Etat_demande;
-        public string Numéro_demande;
+        public string Numero_demande;
         public string  region_demande;
         public string Hopital_demande;
-        public int Nombre_respirateur_réanimation;
-        public int nombre_pousse_seringe;
-        public int nombre_defibrillateur;
-        public int Nombre_respirateur_transport;
-        public int Nombre_bistouri ;
-        public int ID_DEMANDE; 
+        public string Nombre_respirateur_reanimation;
+        public string nombre_pousse_seringe;
+        public string nombre_defibrillateur;
+        public string Nombre_respirateur_transport;
+        public string Nombre_bistouri ;
+        public int ID_DEMANDE;
+        public Demande_class()
+        {
 
-        public Demande_class(int nra, string date, string etat, string num, string region_dema , string hopital_de , int nrr , int nps , int nd , int nrt , int nb , int iddem)
+        }
+
+        public Demande_class(string nra, string date, string etat, string num, string region_dema , string hopital_de , string nrr , string nps , string nd , string nrt , string nb , int iddem)
         {
             Nombre_Respirateur_anesthesie = nra;
             Date_Demande = date ;
             Etat_demande = etat ;
-            Numéro_demande = num ;
+            Numero_demande = num ;
             region_demande = region_dema ;
             Hopital_demande = hopital_de ;
-            Nombre_respirateur_réanimation = nrr ;
+            Nombre_respirateur_reanimation = nrr ;
             nombre_pousse_seringe = nps ;
             nombre_defibrillateur = nd ;
             Nombre_respirateur_transport = nrt;
