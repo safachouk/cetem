@@ -16,7 +16,28 @@ namespace @interface
     public Ajouterintervention_Pousse_seringe()
     {
         InitializeComponent();
-    }
+            ajoutintervenant();
+            ajoutdemande();
+            ajoutseriepousse();
+        }
+
+        private void ajoutseriepousse()
+        {
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getseriepouss());
+        }
+
+        private void ajoutintervenant()
+        {
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(Databaseconnection.getintervenant());
+        }
+
+        private void ajoutdemande()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getdemande());
+        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -67,6 +88,61 @@ namespace @interface
         }
 
         private void Ajouterintervention_Pousse_seringe_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton11_CheckedChanged(object sender, EventArgs e)
         {
 
         }

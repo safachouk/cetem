@@ -95,6 +95,48 @@
     <Compile Include="AjouterIntervention_Respirateur .Designer.cs">
       <DependentUpon>AjouterIntervention_Respirateur .cs</DependentUpon>
     </Compile>
+    <Compile Include="Modifier_demande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_demande.Designer.cs">
+      <DependentUpon>Modifier_demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_equipement.Designer.cs">
+      <DependentUpon>Modifier_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_interv_defibr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_interv_defibr.Designer.cs">
+      <DependentUpon>Modifier_interv_defibr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_interv_resp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_interv_resp.Designer.cs">
+      <DependentUpon>Modifier_interv_resp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_inter_Bist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_inter_Bist.Designer.cs">
+      <DependentUpon>Modifier_inter_Bist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_personnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_personnel.Designer.cs">
+      <DependentUpon>Modifier_personnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_pousse_seringue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_pousse_seringue.Designer.cs">
+      <DependentUpon>Modifier_pousse_seringue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +168,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AjouterIntervention_Respirateur .resx">
       <DependentUpon>AjouterIntervention_Respirateur .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_demande.resx">
+      <DependentUpon>Modifier_demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_equipement.resx">
+      <DependentUpon>Modifier_equipement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_interv_defibr.resx">
+      <DependentUpon>Modifier_interv_defibr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_interv_resp.resx">
+      <DependentUpon>Modifier_interv_resp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_inter_Bist.resx">
+      <DependentUpon>Modifier_inter_Bist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_personnel.resx">
+      <DependentUpon>Modifier_personnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_pousse_seringue.resx">
+      <DependentUpon>Modifier_pousse_seringue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages.resx">
       <DependentUpon>Pages.cs</DependentUpon>

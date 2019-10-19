@@ -17,10 +17,30 @@ namespace @interface
     public AjouterIntervention_Respirateur()
     {
         InitializeComponent();
-           // remplirListDemande(); select numerod demande where état = en instance pr etat = en cour
+            ajoutintervenant();
+            ajoutdemande();
+            ajoutserresp();
 
-    }
-        
+        }
+
+        private void ajoutserresp()
+        {
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getserresp());
+        }
+
+        private void ajoutintervenant()
+        {
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(Databaseconnection.getintervenant());
+        }
+
+        private void ajoutdemande()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getdemande());
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
             if (!radioButton1.Checked && !radioButton2.Checked)
@@ -141,6 +161,36 @@ S= button1.text...*/
         }
 
         private void GroupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox6_Enter(object sender, EventArgs e)
         {
 
         }
