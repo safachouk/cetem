@@ -16,10 +16,37 @@ namespace @interface
     public Ajouterintervention_bistouri()
     {
             InitializeComponent();
+            AjoutPersonnel();
+            ajoudemande();
+            ajoutserie();
+        }
+
+        private void ajoutserie()
+        {
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getserie());
+        }
+
+        private void ajoudemande()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getdemande());
+        }
+
+        private void AjoutPersonnel()
+        {
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(Databaseconnection.getintervenant());
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            if (textBox4.Text=="")
+            {
+                MessageBox.Show("Vous devez donner le numéro d'intervention.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (!radioButton1.Checked && !radioButton2.Checked)
             {
@@ -70,7 +97,7 @@ namespace @interface
             string testfuitepartieneutre = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
             MessageBox.Show(
-          Databaseconnection.ajout_boustri (textBox4.Text , textBox1.Text , etatintervention3 , comboBox3.Text , textBox3.Text , securitelectrique4 , testmodes , richTextBox1.Text , comboBox1.Text , testfuitepartieactive , testfuitepartieneutre , etatequipement3 ) ?
+          Databaseconnection.ajout_boustri (textBox4.Text , textBox1.Text , etatintervention3 , comboBox3.Text , textBox3.Text , securitelectrique4 , testmodes , richTextBox1.Text , comboBox1.Text , testfuitepartieactive , testfuitepartieneutre , etatequipement3 , comboBox2.Text) ?
            "Bistouri ajouté avec succée" :
            "Problem d'ajout de Bistouri");
 

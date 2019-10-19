@@ -16,9 +16,30 @@ namespace @interface
     public Ajouterintervention_defibrillateur()
     {
         InitializeComponent();
+            ajoutintervenant();
+            ajoutdemande();
+            ajoutserie();
     }
 
-    private void Button1_Click(object sender, EventArgs e)
+        private void ajoutserie()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getseriedefib());
+        }
+
+        private void ajoutdemande()
+        {
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getdemande());
+        }
+
+        private void ajoutintervenant()
+        {
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(Databaseconnection.getintervenant());
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
     {
 
 

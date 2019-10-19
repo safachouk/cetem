@@ -23,6 +23,11 @@ namespace CetemLibrary.Modeles
         public string test_vac;
         public string Commentaire;
         public int ID_intervention_resp;
+
+        public Intervention_respirateur_class()
+        {
+        }
+
         public Intervention_respirateur_class (string nure , string datere , string intre , string numre , string tyres , string seriere , string etatre , string tsere , string vcre , string etatres , string oxyres , string pcre , string vacre , string comre , int idresp)
         {
             Numero_intervention = nure;

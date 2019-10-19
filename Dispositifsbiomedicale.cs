@@ -18,6 +18,8 @@ namespace CetemLibrary
         string Nom_service;
         string Nom_region;
 
+        public string modele1; 
+
         public string Marque1 { get => Marque; set => Marque = value; }
         public string Type1 { get => Type; set => Type = value; }
         public string Numero_serie1 { get => Numero_serie; set => Numero_serie = value; }
@@ -25,8 +27,11 @@ namespace CetemLibrary
         public string Nom_service1 { get => Nom_service; set => Nom_service = value; }
         public string Nom_region1 { get => Nom_region; set => Nom_region = value; }
         public int Id { get => id; set => id = value; }
-
-        public Dispositifsbiomedicale(string typ , string marq , string numse, string hop , string serv,string reg , int id)
+        public Dispositifsbiomedicale()
+        {
+                
+        }
+        public Dispositifsbiomedicale(string typ , string marq , string numse, string hop , string serv,string reg ,string modele ,  int id)
         {
             Marque1 = marq;
             Type1 = typ;
@@ -34,6 +39,7 @@ namespace CetemLibrary
             Nom_hopital1 = hop;
             Nom_service1 = serv;
             Nom_region1 = reg;
+            modele1 = modele;
             Id = id;
 
         }

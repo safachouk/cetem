@@ -23,8 +23,26 @@ namespace @interface
     {
             InitializeComponent();
             remplirMonCompte();
-    }
-      public void remplirMonCompte()
+            UpdateListsEquipement();
+            UpdateListsPersonnel();
+            UpdateListsdemande();
+            UpdateListsinterventionresp();
+            UpdateListsinterventionbist();
+            UpdateListsinterventionpouss();
+            UpdateListsinterventiondefib();
+           
+          
+
+        }
+
+       
+
+      
+      
+
+      
+
+        public void remplirMonCompte()
         {
             if (Databaseconnection.Utilisateur_courant != null)
             {
@@ -39,22 +57,43 @@ namespace @interface
             Ajouter_equipement  Aequipement = new Ajouter_equipement();
             Aequipement.Tag = this;
             Aequipement.Show(this);
+            //Aequipement.FormClosing;
+            UpdateListsEquipement();
 
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Ajouter_equipement Mequipement = new Ajouter_equipement();
-            Mequipement.Tag = this;
-            Mequipement.Show(this);
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView1.SelectedRows[0];
 
+                Modifier_equipement Mequipement = new Modifier_equipement();
+                Mequipement.setEquipement((int)selectedrow.Cells[0].Value);
+                
+                Mequipement.Tag = this;
+                Mequipement.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
             bool? result = null;
-            if (Dispositifsbiomedicale.DispositifSelectionne != null)
-                result = Databaseconnection.supprimer_equipement(Dispositifsbiomedicale.DispositifSelectionne.Id);
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView1.SelectedRows[0];
+                result = Databaseconnection.supprimer_equipement((int)selectedrow.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "équipement supprimé." : "erreur de suppression de l'equipement.");
 
@@ -90,23 +129,43 @@ namespace @interface
             AjoutPersonnel Apers = new AjoutPersonnel();
             Apers.Tag = this;
             Apers.Show(this);
+            UpdateListsPersonnel();
         }
 
         private void Button8_Click(object sender, EventArgs e)
         {
-            /*AjoutPersonnel Mpers = new AjoutPersonnel();
-            Mpers.Tag = this;
-            Mpers.Show(this);*/
+            if (dataGridView2.SelectedRows.Count == 1)
+            {
+                var selectedrow5 = dataGridView2.SelectedRows[0];
+
+                Modifier_personnel Mpersonnel = new Modifier_personnel();
+                Mpersonnel.setPersonnel((int)selectedrow5.Cells[0].Value);
+
+                Mpersonnel.Tag = this;
+                Mpersonnel.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
         }
 
         private void Button11_Click(object sender, EventArgs e)
         {
-           bool? result = null;
-            if (Utilisateur.utiliSelection != null)
-                result = Databaseconnection.supprimer_personnel(Utilisateur.utiliSelection.Id);
+            bool? result = null;
+            if (dataGridView2.SelectedRows.Count == 1)
+            {
+                var selectedrow1 = dataGridView2.SelectedRows[0];
+                result = Databaseconnection.supprimer_personnel((int)selectedrow1.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
             if (result.HasValue)
-                MessageBox.Show(result.Value ? "Personnel supprimé." : "erreur de suppression de personnel.");
-                
+                MessageBox.Show(result.Value ? "Personnel supprimé." : "erreur de suppression du personnel.");
+
         }
 
        // private void Button14_Click(object sender, EventArgs e)
@@ -170,46 +229,11 @@ namespace @interface
 
         private void Button4_Click_1(object sender, EventArgs e)
         {
-            if (comboBox29.Text  == "Respirateur d'anesthésie" || comboBox29.Text == "Respirateur de réanimation" || comboBox29.Text == "Respirateur de transport")
-            { 
+            AjouterIntervention_Respirateur Aresp = new AjouterIntervention_Respirateur();
+            Aresp.Tag = this;
+            Aresp.Show(this);
+            UpdateListsinterventionresp();
 
-                AjouterIntervention_Respirateur ajresp = new AjouterIntervention_Respirateur();
-                ajresp.Tag = this;
-                ajresp.Show(this);
-
-            }
-
-             else if (comboBox29.Text.Equals("Bistouri"))
-            {
-
-                Ajouterintervention_bistouri ajbist = new Ajouterintervention_bistouri();
-                ajbist.Tag = this;
-                ajbist.Show(this);
-            }
-            else if (comboBox29.Text == "Pousse seringe")
-            {
-
-                Ajouterintervention_Pousse_seringe ajpouss = new Ajouterintervention_Pousse_seringe();
-                ajpouss.Tag = this;
-                ajpouss.Show(this);
-
-            }
-            else if  (comboBox29.Text == "Défibrillateur")
-            {
-
-                Ajouterintervention_defibrillateur ajdef = new Ajouterintervention_defibrillateur();
-                ajdef.Tag = this;
-                ajdef.Show(this);
-
-            }
-            else if (comboBox29.Text.Equals("Bistouri"))
-            {
-
-                Ajouterintervention_bistouri ajbist = new Ajouterintervention_bistouri();
-                ajbist.Tag = this;
-                ajbist.Show(this);
-            }
-            
         }
 
         private void Button6_Click_1(object sender, EventArgs e)
@@ -244,11 +268,44 @@ namespace @interface
 
        
 
-        private void UpdateLists()
+        private void UpdateListsEquipement()
         {
-            //throw new NotImplementedException();
-            listView1.Items.Clear();
-            listView1.Items.Add(new ListViewItem());
+            
+            dataGridView1.DataSource = Databaseconnection.fillEquipement();
+
+        }
+
+        private void UpdateListsPersonnel()
+        {
+
+            dataGridView2.DataSource = Databaseconnection.fillpersonnel();
+        }
+
+        private void UpdateListsdemande()
+        {
+            dataGridView3.DataSource = Databaseconnection.filldemande();
+        }
+      private void UpdateListsinterventionresp()
+        {
+
+            dataGridView4.DataSource = Databaseconnection.fillinterventionresp();
+        }
+
+      public void  UpdateListsinterventionbist()
+        {
+            dataGridView5.DataSource = Databaseconnection.fillinterventbistouri();
+
+        }
+
+        public void UpdateListsinterventionpouss()
+        {
+            dataGridView7.DataSource = Databaseconnection.fillinterventpousseseringue();
+
+        }
+        public void UpdateListsinterventiondefib()
+        {
+
+            dataGridView6.DataSource = Databaseconnection.fillinterventdefibrillateur();
         }
 
         private void Button10_Click_1(object sender, EventArgs e)
@@ -256,23 +313,49 @@ namespace @interface
             ajout_une_demande Adem = new ajout_une_demande();
             Adem.Tag = this;
             Adem.Show(this);
+            UpdateListsdemande();
 
         }
 
         private void Button13_Click(object sender, EventArgs e)
         {
-            ajout_une_demande Mdem = new ajout_une_demande();
-            Mdem.Tag = this;
-            Mdem.Show(this);
+            if (dataGridView3.SelectedRows.Count == 1)
+            {
+                var selectedrow7 = dataGridView3.SelectedRows[0];
+
+                Modifier_demande mdim = new Modifier_demande();
+                mdim.setdemande(Int32.Parse(selectedrow7.Cells[0].Value.ToString()));
+
+                mdim.Tag = this;
+                mdim.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+
+
+
         }
 
         private void Button14_Click(object sender, EventArgs e)
         {
             bool? result = null;
-            if (Demande_class.demandecetem != null)
-                result = Databaseconnection.supprimer_demande(Demande_class.demandecetem.ID_DEMANDE);
+            if (dataGridView3.SelectedRows.Count == 1)
+            {
+                var selectedrow3 = dataGridView3.SelectedRows[0];
+                result = Databaseconnection.supprime_demande((int)selectedrow3.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
             if (result.HasValue)
-                MessageBox.Show(result.Value ? "Demande supprimé avec succes ." : "erreur de suppression de la demande.");
+            {
+                MessageBox.Show(result.Value ? "Demande supprimé." : "erreur de suppression de la demande.");
+            }
+
         }
 
         private void TabPage5_Click(object sender, EventArgs e)
@@ -293,5 +376,208 @@ namespace @interface
            "Problem de modification");
 
         }
+
+        private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Button4_Click_2(object sender, EventArgs e)
+        {
+            AjouterIntervention_Respirateur Arespir = new AjouterIntervention_Respirateur();
+            Arespir.Tag = this;
+            Arespir.Show(this);
+            UpdateListsinterventionresp();
+        }
+
+        private void Button7_Click_2(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (dataGridView4.SelectedRows.Count == 1)
+            {
+                var selectedrow7 = dataGridView4.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_respirateur((int)selectedrow7.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "Respirateur supprimé." : "erreur de suppression de respirateur.");
+        }
+
+        private void Button6_Click_2(object sender, EventArgs e)
+        {
+            if (dataGridView4.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView4.SelectedRows[0];
+
+                Modifier_interv_resp Mresp = new Modifier_interv_resp();
+                Mresp.setResp((int)selectedrow.Cells[0].Value);
+
+                Mresp.Tag = this;
+                Mresp.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+        }
+
+        private void Button20_Click(object sender, EventArgs e)
+        {
+            Ajouterintervention_bistouri Abist = new Ajouterintervention_bistouri();
+            Abist.Tag = this;
+            Abist.Show(this);
+            UpdateListsinterventionbist();
+        }
+
+        private void Button25_Click(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (dataGridView5.SelectedRows.Count == 1)
+            {
+                var selectedrow9 = dataGridView5.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_bistouri((int)selectedrow9.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "Bistouri supprimé." : "erreur de suppression de bistouri.");
+        }
+
+     
+
+        private void Button22_Click(object sender, EventArgs e)
+        {
+            if (dataGridView5.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView5.SelectedRows[0];
+
+                Modifier_inter_Bist Mbistr = new Modifier_inter_Bist();
+                Mbistr.setbistouri((int)selectedrow.Cells[0].Value);
+
+                Mbistr.Tag = this;
+                Mbistr.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+        }
+
+        private void Button19_Click(object sender, EventArgs e)
+        {
+            Ajouterintervention_Pousse_seringe Apoussser = new Ajouterintervention_Pousse_seringe();
+            Apoussser.Tag = this;
+            Apoussser.Show(this);
+            UpdateListsinterventionpouss();
+        }
+
+        private void Button26_Click(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (dataGridView7.SelectedRows.Count == 1)
+            {
+                var selectedrow9 = dataGridView7.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_pousse_seringue((int)selectedrow9.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "Pousse seringue supprimé." : "erreur de suppression du pousse seringue.");
+        }
+
+        private void Button23_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView7.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView7.SelectedRows[0];
+
+                Modifier_pousse_seringue mpoussseri = new Modifier_pousse_seringue ();
+                mpoussseri.setpousseseringue((int)selectedrow.Cells[0].Value);
+
+                mpoussseri.Tag = this;
+                mpoussseri.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+        }
+
+        private void Button18_Click_1(object sender, EventArgs e)
+        {
+            Ajouterintervention_defibrillateur Adefib = new Ajouterintervention_defibrillateur();
+            Adefib.Tag = this;
+            Adefib.Show(this);
+            UpdateListsinterventiondefib();
+        }
+
+        private void Button27_Click(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (dataGridView6.SelectedRows.Count == 1)
+            {
+                var selectedrow10 = dataGridView6.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_defibrillateur((int)selectedrow10.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "défibrillateur supprimé." : "erreur de suppression du défibrillateur.");
+
+        }
+
+        private void Button21_Click(object sender, EventArgs e)
+        {
+            if (dataGridView6.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView6.SelectedRows[0];
+
+                Modifier_interv_defibr mdefib = new Modifier_interv_defibr();
+                mdefib.setdefibrillateur((int)selectedrow.Cells[0].Value);
+
+                mdefib.Tag = this;
+                mdefib.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+        }
+
+        private void filtreAgain(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

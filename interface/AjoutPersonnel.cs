@@ -20,6 +20,33 @@ namespace @interface
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
+            if (textBox4.Text == "")
+            {
+                MessageBox.Show("Vous devez donner le nom du personnel.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (textBox5.Text == "")
+            {
+                MessageBox.Show("Vous devez donner le prenom du personnel.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Vous devez donner un email correct.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+             
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Vous devez donner un mot de passe .", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+
             MessageBox.Show(
                 Databaseconnection.Ajouter_intervenant(textBox4.Text, textBox5.Text, textBox1.Text, textBox2.Text) ?
                 "Personnel ajouté avec succée" :

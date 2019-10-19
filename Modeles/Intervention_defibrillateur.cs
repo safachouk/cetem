@@ -24,7 +24,11 @@ namespace CetemLibrary.Modeles
         public string Numero_demande10;
         public string type_equip2;
         public string etat_equip25;
-        public int id_defib; 
+        public int id_defib;
+
+        public Intervention_defibrillateur()
+        {
+        }
 
         public Intervention_defibrillateur(string nud, string dated , string etatd , string interd , string tsed , string timsd , string timnd , string ttcd , string tmed , string tpd , string mond , string tepd , string cd , string nmd , string teqd , string eeqd , int iddefb)
         {
