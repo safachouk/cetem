@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace @interface
 
-    {  
+    {
     public partial class Pages : Form
-{
+    {
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
         }
         public Pages()
-    {
+        {
             InitializeComponent();
             remplirMonCompte();
             UpdateListsEquipement();
@@ -30,8 +30,9 @@ namespace @interface
             UpdateListsinterventionbist();
             UpdateListsinterventionpouss();
             UpdateListsinterventiondefib();
-           
-          
+            setPersonnelVisibility(Databaseconnection.Utilisateur_courant.type == "Admin");
+
+
 
         }
         public void remplirMonCompte()
@@ -44,14 +45,25 @@ namespace @interface
             }
 
         }
+        public void setPersonnelVisibility(bool visible)
+        {
+            if (visible)
+            {
+                if (travail.TabCount < 6)
+                    travail.TabPages.Add(tabPage6);
+            }
+            else
+            {
+                travail.TabPages.Remove(tabPage6);
+            }
+        }
         private void Button3_Click(object sender, EventArgs e)
         {
-            Ajouter_equipement  Aequipement = new Ajouter_equipement();
+            Ajouter_equipement Aequipement = new Ajouter_equipement();
             Aequipement.Tag = this;
             Aequipement.Show(this);
             //Aequipement.FormClosing;
             UpdateListsEquipement();
-
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -61,8 +73,8 @@ namespace @interface
                 var selectedrow = dataGridView1.SelectedRows[0];
 
                 Modifier_equipement Mequipement = new Modifier_equipement();
-                Mequipement.setEquipement((int)selectedrow.Cells[0].Value);
-                
+                Mequipement.setEquipement(Int32.Parse(selectedrow.Cells[0].Value.ToString()));
+
                 Mequipement.Tag = this;
                 Mequipement.Show(this);
 
@@ -71,7 +83,7 @@ namespace @interface
             {
                 MessageBox.Show("Veuillez selectionnez une ligne entiére.");
             }
-            
+
         }
 
         private void Button5_Click(object sender, EventArgs e)
@@ -108,12 +120,12 @@ namespace @interface
 
         private void Button7_Click(object sender, EventArgs e)
         {
-           /* bool? result = null;
-            if (intervention.interventionSelectionner != null)
-                result = Databaseconnection.supprimer_intervention(intervention.interventionSelectionner.Id1);
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "Intervention supprimé." : "erreur de supprission de l'intervention.");
-                */
+            /* bool? result = null;
+             if (intervention.interventionSelectionner != null)
+                 result = Databaseconnection.supprimer_intervention(intervention.interventionSelectionner.Id1);
+             if (result.HasValue)
+                 MessageBox.Show(result.Value ? "Intervention supprimé." : "erreur de supprission de l'intervention.");
+                 */
         }
 
         private void Button9_Click(object sender, EventArgs e)
@@ -160,20 +172,20 @@ namespace @interface
 
         }
 
-       // private void Button14_Click(object sender, EventArgs e)
-       // {
-           // if ()
-            //{
-              //  ModifierIntervention Minterventions = new ModifierIntervention();
-                //Minterventions.Tag = this;
-                //Minterventions.Show(this);
-            //}
+        // private void Button14_Click(object sender, EventArgs e)
+        // {
+        // if ()
+        //{
+        //  ModifierIntervention Minterventions = new ModifierIntervention();
+        //Minterventions.Tag = this;
+        //Minterventions.Show(this);
+        //}
         //}
 
         private void Button17_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-            Databaseconnection.Ajouter_Hopital(comboBox5.Text , textBox7.Text) ?
+            Databaseconnection.Ajouter_Hopital(comboBox5.Text, textBox7.Text) ?
              "Hopital ajouté avec succée" :
              "Problem d'ajout de l'hopital");
         }
@@ -221,7 +233,7 @@ namespace @interface
 
         private void Button4_Click_1(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -240,7 +252,7 @@ namespace @interface
 
         }
 
-        public  void ComboBox29_SelectedIndexChanged(object sender, EventArgs e)
+        public void ComboBox29_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -255,11 +267,11 @@ namespace @interface
 
         }
 
-       
+
 
         private void UpdateListsEquipement()
         {
-            
+
             dataGridView1.DataSource = Databaseconnection.fillEquipement();
 
         }
@@ -274,13 +286,13 @@ namespace @interface
         {
             dataGridView3.DataSource = Databaseconnection.filldemande();
         }
-      private void UpdateListsinterventionresp()
+        private void UpdateListsinterventionresp()
         {
 
             dataGridView4.DataSource = Databaseconnection.fillinterventionresp();
         }
 
-      public void  UpdateListsinterventionbist()
+        public void UpdateListsinterventionbist()
         {
             dataGridView5.DataSource = Databaseconnection.fillinterventbistouri();
 
@@ -334,7 +346,7 @@ namespace @interface
             if (dataGridView3.SelectedRows.Count == 1)
             {
                 var selectedrow3 = dataGridView3.SelectedRows[0];
-                result = Databaseconnection.supprime_demande((int)selectedrow3.Cells[0].Value);
+                result = Databaseconnection.supprime_demande(Int32.Parse(selectedrow3.Cells[0].Value.ToString()));
             }
             else
             {
@@ -360,7 +372,7 @@ namespace @interface
         private void Button12_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-          Databaseconnection.Modifier_mon_compte(textBox4.Text , textBox5.Text , textBox3.Text , maskedTextBox1.Text,Databaseconnection.Utilisateur_courant.Id) ?
+          Databaseconnection.Modifier_mon_compte(textBox4.Text, textBox5.Text, textBox3.Text, maskedTextBox1.Text, Databaseconnection.Utilisateur_courant.Id) ?
            "personnelle modifié avec succée" :
            "Problem de modification");
 
@@ -388,66 +400,66 @@ namespace @interface
 
         private void Button4_Click_2(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button7_Click_2(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Button6_Click_2(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Button20_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button25_Click(object sender, EventArgs e)
         {
-       
+
         }
 
-     
+
 
         private void Button22_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button19_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button26_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Button23_Click(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void Button18_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button27_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void Button21_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void filtreAgain(object sender, EventArgs e)
@@ -489,18 +501,18 @@ namespace @interface
 
         private void Button7_Click_3(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button18_Click_2(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void Button20_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Button4_Click_5(object sender, EventArgs e)
@@ -674,6 +686,12 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "défibrillateur supprimé." : "erreur de suppression du défibrillateur.");
+        }
+
+        private void Button16_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CetemLibrary
         public string prenom;
         public string email;
         public string password;
+        public string type;
        
 
         public string Nom { get => nom; set => nom = value; }
@@ -26,13 +27,14 @@ namespace CetemLibrary
 
        
 
-        public Utilisateur(string nm,string prenm,string mail,string pass, int id)
+        public Utilisateur(string nm,string prenm,string mail,string pass,string type12, int id)
         {
            
             Nom = nm;
             Prenom = prenm;
             Email = mail;
             Password = pass;
+            type = type12; 
             Id = id;
           
         }

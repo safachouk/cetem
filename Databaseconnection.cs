@@ -389,6 +389,7 @@ namespace CetemLibrary
                             reader.GetString("prenom_technicen"),
                             reader.GetString("e_mail"),
                             reader.GetString("password"),
+                             reader.GetString("type"),
                             reader.GetInt32("id_tech"));
                         reader.Close();
                         conn.Close();
@@ -452,7 +453,7 @@ namespace CetemLibrary
             {
                 var dbm = new Dispositifsbiomedicale();
                 conn.Open();
-                var cmd = new MySqlCommand("SELECT type As 'Type' , marque As 'Marque' , NUM_SERIE As 'Numéro série' , nom_de_hopital As 'Hopital' , Nom_de_service As 'service'  , Nom_Region As 'region' , Modele As 'Modéle'  , id_equipement As 'Identifiant' FROM equipements WHERE id_equipement=@id", conn);
+                var cmd = new MySqlCommand("SELECT * FROM equipements WHERE id_equipement=@id", conn);
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Prepare();
                 var reader = cmd.ExecuteReader();
@@ -515,6 +516,7 @@ namespace CetemLibrary
                             reader.GetString("prenom_technicen"),
                             reader.GetString("e_mail"),
                             reader.GetString("password"),
+                            reader.GetString("type"),
                             reader.GetInt32("ID_Tech"));
                         reader.Close();
                         conn.Close();
