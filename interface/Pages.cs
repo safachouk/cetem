@@ -221,10 +221,7 @@ namespace @interface
 
         private void Button4_Click_1(object sender, EventArgs e)
         {
-            AjouterIntervention_Respirateur Aresp = new AjouterIntervention_Respirateur();
-            Aresp.Tag = this;
-            Aresp.Show(this);
-            UpdateListsinterventionresp();
+            
 
         }
 
@@ -391,30 +388,132 @@ namespace @interface
 
         private void Button4_Click_2(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Button7_Click_2(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Button6_Click_2(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void Button20_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button25_Click(object sender, EventArgs e)
+        {
+       
+        }
+
+     
+
+        private void Button22_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button19_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button26_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Button23_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void Button18_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button27_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void Button21_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void filtreAgain(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabPage9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabPage10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button21_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_Click_4(object sender, EventArgs e)
+        {
             AjouterIntervention_Respirateur Arespir = new AjouterIntervention_Respirateur();
             Arespir.Tag = this;
             Arespir.Show(this);
             UpdateListsinterventionresp();
         }
 
-        private void Button7_Click_2(object sender, EventArgs e)
+        private void Button6_Click_3(object sender, EventArgs e)
         {
-            bool? result = null;
-            if (dataGridView4.SelectedRows.Count == 1)
-            {
-                var selectedrow7 = dataGridView4.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_respirateur((int)selectedrow7.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "Respirateur supprimé." : "erreur de suppression de respirateur.");
         }
 
-        private void Button6_Click_2(object sender, EventArgs e)
+        private void Button7_Click_3(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Button18_Click_2(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void Button20_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button4_Click_5(object sender, EventArgs e)
+        {
+            AjouterIntervention_Respirateur Aresp = new AjouterIntervention_Respirateur();
+            Aresp.Tag = this;
+            Aresp.Show(this);
+            UpdateListsinterventionresp();
+        }
+
+        private void Button6_Click_4(object sender, EventArgs e)
+        {
+
             if (dataGridView4.SelectedRows.Count == 1)
             {
                 var selectedrow = dataGridView4.SelectedRows[0];
@@ -432,7 +531,23 @@ namespace @interface
             }
         }
 
-        private void Button20_Click(object sender, EventArgs e)
+        private void Button7_Click_4(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (dataGridView4.SelectedRows.Count == 1)
+            {
+                var selectedrow7 = dataGridView4.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_respirateur((int)selectedrow7.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "Respirateur supprimé." : "erreur de suppression de respirateur.");
+        }
+
+        private void Button18_Click_3(object sender, EventArgs e)
         {
             Ajouterintervention_bistouri Abist = new Ajouterintervention_bistouri();
             Abist.Tag = this;
@@ -440,25 +555,7 @@ namespace @interface
             UpdateListsinterventionbist();
         }
 
-        private void Button25_Click(object sender, EventArgs e)
-        {
-            bool? result = null;
-            if (dataGridView5.SelectedRows.Count == 1)
-            {
-                var selectedrow9 = dataGridView5.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_bistouri((int)selectedrow9.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "Bistouri supprimé." : "erreur de suppression de bistouri.");
-        }
-
-     
-
-        private void Button22_Click(object sender, EventArgs e)
+        private void Button19_Click_1(object sender, EventArgs e)
         {
             if (dataGridView5.SelectedRows.Count == 1)
             {
@@ -477,7 +574,23 @@ namespace @interface
             }
         }
 
-        private void Button19_Click(object sender, EventArgs e)
+        private void Button20_Click_2(object sender, EventArgs e)
+        {
+            bool? result = null;
+            if (dataGridView5.SelectedRows.Count == 1)
+            {
+                var selectedrow9 = dataGridView5.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_bistouri((int)selectedrow9.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "Bistouri supprimé." : "erreur de suppression de bistouri.");
+        }
+
+        private void Button24_Click(object sender, EventArgs e)
         {
             Ajouterintervention_Pousse_seringe Apoussser = new Ajouterintervention_Pousse_seringe();
             Apoussser.Tag = this;
@@ -485,7 +598,26 @@ namespace @interface
             UpdateListsinterventionpouss();
         }
 
-        private void Button26_Click(object sender, EventArgs e)
+        private void Button25_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView7.SelectedRows.Count == 1)
+            {
+                var selectedrow = dataGridView7.SelectedRows[0];
+
+                Modifier_pousse_seringue mpoussseri = new Modifier_pousse_seringue();
+                mpoussseri.setpousseseringue((int)selectedrow.Cells[0].Value);
+
+                mpoussseri.Tag = this;
+                mpoussseri.Show(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+        }
+
+        private void Button26_Click_1(object sender, EventArgs e)
         {
             bool? result = null;
             if (dataGridView7.SelectedRows.Count == 1)
@@ -501,27 +633,7 @@ namespace @interface
                 MessageBox.Show(result.Value ? "Pousse seringue supprimé." : "erreur de suppression du pousse seringue.");
         }
 
-        private void Button23_Click(object sender, EventArgs e)
-        {
-
-            if (dataGridView7.SelectedRows.Count == 1)
-            {
-                var selectedrow = dataGridView7.SelectedRows[0];
-
-                Modifier_pousse_seringue mpoussseri = new Modifier_pousse_seringue ();
-                mpoussseri.setpousseseringue((int)selectedrow.Cells[0].Value);
-
-                mpoussseri.Tag = this;
-                mpoussseri.Show(this);
-
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-        }
-
-        private void Button18_Click_1(object sender, EventArgs e)
+        private void Button21_Click_2(object sender, EventArgs e)
         {
             Ajouterintervention_defibrillateur Adefib = new Ajouterintervention_defibrillateur();
             Adefib.Tag = this;
@@ -529,24 +641,7 @@ namespace @interface
             UpdateListsinterventiondefib();
         }
 
-        private void Button27_Click(object sender, EventArgs e)
-        {
-            bool? result = null;
-            if (dataGridView6.SelectedRows.Count == 1)
-            {
-                var selectedrow10 = dataGridView6.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_defibrillateur((int)selectedrow10.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "défibrillateur supprimé." : "erreur de suppression du défibrillateur.");
-
-        }
-
-        private void Button21_Click(object sender, EventArgs e)
+        private void Button22_Click_1(object sender, EventArgs e)
         {
             if (dataGridView6.SelectedRows.Count == 1)
             {
@@ -565,11 +660,20 @@ namespace @interface
             }
         }
 
-        private void filtreAgain(object sender, EventArgs e)
+        private void Button23_Click_1(object sender, EventArgs e)
         {
-
+            bool? result = null;
+            if (dataGridView6.SelectedRows.Count == 1)
+            {
+                var selectedrow10 = dataGridView6.SelectedRows[0];
+                result = Databaseconnection.supprimer_interv_defibrillateur((int)selectedrow10.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
+            }
+            if (result.HasValue)
+                MessageBox.Show(result.Value ? "défibrillateur supprimé." : "erreur de suppression du défibrillateur.");
         }
-
-      
     }
 }
