@@ -58,12 +58,12 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.ItemHeight = 21;
             this.comboBox2.Items.AddRange(new object[] {
-            "Respirateur d’anesthésie",
             "Respirateur de réanimation ",
             "Respirateur de transport ",
             "Bistouri ",
             "Pousse seringe ",
-            "Défibrillateur "});
+            "Défibrillateur ",
+            "Respirateur anesthésie "});
             this.comboBox2.Location = new System.Drawing.Point(463, 374);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
@@ -268,9 +268,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(198, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(618, 44);
+            this.label1.Size = new System.Drawing.Size(550, 44);
             this.label1.TabIndex = 134;
-            this.label1.Text = "Ajouter un  équipement ";
+            this.label1.Text = "Ajouter   équipement ";
             // 
             // pictureBox1
             // 
