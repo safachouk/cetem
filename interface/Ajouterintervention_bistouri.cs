@@ -41,7 +41,7 @@ namespace @interface
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text=="")
+            if (dateTimePicker1.Text=="")
             {
                 MessageBox.Show("Vous devez donner le numéro d'intervention.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -97,7 +97,7 @@ namespace @interface
             string testfuitepartieneutre = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
             MessageBox.Show(
-          Databaseconnection.ajout_boustri (textBox4.Text , textBox1.Text , etatintervention3 , comboBox3.Text , textBox3.Text , securitelectrique4 , testmodes , richTextBox1.Text , comboBox1.Text , testfuitepartieactive , testfuitepartieneutre , etatequipement3 , comboBox2.Text) ?
+          Databaseconnection.ajout_boustri (dateTimePicker1.Text , textBox1.Text , etatintervention3 , comboBox3.Text , textBox3.Text , securitelectrique4 , testmodes , richTextBox1.Text , comboBox1.Text , testfuitepartieactive , testfuitepartieneutre , etatequipement3 , comboBox2.Text) ?
            "Bistouri ajouté avec succée" :
            "Problem d'ajout de Bistouri");
 

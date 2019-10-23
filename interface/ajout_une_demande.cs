@@ -63,12 +63,7 @@ namespace @interface
                 return;
             }
 
-            if (textBox1.Text =="")
-            {
-                MessageBox.Show("la date de la demande est AAAA-MM-JJ.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
+           
 
             if(comboBox6.Text == "")
             {
@@ -116,7 +111,7 @@ namespace @interface
                 return;
             }
             MessageBox.Show(
-        Databaseconnection.Ajouter_demande(textBox2.Text , textBox3.Text , textBox5.Text , textBox6.Text , textBox4.Text , textBox7.Text , textBox1.Text , comboBox6.Text , textBox8.Text , comboBox9.Text , comboBox8.Text) ?
+        Databaseconnection.Ajouter_demande(textBox2.Text , textBox3.Text , textBox5.Text , textBox6.Text , textBox4.Text , textBox7.Text , dateTimePicker1.Text , comboBox6.Text , textBox8.Text , comboBox9.Text , comboBox8.Text) ?
          "Demande ajouté avec succée" :
          "Problem d'ajout de la demande");
             UpdateLists();

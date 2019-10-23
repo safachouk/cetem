@@ -136,7 +136,7 @@ S= button1.text...*/
 
 
             MessageBox.Show(
-           Databaseconnection.intervention_respirateur(textBox2.Text , textBox1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention, etatsecurite , etatvc, etatequipement, etatoxyg, etatpress , etatvac, richTextBox1.Text) ?
+           Databaseconnection.intervention_respirateur(textBox2.Text , dateTimePicker1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention, etatsecurite , etatvc, etatequipement, etatoxyg, etatpress , etatvac, richTextBox1.Text) ?
             "Respirateur ajouté avec succée" :
             "Problem d'ajout de Respirateur");
         

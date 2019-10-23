@@ -39,7 +39,7 @@ namespace @interface
                 return;
             }
              
-            if (textBox2.Text == "")
+            if (maskedTextBox1.Text == "")
             {
                 MessageBox.Show("Vous devez donner un mot de passe .", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -48,7 +48,7 @@ namespace @interface
 
 
             MessageBox.Show(
-                Databaseconnection.Ajouter_intervenant(textBox4.Text, textBox5.Text, textBox1.Text, textBox2.Text) ?
+                Databaseconnection.Ajouter_intervenant(textBox4.Text, textBox5.Text, textBox1.Text, maskedTextBox1.Text) ?
                 "Personnel ajouté avec succée" :
                 "Problem d'ajout de personnel");
         }

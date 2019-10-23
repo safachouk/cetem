@@ -38,24 +38,24 @@ namespace @interface
         public void setdemande(int id)
         {
             demm = Databaseconnection.getdemande(id);
-            textBox2.Text= demm.Nombre_Respirateur_anesthesie ;
+            textBox8.Text= demm.Nombre_Respirateur_anesthesie ;
             textBox1.Text = demm.Date_Demande;
             comboBox6.Text = demm.Etat_demande;
-            textBox8.Text = demm.Numero_demande;
+            textBox1.Text = demm.Numero_demande;
             comboBox9.Text = demm.region_demande;
             comboBox8.Text = demm.Hopital_demande;
-            textBox3.Text = demm.Nombre_respirateur_reanimation;
-            textBox5.Text = demm.nombre_pousse_seringe;
-            textBox6.Text = demm.nombre_defibrillateur;
-            textBox4.Text = demm.Nombre_respirateur_transport;
-            textBox7.Text = demm.Nombre_bistouri ;
+            textBox9.Text = demm.Nombre_respirateur_reanimation;
+            textBox11.Text = demm.nombre_pousse_seringe;
+            textBox12.Text = demm.nombre_defibrillateur;
+            textBox10.Text = demm.Nombre_respirateur_transport;
+            textBox13.Text = demm.Nombre_bistouri ;
 
         }
 
         private void Button10_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-         Databaseconnection.Modifier_Demande(textBox2.Text ,textBox1.Text, comboBox6.Text, textBox8.Text, comboBox9.Text, comboBox8.Text, textBox3.Text , textBox5.Text , textBox6.Text , textBox4.Text , textBox7.Text , demm.ID_DEMANDE) ?
+         Databaseconnection.Modifier_Demande(textBox8.Text , dateTimePicker1.Text, comboBox6.Text, textBox1.Text, comboBox9.Text, comboBox8.Text, textBox9.Text , textBox11.Text , textBox12.Text , textBox10.Text , textBox7.Text , demm.ID_DEMANDE) ?
           "demande Modifier avec succée" :
           "Problem de modification de la demande ");
         }

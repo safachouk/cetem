@@ -125,5 +125,10 @@ namespace @interface
         {
 
         }
+
+        private void DateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

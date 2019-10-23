@@ -45,7 +45,7 @@ namespace @interface
         {
             de = Databaseconnection.getdefibrillateur(id);
             textBox1.Text = de.Numero_intervention6;
-            textBox2.Text = de.Date_intervention;
+            dateTimePicker1.Text = de.Date_intervention;
           
             switch(de.Etat_intervention)
             {
@@ -59,7 +59,7 @@ namespace @interface
            
             switch (de.Test_securit_electrique)
             {
-                case "Bon": radioButton12.Select();
+                case "True": radioButton12.Select();
                     break;
                 default:
                     radioButton11.Select(); break;
@@ -67,7 +67,7 @@ namespace @interface
         
             switch (de.Test_indicateur_mode_synchro)
             {
-                case "Bon":
+                case "True":
                     radioButton6.Select();
                     break;
                 default:
@@ -76,7 +76,7 @@ namespace @interface
          
             switch (de.Test_indicateur_mode_normale)
             {
-                case "Bon":
+                case "True":
                     radioButton16.Select();
                     break;
                 default:
@@ -85,7 +85,7 @@ namespace @interface
          
             switch (de.Test_temps_charge)
             {
-                case "Bon":
+                case "True":
                     radioButton8.Select();
                     break;
                 default:
@@ -94,7 +94,7 @@ namespace @interface
          
             switch (de.Testmesureenergie)
             {
-                case "Bon":
+                case "True":
                     radioButton10.Select();
                     break;
                 default:
@@ -103,7 +103,7 @@ namespace @interface
         
             switch (de.Test_taux_de_perte)
             {
-                case "Bon":
+                case "True":
                     radioButton14.Select();
                     break;
                 default:
@@ -112,7 +112,7 @@ namespace @interface
          
             switch (de.Testmoniteurecg)
             {
-                case "Bon":
+                case "True":
                     radioButton18.Select();
                     break;
                 default:
@@ -121,7 +121,7 @@ namespace @interface
          
             switch (de.Testenregistrementpapier)
             {
-                case "Bon":
+                case "True":
                     radioButton20.Select();
                     break;
                 default:
@@ -133,7 +133,7 @@ namespace @interface
             
             switch (de.etat_equip25)
             {
-                case "Bonne": radioButton3.Select();
+                case "True": radioButton3.Select();
                     break;
                 default:
                     radioButton4.Select();break;
@@ -141,6 +141,21 @@ namespace @interface
 
 
 
+
+        }
+
+        private void Modifier_interv_defibr_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox7_Enter(object sender, EventArgs e)
+        {
 
         }
 
@@ -159,11 +174,9 @@ namespace @interface
 
 
             MessageBox.Show(
-        Databaseconnection.Modifier_interv_defibrillateur(textBox1.Text, textBox2.Text, etatintervention5661, comboBox3.Text, testsecuriteelectrique5561, testindicateursynchro1, indicateurnormale1, testtempscharge1, testenergie1, tauxperte1, testmoniteur1, enregistrementpapier1, richTextBox1.Text, comboBox2.Text, textBox3.Text, etatequipement5661 , de.id_defib) ?
+        Databaseconnection.Modifier_interv_defibrillateur(textBox1.Text, dateTimePicker1.Text, etatintervention5661, comboBox3.Text, testsecuriteelectrique5561, testindicateursynchro1, indicateurnormale1, testtempscharge1, testenergie1, tauxperte1, testmoniteur1, enregistrementpapier1, richTextBox1.Text, comboBox2.Text, textBox3.Text, etatequipement5661, de.id_defib) ?
          "Défibrillateur modifié avec succée" :
          "Problem de modification de Défibrillateur");
         }
-
-       
     }
 }

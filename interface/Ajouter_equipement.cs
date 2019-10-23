@@ -98,8 +98,8 @@ namespace @interface
             Databaseconnection.Ajouter_equipement(comboBox2.Text , textBox2.Text , textBox3.Text , textBox1.Text , comboBox1.Text , comboBox3.Text , comboBox4.Text) ?
              "équipement ajouté avec succée" :
              "Problem d'ajout de l'équipement");
-       
 
+            this.Close();
 
         }
 
@@ -109,6 +109,11 @@ namespace @interface
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ajouter_equipement_Load(object sender, EventArgs e)
         {
 
         }

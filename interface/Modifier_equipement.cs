@@ -24,33 +24,33 @@ namespace @interface
 
         private void ajoutservice()
         {
-            comboBox4.Items.Clear();
-            comboBox4.Items.AddRange(Databaseconnection.getservice());
+            comboBox5.Items.Clear();
+            comboBox5.Items.AddRange(Databaseconnection.getservice());
         }
 
         private void ajouterregion()
         {
-            comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.GetRegions());
+            comboBox7.Items.Clear();
+            comboBox7.Items.AddRange(Databaseconnection.GetRegions());
         }
 
         private void ajouthopital()
         {
-            comboBox3.Items.Clear();
-            comboBox3.Items.AddRange(Databaseconnection.gethopital());
+            comboBox6.Items.Clear();
+            comboBox6.Items.AddRange(Databaseconnection.gethopital());
         }
 
         Dispositifsbiomedicale elem; 
         public void setEquipement(int id)
         {
             elem = Databaseconnection.getEquipement(id);
-            comboBox1.Text = elem.Nom_region1;
-            comboBox2.Text = elem.Type1;
-            comboBox3.Text = elem.Nom_hopital1;
-            comboBox4.Text = elem.Nom_service1;
-            textBox3.Text = elem.Marque1;
-            textBox5.Text = elem.modele1;
-            textBox1.Text = elem.Numero_serie1;
+            comboBox7.Text = elem.Nom_region1;
+            comboBox8.Text = elem.Type1;
+            comboBox6.Text = elem.Nom_hopital1;
+            comboBox5.Text = elem.Nom_service1;
+            textBox5.Text = elem.Marque1;
+            textBox2.Text = elem.modele1;
+            textBox3.Text = elem.Numero_serie1;
             
 
 
@@ -65,7 +65,7 @@ namespace @interface
         private void Button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-           Databaseconnection.Modifier_equipmement(textBox3.Text, comboBox2.Text, textBox5.Text, textBox1.Text, comboBox3.Text, comboBox4.Text, comboBox1.Text, elem.Id)?
+           Databaseconnection.Modifier_equipmement(textBox5.Text, comboBox8.Text, textBox2.Text, textBox3.Text, comboBox6.Text, comboBox5.Text, comboBox7.Text, elem.Id)?
             "équipement Modifier avec succée" :
             "Problem de modification de l'équipement");
         }

@@ -45,7 +45,7 @@ namespace @interface
         {
             x = Databaseconnection.getbistouri(id);
             textBox1.Text = x.Numero_intervention;
-            textBox2.Text = x.Date_intervention;
+            dateTimePicker1.Text = x.Date_intervention;
           
             switch (x.Etat_intervention)
             {
@@ -117,7 +117,7 @@ namespace @interface
             string testfuitepartieneutre1 = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
             MessageBox.Show(
-          Databaseconnection.Modifier_interv_bistouri(textBox1.Text, textBox2.Text, etatintervention33, comboBox3.Text, textBox3.Text , securitelectrique44, testmodes1, richTextBox1.Text, comboBox1.Text , testfuitepartieactive1, testfuitepartieneutre1, etatequipement33, comboBox2.Text , x.idintervention) ?
+          Databaseconnection.Modifier_interv_bistouri(textBox1.Text, dateTimePicker1.Text, etatintervention33, comboBox3.Text, textBox3.Text , securitelectrique44, testmodes1, richTextBox1.Text, comboBox1.Text , testfuitepartieactive1, testfuitepartieneutre1, etatequipement33, comboBox2.Text , x.idintervention) ?
            "Bistouri modifié avec succée" :
            "Problem de modification de Bistouri");
 

@@ -45,7 +45,7 @@ namespace @interface
         {
             respmo= Databaseconnection.getrespirateur(id);
             textBox1.Text = respmo.Numero_intervention;
-            textBox2.Text = respmo.Date_intervention;
+            dateTimePicker1.Text = respmo.Date_intervention;
             comboBox3.Text = respmo.Intervenant;
             comboBox1.Text = respmo.Numero_demande;
             comboBox29.Text =  respmo.type_equip;
@@ -171,7 +171,7 @@ namespace @interface
                 etatoxyg1 = radioButton18.Text;
 
             MessageBox.Show(
-          Databaseconnection.Modifier_interv_respirateur(textBox1.Text, textBox2.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention1, etatsecurite1, etatvc1, etatequipement1, etatoxyg1, etatpress1, etatvac1, richTextBox1.Text , respmo.ID_intervention_resp) ?
+          Databaseconnection.Modifier_interv_respirateur(textBox1.Text, dateTimePicker1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention1, etatsecurite1, etatvc1, etatequipement1, etatoxyg1, etatpress1, etatvac1, richTextBox1.Text , respmo.ID_intervention_resp) ?
            "Respirateur modifié avec succée" :
            "Problem de modification de Respirateur");
 
@@ -186,6 +186,11 @@ namespace @interface
         }
 
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox6_Enter(object sender, EventArgs e)
         {
 
         }

@@ -25,7 +25,7 @@ namespace @interface
             textBox1.Text = pers.Nom;
             textBox2.Text = pers.Prenom;
             textBox3.Text = pers.Email;
-            textBox4.Text = pers.Password; 
+            maskedTextBox1.Text = pers.Password; 
         }
 
     
@@ -34,9 +34,14 @@ namespace @interface
         {
             
             MessageBox.Show(
-          Databaseconnection.Modifier_Personnel(textBox1.Text , textBox2.Text, textBox3.Text , textBox4.Text , pers.Id) ?
+          Databaseconnection.Modifier_Personnel(textBox1.Text , textBox2.Text, textBox3.Text , maskedTextBox1.Text, pers.Id) ?
            "Personnel Modifier avec succée" :
            "Problem de modification du personnel");
+        }
+
+        private void Modifier_personnel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

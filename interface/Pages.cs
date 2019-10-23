@@ -39,9 +39,9 @@ namespace @interface
         {
             if (Databaseconnection.Utilisateur_courant != null)
             {
-                textBox4.Text = Databaseconnection.Utilisateur_courant.Nom;
-                textBox5.Text = Databaseconnection.Utilisateur_courant.Prenom;
-                textBox3.Text = Databaseconnection.Utilisateur_courant.Email;
+                textBox3.Text = Databaseconnection.Utilisateur_courant.Nom;
+                textBox4.Text = Databaseconnection.Utilisateur_courant.Prenom;
+                textBox5.Text = Databaseconnection.Utilisateur_courant.Email;
             }
 
         }
@@ -62,8 +62,9 @@ namespace @interface
             Ajouter_equipement Aequipement = new Ajouter_equipement();
             Aequipement.Tag = this;
             Aequipement.Show(this);
-            //Aequipement.FormClosing;
             UpdateListsEquipement();
+         
+         
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -311,10 +312,7 @@ namespace @interface
 
         private void Button10_Click_1(object sender, EventArgs e)
         {
-            ajout_une_demande Adem = new ajout_une_demande();
-            Adem.Tag = this;
-            Adem.Show(this);
-            UpdateListsdemande();
+           
 
         }
 
@@ -372,7 +370,7 @@ namespace @interface
         private void Button12_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-          Databaseconnection.Modifier_mon_compte(textBox4.Text, textBox5.Text, textBox3.Text, maskedTextBox1.Text, Databaseconnection.Utilisateur_courant.Id) ?
+          Databaseconnection.Modifier_mon_compte(textBox3.Text, textBox4.Text, textBox5.Text, maskedTextBox2.Text, Databaseconnection.Utilisateur_courant.Id) ?
            "personnelle modifié avec succée" :
            "Problem de modification");
 
@@ -692,6 +690,44 @@ namespace @interface
         {
             Application.Restart();
         
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ContextMenuStrip6_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            ajout_une_demande Adem = new ajout_une_demande();
+            Adem.Tag = this;
+            Adem.Show(this);
+            UpdateListsdemande();
+        }
+
+        private void DataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TabPage10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox4_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
