@@ -77,12 +77,18 @@ namespace @interface
             string testpremiervoie = radioButton7.Checked ? radioButton7.Text : radioButton8.Text;
             string testdeuxiemevoie = radioButton9.Checked ? radioButton9.Text : radioButton10.Text;
 
-          
 
- MessageBox.Show(
-           Databaseconnection.intervention_pousse_seringe(textBox3.Text , dateTimePicker1.Text , etatintervention1 , comboBox3.Text , etatsecurite1 , testpremiervoie , testdeuxiemevoie , richTextBox1.Text , comboBox1.Text , etatequipement1 , comboBox2.Text) ?
-            "Pousse seringue ajouté avec succée" :
-            "Problem d'ajout de Pousse seringue");
+
+
+            var result = Databaseconnection.intervention_pousse_seringe(textBox3.Text, dateTimePicker1.Text, etatintervention1, comboBox3.Text, etatsecurite1, testpremiervoie, testdeuxiemevoie, richTextBox1.Text, comboBox1.Text, etatequipement1, comboBox2.Text);
+            
+            if (result)
+            {
+                MessageBox.Show("Pousse seringue ajouté avec succée");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Problem d'ajout de Pousse seringue");
 
 
         }

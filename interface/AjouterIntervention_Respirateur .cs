@@ -132,14 +132,20 @@ S= button1.text...*/
                 etatoxyg = radioButton17.Checked ? radioButton17.Text : radioButton16.Text;
             else
                 etatoxyg = radioButton18.Text;
-            
 
 
-            MessageBox.Show(
-           Databaseconnection.intervention_respirateur(textBox2.Text , dateTimePicker1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention, etatsecurite , etatvc, etatequipement, etatoxyg, etatpress , etatvac, richTextBox1.Text) ?
-            "Respirateur ajouté avec succée" :
-            "Problem d'ajout de Respirateur");
-        
+
+
+            var result = Databaseconnection.intervention_respirateur(textBox2.Text, dateTimePicker1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention, etatsecurite, etatvc, etatequipement, etatoxyg, etatpress, etatvac, richTextBox1.Text);
+           
+            if (result)
+            {
+                MessageBox.Show("Respirateur ajouté avec succée");
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem d'ajout de Respirateur");
 
 
         }

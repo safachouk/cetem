@@ -32,11 +32,17 @@ namespace @interface
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
-            MessageBox.Show(
-          Databaseconnection.Modifier_Personnel(textBox1.Text , textBox2.Text, textBox3.Text , maskedTextBox1.Text, pers.Id) ?
-           "Personnel Modifier avec succée" :
-           "Problem de modification du personnel");
+
+
+            var result = Databaseconnection.Modifier_Personnel(textBox1.Text, textBox2.Text, textBox3.Text, maskedTextBox1.Text, pers.Id);
+          
+            if (result)
+            {
+                MessageBox.Show("Personnel Modifier avec succée");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Problem de modification du personnel");
         }
 
         private void Modifier_personnel_Load(object sender, EventArgs e)

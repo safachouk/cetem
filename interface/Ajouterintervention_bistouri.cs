@@ -96,10 +96,16 @@ namespace @interface
             string testfuitepartieactive = radioButton9.Checked ? radioButton9.Text : radioButton10.Text;
             string testfuitepartieneutre = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
-            MessageBox.Show(
-          Databaseconnection.ajout_boustri (dateTimePicker1.Text , textBox1.Text , etatintervention3 , comboBox3.Text , textBox3.Text , securitelectrique4 , testmodes , richTextBox1.Text , comboBox1.Text , testfuitepartieactive , testfuitepartieneutre , etatequipement3 , comboBox2.Text) ?
-           "Bistouri ajouté avec succée" :
-           "Problem d'ajout de Bistouri");
+
+            var result = Databaseconnection.ajout_boustri(dateTimePicker1.Text, textBox1.Text, etatintervention3, comboBox3.Text, textBox3.Text, securitelectrique4, testmodes, richTextBox1.Text, comboBox1.Text, testfuitepartieactive, testfuitepartieneutre, etatequipement3, comboBox2.Text); 
+           
+            if(result)
+            {
+                MessageBox.Show("Bistouri ajouté avec succée");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Problem d'ajout de Bistouri");
 
          
         }

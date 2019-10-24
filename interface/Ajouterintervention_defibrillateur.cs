@@ -105,14 +105,15 @@ namespace @interface
             string tauxperte = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
 
-            MessageBox.Show(
-        Databaseconnection.ajout_defibrillateur(textBox6.Text , textBox3.Text , etatintervention566 , comboBox3.Text , testsecuriteelectrique556 , testindicateursynchro , indicateurnormale , testtempscharge , testenergie , tauxperte , testmoniteur , enregistrementpapier , richTextBox1.Text , comboBox2.Text , textBox5.Text , etatequipement566 ) ?
-         "Défibrillateur ajouté avec succée" :
-         "Problem d'ajout de Défibrillateur");
-           
 
-
-
+            var result = Databaseconnection.ajout_defibrillateur(textBox6.Text, textBox3.Text, etatintervention566, comboBox3.Text, testsecuriteelectrique556, testindicateursynchro, indicateurnormale, testtempscharge, testenergie, tauxperte, testmoniteur, enregistrementpapier, richTextBox1.Text, comboBox2.Text, textBox5.Text, etatequipement566);
+          if (result)
+            {
+                MessageBox.Show("Défibrillateur ajouté avec succée");
+                this.Close();
+            }
+          else
+                MessageBox.Show("Problem d'ajout de Défibrillateur");
 
 
 

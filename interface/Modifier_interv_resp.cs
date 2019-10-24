@@ -170,10 +170,16 @@ namespace @interface
             else
                 etatoxyg1 = radioButton18.Text;
 
-            MessageBox.Show(
-          Databaseconnection.Modifier_interv_respirateur(textBox1.Text, dateTimePicker1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention1, etatsecurite1, etatvc1, etatequipement1, etatoxyg1, etatpress1, etatvac1, richTextBox1.Text , respmo.ID_intervention_resp) ?
-           "Respirateur modifié avec succée" :
-           "Problem de modification de Respirateur");
+
+            var result = Databaseconnection.Modifier_interv_respirateur(textBox1.Text, dateTimePicker1.Text, comboBox3.Text, comboBox1.Text, comboBox29.Text, comboBox2.Text, etatintervention1, etatsecurite1, etatvc1, etatequipement1, etatoxyg1, etatpress1, etatvac1, richTextBox1.Text, respmo.ID_intervention_resp);
+            if (result)
+            {
+                MessageBox.Show("Respirateur modifié avec succée");
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem de modification de Respirateur");
 
 
 

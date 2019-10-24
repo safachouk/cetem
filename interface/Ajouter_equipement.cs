@@ -94,12 +94,17 @@ namespace @interface
                 return;
             }
 
-            MessageBox.Show(
-            Databaseconnection.Ajouter_equipement(comboBox2.Text , textBox2.Text , textBox3.Text , textBox1.Text , comboBox1.Text , comboBox3.Text , comboBox4.Text) ?
-             "équipement ajouté avec succée" :
-             "Problem d'ajout de l'équipement");
 
-            this.Close();
+            var result = Databaseconnection.Ajouter_equipement(comboBox2.Text, textBox2.Text, textBox3.Text, textBox1.Text, comboBox1.Text, comboBox3.Text, comboBox4.Text);
+            if (result)
+            {
+                MessageBox.Show("équipement ajouté avec succée");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Problem d'ajout de l'équipement");
+
+
 
         }
 

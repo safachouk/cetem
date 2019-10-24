@@ -47,10 +47,17 @@ namespace @interface
             }
 
 
-            MessageBox.Show(
-                Databaseconnection.Ajouter_intervenant(textBox4.Text, textBox5.Text, textBox1.Text, maskedTextBox1.Text) ?
-                "Personnel ajouté avec succée" :
-                "Problem d'ajout de personnel");
+
+            var result = Databaseconnection.Ajouter_intervenant(textBox4.Text, textBox5.Text, textBox1.Text, maskedTextBox1.Text);
+                
+            if (result)
+            {
+                MessageBox.Show("Personnel ajouté avec succée");
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem d'ajout de personnel");
         }
 
 

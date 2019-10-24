@@ -116,10 +116,17 @@ namespace @interface
             string testfuitepartieactive1 = radioButton9.Checked ? radioButton9.Text : radioButton10.Text;
             string testfuitepartieneutre1 = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
-            MessageBox.Show(
-          Databaseconnection.Modifier_interv_bistouri(textBox1.Text, dateTimePicker1.Text, etatintervention33, comboBox3.Text, textBox3.Text , securitelectrique44, testmodes1, richTextBox1.Text, comboBox1.Text , testfuitepartieactive1, testfuitepartieneutre1, etatequipement33, comboBox2.Text , x.idintervention) ?
-           "Bistouri modifié avec succée" :
-           "Problem de modification de Bistouri");
+           
+         var result = Databaseconnection.Modifier_interv_bistouri(textBox1.Text, dateTimePicker1.Text, etatintervention33, comboBox3.Text, textBox3.Text, securitelectrique44, testmodes1, richTextBox1.Text, comboBox1.Text, testfuitepartieactive1, testfuitepartieneutre1, etatequipement33, comboBox2.Text, x.idintervention);
+          
+          
+            if(result)
+            {
+                MessageBox.Show("Bistouri modifié avec succée");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Problem de modification de Bistouri");
 
 
         }

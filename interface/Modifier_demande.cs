@@ -54,10 +54,18 @@ namespace @interface
 
         private void Button10_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-         Databaseconnection.Modifier_Demande(textBox8.Text , dateTimePicker1.Text, comboBox6.Text, textBox1.Text, comboBox9.Text, comboBox8.Text, textBox9.Text , textBox11.Text , textBox12.Text , textBox10.Text , textBox7.Text , demm.ID_DEMANDE) ?
-          "demande Modifier avec succée" :
-          "Problem de modification de la demande ");
+
+            var result = Databaseconnection.Modifier_Demande(textBox8.Text, dateTimePicker1.Text, comboBox6.Text, textBox1.Text, comboBox9.Text, comboBox8.Text, textBox9.Text, textBox11.Text, textBox12.Text, textBox10.Text, textBox7.Text, demm.ID_DEMANDE);
+         
+         
+            if (result)
+            {
+                MessageBox.Show("demande Modifier avec succée" );
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem de modification de la demande ");
         }
 
         private void Modifier_demande_Load(object sender, EventArgs e)

@@ -43,7 +43,7 @@ namespace CetemLibrary
             {
                 conn.Open();
                 var numserie = new List<string>();
-                var cmd11 = new MySqlCommand("SELECT  NUM_SERIE FROM equipements where 	TYPE = 'Respirateur anesthésie' || TYPE = 'Respirateur de réanimation' || TYPE = 'Respirateur de transport' ", conn);
+                var cmd11 = new MySqlCommand("SELECT  NUM_SERIE FROM equipements where 	TYPE = 'Respirateur anesthésie' || TYPE = 'Respirateur de reanimation' || TYPE = 'Respirateur de transport' ", conn);
                 var reader = cmd11.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -265,8 +265,41 @@ namespace CetemLibrary
             }
             return null;
         }
+        public static string[] gethopital(string region)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var hopitals = new List<string>();
+                var cmd5 = new MySqlCommand("SELECT  NOM_HOPITAL FROM hopitaux where nom_region like @region", conn);
+                cmd5.Parameters.AddWithValue("@region", region);
+                var reader = cmd5.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        hopitals.Add(reader.GetString("NOM_HOPITAL"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de Hopitaux trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return hopitals.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
 
-       
+
 
         public static string[] getEquipement()
         {

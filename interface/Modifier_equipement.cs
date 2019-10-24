@@ -64,10 +64,18 @@ namespace @interface
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-           Databaseconnection.Modifier_equipmement(textBox5.Text, comboBox8.Text, textBox2.Text, textBox3.Text, comboBox6.Text, comboBox5.Text, comboBox7.Text, elem.Id)?
-            "équipement Modifier avec succée" :
-            "Problem de modification de l'équipement");
+
+            var result = Databaseconnection.Modifier_equipmement(textBox5.Text, comboBox8.Text, textBox2.Text, textBox3.Text, comboBox6.Text, comboBox5.Text, comboBox7.Text, elem.Id);
+          
+            if (result)
+            {
+
+                MessageBox.Show("équipement Modifier avec succée");
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem de modification de l'équipement");
         }
     }
 }

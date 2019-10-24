@@ -93,10 +93,16 @@ namespace @interface
 
 
 
-            MessageBox.Show(
-                      Databaseconnection.Modifier_interv_pousse_seringue(textBox3.Text, dateTimePicker1.Text, etatintervention11, comboBox3.Text, etatsecurite11, testpremiervoie1, testdeuxiemevoie1, richTextBox1.Text, comboBox1.Text, etatequipement11, comboBox2.Text , ps.id_pousse) ?
-                       "Pousse seringue modifié avec succée" :
-                       "Problem de modification de Pousse seringue");
+
+            var result = Databaseconnection.Modifier_interv_pousse_seringue(textBox3.Text, dateTimePicker1.Text, etatintervention11, comboBox3.Text, etatsecurite11, testpremiervoie1, testdeuxiemevoie1, richTextBox1.Text, comboBox1.Text, etatequipement11, comboBox2.Text, ps.id_pousse);
+            if(result)
+            {
+                MessageBox.Show("Pousse seringue modifié avec succée");
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem de modification de Pousse seringue");
         }
 
         private void Modifier_pousse_seringue_Load(object sender, EventArgs e)

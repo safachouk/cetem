@@ -91,7 +91,7 @@
             this.button1.Image = global::@interface.Properties.Resources._____;
             this.button1.Location = new System.Drawing.Point(194, 549);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 103);
+            this.button1.Size = new System.Drawing.Size(116, 103);
             this.button1.TabIndex = 133;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);

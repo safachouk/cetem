@@ -110,11 +110,19 @@ namespace @interface
                 MessageBox.Show("Vous devez donner le nombre des bistouris .", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show(
-        Databaseconnection.Ajouter_demande(textBox2.Text , textBox3.Text , textBox5.Text , textBox6.Text , textBox4.Text , textBox7.Text , dateTimePicker1.Text , comboBox6.Text , textBox8.Text , comboBox9.Text , comboBox8.Text) ?
-         "Demande ajouté avec succée" :
-         "Problem d'ajout de la demande");
-            UpdateLists();
+
+            var result = Databaseconnection.Ajouter_demande(textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox7.Text, dateTimePicker1.Text, comboBox6.Text, textBox8.Text, comboBox9.Text, comboBox8.Text);
+            if (result)
+            {
+                MessageBox.Show("Demande ajouté avec succée");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Problem d'ajout de la demande");
+
+
+
+
         }
 
         private void UpdateLists()
@@ -127,6 +135,18 @@ namespace @interface
         private void Label22_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateHospital(object sender, EventArgs e)
+        {
+            if (sender is ComboBox c)
+            {
+                var name = c.SelectedText;
+                if (string.IsNullOrEmpty(name.Trim()))
+                    name = "%";
+                comboBox8.Items.Clear();
+                comboBox8.Items.AddRange(Databaseconnection.gethopital(name));
+            }
         }
     }
 }

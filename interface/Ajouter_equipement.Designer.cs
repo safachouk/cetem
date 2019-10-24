@@ -60,12 +60,12 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.ItemHeight = 21;
             this.comboBox2.Items.AddRange(new object[] {
-            "Respirateur de réanimation ",
             "Respirateur de transport ",
             "Bistouri ",
             "Pousse seringe ",
             "Défibrillateur ",
-            "Respirateur anesthésie "});
+            "Respirateur anesthésie ",
+            "Respirateur de reanimation "});
             this.comboBox2.Location = new System.Drawing.Point(437, 344);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";

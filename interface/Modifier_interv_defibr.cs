@@ -173,10 +173,17 @@ namespace @interface
             string tauxperte1 = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
 
-            MessageBox.Show(
-        Databaseconnection.Modifier_interv_defibrillateur(textBox1.Text, dateTimePicker1.Text, etatintervention5661, comboBox3.Text, testsecuriteelectrique5561, testindicateursynchro1, indicateurnormale1, testtempscharge1, testenergie1, tauxperte1, testmoniteur1, enregistrementpapier1, richTextBox1.Text, comboBox2.Text, textBox3.Text, etatequipement5661, de.id_defib) ?
-         "Défibrillateur modifié avec succée" :
-         "Problem de modification de Défibrillateur");
+
+            var result = Databaseconnection.Modifier_interv_defibrillateur(textBox1.Text, dateTimePicker1.Text, etatintervention5661, comboBox3.Text, testsecuriteelectrique5561, testindicateursynchro1, indicateurnormale1, testtempscharge1, testenergie1, tauxperte1, testmoniteur1, enregistrementpapier1, richTextBox1.Text, comboBox2.Text, textBox3.Text, etatequipement5661, de.id_defib);
+        
+            if (result)
+            {
+                MessageBox.Show("Défibrillateur modifié avec succée");
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Problem de modification de Défibrillateur");
         }
     }
 }
