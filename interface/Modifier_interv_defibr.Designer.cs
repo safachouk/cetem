@@ -698,6 +698,7 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Modifier_interv_defibr";
             this.Load += new System.EventHandler(this.Modifier_interv_defibr_Load);
             this.groupBox10.ResumeLayout(false);

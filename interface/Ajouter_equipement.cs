@@ -122,5 +122,17 @@ namespace @interface
         {
 
         }
+
+        private void UpdateHopit(object sender, EventArgs e)
+        {
+            if (sender is ComboBox c)
+            {
+                var name = c.Text;
+                if (string.IsNullOrEmpty(name.Trim()))
+                    name = "%";
+                comboBox3.Items.Clear();
+                comboBox3.Items.AddRange(Databaseconnection.gethopital(name));
+            }
+        }
     }
 }

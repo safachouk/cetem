@@ -77,5 +77,17 @@ namespace @interface
             else
                 MessageBox.Show("Problem de modification de l'équipement");
         }
+
+        private void Updatehopital(object sender, EventArgs e)
+        {
+            if (sender is ComboBox c)
+            {
+                var name = c.Text;
+                if (string.IsNullOrEmpty(name.Trim()))
+                    name = "%";
+                comboBox6.Items.Clear();
+                comboBox6.Items.AddRange(Databaseconnection.gethopital(name));
+            }
+        }
     }
 }

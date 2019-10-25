@@ -72,5 +72,17 @@ namespace @interface
         {
 
         }
+
+        private void UpdateDemande(object sender, EventArgs e)
+        {
+             if (sender is ComboBox c)
+            {
+                var name = c.Text;
+                if (string.IsNullOrEmpty(name.Trim()))
+                    name = "%";
+                comboBox8.Items.Clear();
+                comboBox8.Items.AddRange(Databaseconnection.gethopital(name));
+            }
+        }
     }
 }

@@ -141,7 +141,7 @@ namespace @interface
         {
             if (sender is ComboBox c)
             {
-                var name = c.SelectedText;
+                var name = c.Text;
                 if (string.IsNullOrEmpty(name.Trim()))
                     name = "%";
                 comboBox8.Items.Clear();

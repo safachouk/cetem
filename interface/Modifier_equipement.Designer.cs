@@ -229,6 +229,7 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(204, 29);
             this.comboBox7.TabIndex = 190;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.Updatehopital);
             // 
             // comboBox8
             // 

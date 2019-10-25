@@ -113,6 +113,7 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(222, 29);
             this.comboBox9.TabIndex = 125;
+            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.UpdateHospital);
             this.comboBox9.SelectedValueChanged += new System.EventHandler(this.UpdateHospital);
             // 
             // label18
