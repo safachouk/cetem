@@ -20,13 +20,15 @@ namespace CetemLibrary.Modeles
         public string Numero_demande;
         public string etat_equip;
         public string num_ser_equip;
+        public string typeequipement;
         public int id_pousse;
+       
 
         public Intervention_pousse_seringue()
         {
         }
 
-        public Intervention_pousse_seringue (string numps , string dateps , string etatps , string interps , string tseps , string tppvps , string tpdvps , string cps , string ndps , string etps , string sps , int idpouss )
+        public Intervention_pousse_seringue (string numps , string dateps , string etatps , string interps , string tseps , string tppvps , string tpdvps , string cps , string ndps , string etps , string sps ,string typequip, int idpouss )
         {
             numero_intervention = numps;
             date_intervention = dateps;
@@ -39,6 +41,7 @@ namespace CetemLibrary.Modeles
             Numero_demande = ndps;
             etat_equip = etps;
             num_ser_equip = sps;
+            typeequipement = typequip;
             id_pousse = idpouss; 
 
         }

@@ -94,7 +94,7 @@ namespace @interface
 
 
 
-            var result = Databaseconnection.Modifier_interv_pousse_seringue(textBox3.Text, dateTimePicker1.Text, etatintervention11, comboBox3.Text, etatsecurite11, testpremiervoie1, testdeuxiemevoie1, richTextBox1.Text, comboBox1.Text, etatequipement11, comboBox2.Text, ps.id_pousse);
+            var result = Databaseconnection.Modifier_interv_pousse_seringue(textBox3.Text, dateTimePicker1.Text, etatintervention11, comboBox3.Text, etatsecurite11, testpremiervoie1, testdeuxiemevoie1, richTextBox1.Text, comboBox1.Text, etatequipement11, comboBox2.Text, textBox1.Text , ps.id_pousse);
             if(result)
             {
                 MessageBox.Show("Pousse seringue modifié avec succée");

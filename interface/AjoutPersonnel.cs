@@ -33,11 +33,15 @@ namespace @interface
                 return;
             }
 
-            if (textBox1.Text == "")
+           
+             if (!((textBox1.Text.EndsWith("@gmail.com") ) || (textBox1.Text.EndsWith("@yahoo.fr")) || (textBox1.Text.EndsWith("@hotmail.fr"))))
+
+
             {
-                MessageBox.Show("Vous devez donner un email correct.", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vous devez inserer un mail qui se termine par @gmail.com ou @yahoo.fr ou @hotmail.fr .", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            
              
             if (maskedTextBox1.Text == "")
             {

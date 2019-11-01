@@ -200,5 +200,15 @@ S= button1.text...*/
         {
 
         }
+
+        private void Label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

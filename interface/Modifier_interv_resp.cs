@@ -188,7 +188,7 @@ namespace @interface
 
         private void Modifier_interv_resp_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
@@ -197,6 +197,31 @@ namespace @interface
         }
 
         private void GroupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
         {
 
         }

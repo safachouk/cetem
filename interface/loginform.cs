@@ -44,5 +44,31 @@ namespace @interface
         {
 
         }
+
+      
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+
+
+
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

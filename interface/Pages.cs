@@ -62,9 +62,15 @@ namespace @interface
             Ajouter_equipement Aequipement = new Ajouter_equipement();
             Aequipement.Tag = this;
             Aequipement.Show(this);
+            Aequipement.FormClosed += Aequipement_FormClosed;
+            
+         
+         
+        }
+
+        private void Aequipement_FormClosed(object sender, FormClosedEventArgs e)
+        {
             UpdateListsEquipement();
-         
-         
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -78,13 +84,12 @@ namespace @interface
 
                 Mequipement.Tag = this;
                 Mequipement.Show(this);
-
+                Mequipement.FormClosed += Aequipement_FormClosed;
             }
             else
             {
                 MessageBox.Show("Veuillez selectionnez une ligne entiére.");
             }
-
         }
 
         private void Button5_Click(object sender, EventArgs e)
@@ -101,7 +106,7 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "équipement supprimé." : "erreur de suppression de l'equipement.");
-
+            UpdateListsEquipement();
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -129,12 +134,17 @@ namespace @interface
                  */
         }
 
+        private void Apers_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UpdateListsPersonnel();
+        }
         private void Button9_Click(object sender, EventArgs e)
         {
             AjoutPersonnel Apers = new AjoutPersonnel();
             Apers.Tag = this;
             Apers.Show(this);
-            UpdateListsPersonnel();
+            Apers.FormClosed += Apers_FormClosed;
+          
         }
 
         private void Button8_Click(object sender, EventArgs e)
@@ -148,6 +158,7 @@ namespace @interface
 
                 Mpersonnel.Tag = this;
                 Mpersonnel.Show(this);
+                Mpersonnel.FormClosed += Apers_FormClosed;
 
             }
             else
@@ -170,7 +181,7 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "Personnel supprimé." : "erreur de suppression du personnel.");
-
+            UpdateListsPersonnel();
         }
 
         // private void Button14_Click(object sender, EventArgs e)
@@ -191,131 +202,65 @@ namespace @interface
              "Problem d'ajout de l'hopital");
         }
 
-        private void VScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void VScrollBar1_Scroll_1(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void DomainUpDown1_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabPage2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Pages_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button4_Click_1(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void Button6_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button7_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void ComboBox29_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabPage7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label22_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
 
 
         private void UpdateListsEquipement()
         {
-
             dataGridView1.DataSource = Databaseconnection.fillEquipement();
-
+            dataGridView1.Refresh();
+            dataGridView1.Update();
         }
 
         private void UpdateListsPersonnel()
         {
 
             dataGridView2.DataSource = Databaseconnection.fillpersonnel();
+            dataGridView2.Refresh();
+            dataGridView2.Update();
         }
 
         private void UpdateListsdemande()
         {
             dataGridView3.DataSource = Databaseconnection.filldemande();
+            dataGridView3.Refresh();
+            dataGridView3.Update();
         }
         private void UpdateListsinterventionresp()
         {
-
             dataGridView4.DataSource = Databaseconnection.fillinterventionresp();
+            dataGridView4.Refresh();
+            dataGridView4.Update();
         }
 
         public void UpdateListsinterventionbist()
         {
             dataGridView5.DataSource = Databaseconnection.fillinterventbistouri();
-
+            dataGridView5.Refresh();
+            dataGridView5.Update();
         }
 
         public void UpdateListsinterventionpouss()
         {
-            dataGridView7.DataSource = Databaseconnection.fillinterventpousseseringue();
-
+            dataGridView6.DataSource = Databaseconnection.fillinterventpousseseringue();
+            dataGridView6.Refresh();
+            dataGridView6.Update();
         }
         public void UpdateListsinterventiondefib()
         {
 
-            dataGridView6.DataSource = Databaseconnection.fillinterventdefibrillateur();
+            dataGridView7.DataSource = Databaseconnection.fillinterventdefibrillateur();
+            dataGridView7.Refresh();
+            dataGridView7.Update();
         }
 
-        private void Button10_Click_1(object sender, EventArgs e)
+    
+        private void mdim_FormClosed (object sender, FormClosedEventArgs e)
         {
-           
+            UpdateListsdemande();
 
         }
-
         private void Button13_Click(object sender, EventArgs e)
         {
             if (dataGridView3.SelectedRows.Count == 1)
@@ -327,6 +272,7 @@ namespace @interface
 
                 mdim.Tag = this;
                 mdim.Show(this);
+                mdim.FormClosed += mdim_FormClosed;
 
             }
             else
@@ -354,136 +300,33 @@ namespace @interface
             {
                 MessageBox.Show(result.Value ? "Demande supprimé." : "erreur de suppression de la demande.");
             }
-
+            UpdateListsdemande();
         }
 
-        private void TabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void Button12_Click(object sender, EventArgs e)
         {
+            if (!((textBox5.Text.EndsWith("@gmail.com")) || (textBox5.Text.EndsWith("@yahoo.fr")) || (textBox5.Text.EndsWith("@hotmail.fr"))))
+
+
+            {
+                MessageBox.Show("Vous devez inserer un mail qui se termine par @gmail.com ou @yahoo.fr ou @hotmail.fr .", "Erruer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             MessageBox.Show(
-          Databaseconnection.Modifier_mon_compte(textBox3.Text, textBox4.Text, textBox5.Text, maskedTextBox2.Text, Databaseconnection.Utilisateur_courant.Id) ?
-           "personnelle modifié avec succée" :
-           "Problem de modification");
-
-        }
-
-        private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void TabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Button4_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button7_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button6_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void Button22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button23_Click(object sender, EventArgs e)
-        {
+            Databaseconnection.Modifier_mon_compte(textBox3.Text, textBox4.Text, textBox5.Text, maskedTextBox2.Text, Databaseconnection.Utilisateur_courant.Id) ?
+             "personnelle modifié avec succée" :
+             "Problem de modification");
+            
+            
 
 
         }
 
-        private void Button18_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button27_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void Button21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void filtreAgain(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabPage9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabPage10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button4_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button21_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Button4_Click_4(object sender, EventArgs e)
         {
@@ -493,24 +336,10 @@ namespace @interface
             UpdateListsinterventionresp();
         }
 
-        private void Button6_Click_3(object sender, EventArgs e)
+
+        private void Aresp_FormClosed(object sender, EventArgs e)
         {
-        }
-
-        private void Button7_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button18_Click_2(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void Button20_Click_1(object sender, EventArgs e)
-        {
-
+            UpdateListsinterventionresp();
         }
 
         private void Button4_Click_5(object sender, EventArgs e)
@@ -518,7 +347,8 @@ namespace @interface
             AjouterIntervention_Respirateur Aresp = new AjouterIntervention_Respirateur();
             Aresp.Tag = this;
             Aresp.Show(this);
-            UpdateListsinterventionresp();
+            Aresp.FormClosed += Aresp_FormClosed;
+           
         }
 
         private void Button6_Click_4(object sender, EventArgs e)
@@ -533,6 +363,7 @@ namespace @interface
 
                 Mresp.Tag = this;
                 Mresp.Show(this);
+                Mresp.FormClosed += Aresp_FormClosed;
 
             }
             else
@@ -555,6 +386,7 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "Respirateur supprimé." : "erreur de suppression de respirateur.");
+            UpdateListsinterventionresp();
         }
 
         private void Button18_Click_3(object sender, EventArgs e)
@@ -562,6 +394,12 @@ namespace @interface
             Ajouterintervention_bistouri Abist = new Ajouterintervention_bistouri();
             Abist.Tag = this;
             Abist.Show(this);
+            Abist.FormClosed += Abist_FormClosed;
+      
+        }
+
+        private void Abist_FormClosed(object sender, FormClosedEventArgs e)
+        {
             UpdateListsinterventionbist();
         }
 
@@ -576,6 +414,7 @@ namespace @interface
 
                 Mbistr.Tag = this;
                 Mbistr.Show(this);
+                Mbistr.FormClosed += Abist_FormClosed;
 
             }
             else
@@ -598,6 +437,7 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "Bistouri supprimé." : "erreur de suppression de bistouri.");
+            UpdateListsinterventionbist();
         }
 
         private void Button24_Click(object sender, EventArgs e)
@@ -605,20 +445,27 @@ namespace @interface
             Ajouterintervention_Pousse_seringe Apoussser = new Ajouterintervention_Pousse_seringe();
             Apoussser.Tag = this;
             Apoussser.Show(this);
+            Apoussser.FormClosed += Apoussser_FormClosed;
+            
+        }
+
+        private void Apoussser_FormClosed(object sender, FormClosedEventArgs e)
+        {
             UpdateListsinterventionpouss();
         }
 
         private void Button25_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView7.SelectedRows.Count == 1)
+            if (dataGridView6.SelectedRows.Count == 1)
             {
-                var selectedrow = dataGridView7.SelectedRows[0];
+                var selectedrow = dataGridView6.SelectedRows[0];
 
                 Modifier_pousse_seringue mpoussseri = new Modifier_pousse_seringue();
                 mpoussseri.setpousseseringue((int)selectedrow.Cells[0].Value);
 
                 mpoussseri.Tag = this;
                 mpoussseri.Show(this);
+                mpoussseri.FormClosed += Apoussser_FormClosed;
 
             }
             else
@@ -630,9 +477,9 @@ namespace @interface
         private void Button26_Click_1(object sender, EventArgs e)
         {
             bool? result = null;
-            if (dataGridView7.SelectedRows.Count == 1)
+            if (dataGridView6.SelectedRows.Count == 1)
             {
-                var selectedrow9 = dataGridView7.SelectedRows[0];
+                var selectedrow9 = dataGridView6.SelectedRows[0];
                 result = Databaseconnection.supprimer_interv_pousse_seringue((int)selectedrow9.Cells[0].Value);
             }
             else
@@ -641,6 +488,7 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "Pousse seringue supprimé." : "erreur de suppression du pousse seringue.");
+            UpdateListsinterventionpouss();
         }
 
         private void Button21_Click_2(object sender, EventArgs e)
@@ -648,20 +496,27 @@ namespace @interface
             Ajouterintervention_defibrillateur Adefib = new Ajouterintervention_defibrillateur();
             Adefib.Tag = this;
             Adefib.Show(this);
+            Adefib.FormClosed += Adefib_FormCloesd;
+            
+        }
+
+        private void Adefib_FormCloesd(object sender, FormClosedEventArgs e)
+        {
             UpdateListsinterventiondefib();
         }
 
         private void Button22_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView6.SelectedRows.Count == 1)
+            if (dataGridView7.SelectedRows.Count == 1)
             {
-                var selectedrow = dataGridView6.SelectedRows[0];
+                var selectedrow = dataGridView7.SelectedRows[0];
 
                 Modifier_interv_defibr mdefib = new Modifier_interv_defibr();
                 mdefib.setdefibrillateur((int)selectedrow.Cells[0].Value);
 
                 mdefib.Tag = this;
                 mdefib.Show(this);
+                mdefib.FormClosed += Adefib_FormCloesd;
 
             }
             else
@@ -673,9 +528,9 @@ namespace @interface
         private void Button23_Click_1(object sender, EventArgs e)
         {
             bool? result = null;
-            if (dataGridView6.SelectedRows.Count == 1)
+            if (dataGridView7.SelectedRows.Count == 1)
             {
-                var selectedrow10 = dataGridView6.SelectedRows[0];
+                var selectedrow10 = dataGridView7.SelectedRows[0];
                 result = Databaseconnection.supprimer_interv_defibrillateur((int)selectedrow10.Cells[0].Value);
             }
             else
@@ -684,6 +539,7 @@ namespace @interface
             }
             if (result.HasValue)
                 MessageBox.Show(result.Value ? "défibrillateur supprimé." : "erreur de suppression du défibrillateur.");
+            UpdateListsinterventiondefib();
         }
 
         private void Button16_Click(object sender, EventArgs e)
@@ -692,40 +548,46 @@ namespace @interface
         
         }
 
-        private void TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ContextMenuStrip6_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
+    
 
         private void Button10_Click(object sender, EventArgs e)
         {
             ajout_une_demande Adem = new ajout_une_demande();
             Adem.Tag = this;
             Adem.Show(this);
-            UpdateListsdemande();
+            Adem.FormClosed += mdim_FormClosed;
         }
 
-        private void DataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TabPage10_Click_1(object sender, EventArgs e)
+        private void ComboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void TextBox4_TextChanged_1(object sender, EventArgs e)
+        private void PictureBox25_Click(object sender, EventArgs e)
+        {
+   }
+
+        private void Panel18_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TabPage7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

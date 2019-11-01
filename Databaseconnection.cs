@@ -68,6 +68,112 @@ namespace CetemLibrary
             return null;
         }
 
+        public static object[] Getnumserie()
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var numserie = new List<string>();
+                var cmd16 = new MySqlCommand("SELECT  NUM_SERIE FROM equipements", conn);
+                var reader = cmd16.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        numserie.Add(reader.GetString("NUM_SERIE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero de serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                reader.Close();
+                conn.Close();
+                return numserie.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static object[] GetModele()
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var Modele = new List<string>();
+                var cmd15 = new MySqlCommand("SELECT  Modele FROM equipements", conn);
+                var reader = cmd15.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Modele.Add(reader.GetString("Modele"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de modele trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                reader.Close();
+                conn.Close();
+                return Modele.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static string[] GetMarque()
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var Marque = new List<string>();
+                var cmd14 = new MySqlCommand("SELECT  MARQUE FROM equipements", conn);
+                var reader = cmd14.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Marque.Add(reader.GetString("MARQUE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de marque trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+                reader.Close();
+                conn.Close();
+                return Marque.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+        }
+
+            
+
+
         public static string[] getseriedefib()
         {
             if (conn == null)
@@ -87,7 +193,7 @@ namespace CetemLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Erreur pas de Hopitaux trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Erreur pas de numero serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
                 conn.Close();
@@ -100,6 +206,8 @@ namespace CetemLibrary
             }
             return null;
         }
+
+       
 
         public static string[] getseriepouss()
         {
@@ -120,7 +228,7 @@ namespace CetemLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Erreur pas de Hopitaux trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Erreur pas de numero serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
                 conn.Close();
@@ -153,7 +261,7 @@ namespace CetemLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Erreur pas de Hopitaux trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Erreur pas de numero de serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
                 conn.Close();
@@ -186,7 +294,7 @@ namespace CetemLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Erreur pas de Hopitaux trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Erreur pas de numero demande trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
                 conn.Close();
@@ -467,6 +575,38 @@ namespace CetemLibrary
 
 
                 int rowCount = aequip.ExecuteNonQuery();
+
+                conn.Close();
+                return rowCount == 1;
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
+
+
+        public static bool Ajouter_listequip(string typ , string model , string marq , string num)
+        {
+
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var atypequip = new MySqlCommand("INSERT INTO demandes (typ,modele,marque,numeroserie )" + "VALUES(@type,@modele,@marque, @num_serie)", conn);
+                atypequip.Parameters.AddWithValue("@type", typ);
+                atypequip.Parameters.AddWithValue("@modele", model);
+                atypequip.Parameters.AddWithValue("@marque", marq);
+                atypequip.Parameters.AddWithValue("@num_serie" , num);
+              
+
+
+
+                int rowCount = atypequip.ExecuteNonQuery();
 
                 conn.Close();
                 return rowCount == 1;
@@ -765,6 +905,7 @@ namespace CetemLibrary
                             reader.GetString("Numero_demande"),
                             reader.GetString("etat_equip"),
                             reader.GetString("num_ser_equip"),
+                            reader.GetString("typeequipement"),
                             reader.GetInt32("id_pousse"));
                         reader.Close();
                         conn.Close();
@@ -846,7 +987,7 @@ namespace CetemLibrary
             return null;
 
         }
-
+        //textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox7.Text, dateTimePicker1.Text, comboBox6.Text, textBox8.Text, comboBox9.Text, comboBox8.Text
 
         public static bool Ajouter_demande(string numbane, string numrea, string numpouss, string numdef, string numtranspo, string numbistou, string dattt, string etatt, string numerooo, string nomregionnn, string nomhopitalll)
         {
@@ -988,7 +1129,7 @@ namespace CetemLibrary
 
 
 
-        public static bool intervention_pousse_seringe( string numintervention1 , string dateintervent1 , string etatinterv1 , string intervenant12 , string testsecu1 , string testvoie1 , string testvoie2 , string comme1 , string numdemand1 , string etatequip1 , string num_ser_equip1)
+        public static bool intervention_pousse_seringe( string numintervention1 , string dateintervent1 , string etatinterv1 , string intervenant12 , string testsecu1 , string testvoie1 , string testvoie2 , string comme1 , string numdemand1 , string etatequip1 , string num_ser_equip1 , string typeequipement1)
         {
 
             if (conn == null)
@@ -999,7 +1140,7 @@ namespace CetemLibrary
 
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
-                var aintervrpouss = new MySqlCommand("INSERT INTO  intervention_pousse_seringe(numero_intervention , date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_performance_premiere_voie , Test_performance_deuxieme_voie , Commentaire , Numero_demande , etat_equip , num_ser_equip )" + "VALUES(@numero_intervention , @date_intervention , @Etat_intervention , @Intervenant , @Test_securit_electrique , @Test_performance_premiere_voie , @Test_performance_deuxieme_voie , @Commentaire , @Numero_demande , @etat_equip  , @num_ser_equip)", conn); 
+                var aintervrpouss = new MySqlCommand("INSERT INTO  intervention_pousse_seringe(numero_intervention , date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_performance_premiere_voie , Test_performance_deuxieme_voie , Commentaire , Numero_demande , etat_equip , num_ser_equip , typeequipement )" + "VALUES(@numero_intervention , @date_intervention , @Etat_intervention , @Intervenant , @Test_securit_electrique , @Test_performance_premiere_voie , @Test_performance_deuxieme_voie , @Commentaire , @Numero_demande , @etat_equip  , @num_ser_equip ,@typeequipement12)", conn); 
                aintervrpouss.Parameters.AddWithValue("@numero_intervention", numintervention1);
                 aintervrpouss.Parameters.AddWithValue("@date_intervention", dateintervent1);
                 aintervrpouss.Parameters.AddWithValue("@Etat_intervention", etatinterv1);
@@ -1011,6 +1152,8 @@ namespace CetemLibrary
                 aintervrpouss.Parameters.AddWithValue("@Numero_demande", numdemand1);
                 aintervrpouss.Parameters.AddWithValue("@etat_equip", etatequip1);
                 aintervrpouss.Parameters.AddWithValue("@num_ser_equip", num_ser_equip1);
+                aintervrpouss.Parameters.AddWithValue("@typeequipement12", typeequipement1);
+
                 int rowCount = aintervrpouss.ExecuteNonQuery();
 
                 conn.Close();
@@ -1393,7 +1536,7 @@ namespace CetemLibrary
                     conn.Open();
              
                 var Minterde = new MySqlCommand("update intervention_defibrillateur set Numero_intervention6=@nintd , Date_intervention=@dated , Etat_intervention=@etatd , Intervenant=@intde , Test_securit_electrique =@tsed , Test_indicateur_mode_synchro =@timsd1 , Test_indicateur_mode_normale=@timnd , Test_temps_charge =@ttcd , Testmesureenergie =@tmed , Test_taux_de_perte=@ttpd , Testmoniteurecg=@tmecgd , Testenregistrementpapier=@tepd , Commentaire=@comd , Numero_demande10=@nmded , type_equip2=@tydef , etat_equip25=@etdef where id_defib= @id", conn);
-                Intervention_bistouri IB;
+               
 
                 Minterde.Parameters.AddWithValue("@nintd", numinterdef);
                 Minterde.Parameters.AddWithValue("@dated", datedef);
@@ -1437,7 +1580,7 @@ namespace CetemLibrary
             {
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
-                Intervention_defibrillateur Interdef;
+             
                 var Dind = new MySqlCommand("delete from intervention_defibrillateur where id_defib= @id", conn);
                 Dind.Parameters.AddWithValue("@id", id);
                 int rowCount = Dind.ExecuteNonQuery();
@@ -1456,7 +1599,7 @@ namespace CetemLibrary
 
 
 
-        public static bool Modifier_interv_pousse_seringue(string numpousse , string datepousse1 , string etatpouss1 , string iterpouss1 , string tspouss1 , string tspvpou1 , string tsp2pouss1 , string compouss1 , string numpousse1 , string etatequip , string seriepouss1 , int id)
+        public static bool Modifier_interv_pousse_seringue(string numpousse , string datepousse1 , string etatpouss1 , string iterpouss1 , string tspouss1 , string tspvpou1 , string tsp2pouss1 , string compouss1 , string numpousse1 , string etatequip , string seriepouss1 , string typeequip , int id)
 
         {
             if (conn == null)
@@ -1467,7 +1610,7 @@ namespace CetemLibrary
                     conn.Open();
               
 
-                var Minterpouss = new MySqlCommand("update intervention_pousse_seringe set numero_intervention=@nintpous , date_intervention=@datpouss , Etat_intervention=@etatpouss , Intervenant=@intervpouss , Test_securit_electrique=@tsepouss , Test_performance_premiere_voie=@tspvpou , Test_performance_deuxieme_voie=@tsp2pouss , Commentaire=@compouss , Numero_demande=@numpouss , etat_equip=@etatequip , num_ser_equip=@seriepouss where id_pousse= @id", conn);
+                var Minterpouss = new MySqlCommand("update intervention_pousse_seringe set numero_intervention=@nintpous , date_intervention=@datpouss , Etat_intervention=@etatpouss , Intervenant=@intervpouss , Test_securit_electrique=@tsepouss , Test_performance_premiere_voie=@tspvpou , Test_performance_deuxieme_voie=@tsp2pouss , Commentaire=@compouss , Numero_demande=@numpouss , etat_equip=@etatequip , num_ser_equip=@seriepouss , typeequipement1=@typeequi1235 where id_pousse= @id", conn);
               
 
                 Minterpouss.Parameters.AddWithValue("@nintpous", numpousse);
@@ -1481,6 +1624,7 @@ namespace CetemLibrary
                 Minterpouss.Parameters.AddWithValue("@numpouss", numpousse1);
                 Minterpouss.Parameters.AddWithValue("@etatequip", etatequip);
                 Minterpouss.Parameters.AddWithValue("@seriepouss", seriepouss1);
+                Minterpouss.Parameters.AddWithValue("@typeequi1235", typeequip);
                 Minterpouss.Parameters.AddWithValue("@id", id);
 
 
@@ -1508,7 +1652,6 @@ namespace CetemLibrary
             {
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
-                Intervention_pousse_seringue inpser;
                 var Dpouss = new MySqlCommand("delete from intervention_pousse_seringe where id_pousse= @id", conn);
                 Dpouss.Parameters.AddWithValue("@id", id);
                 int rowCount = Dpouss.ExecuteNonQuery();
@@ -1647,7 +1790,7 @@ namespace CetemLibrary
             try
             {
                 conn.Open();
-                MySqlDataAdapter msd = new MySqlDataAdapter("SELECT * FROM equipements", conn);
+                MySqlDataAdapter msd = new MySqlDataAdapter("SELECT ID_EQUIPEMENT as 'Identifiant'  , Nom_region as 'Region' , nom_de_hopital as'Hopital'  , Nom_de_service as 'Service' , TYPE as 'Type Equipement '  , MARQUE as 'Marque' , Modele as 'Modele' , NUM_SERIE as 'Numero Serie'   FROM equipements", conn);
                 msd.SelectCommand.CommandType = CommandType.Text;
                 msd.Fill(dt);
                 conn.Close();
@@ -1670,7 +1813,7 @@ namespace CetemLibrary
             try
             {
                 conn.Open();
-                MySqlDataAdapter msp = new MySqlDataAdapter("SELECT * FROM techniciens", conn);
+                MySqlDataAdapter msp = new MySqlDataAdapter("SELECT ID_Tech as 'Identifiant' ,  Nom_technicien as 'Nom intervenant' , prenom_technicen as 'Prenom Intervenant' , e_mail as 'Adresse EMAIL' , password as 'Mot De Passe' FROM techniciens where type not like'Admin'", conn);
                 msp.SelectCommand.CommandType = CommandType.Text;
                 msp.Fill(dp);
                 conn.Close();
@@ -1691,7 +1834,7 @@ namespace CetemLibrary
             try
             {
                 conn.Open();
-                MySqlDataAdapter msd = new MySqlDataAdapter("SELECT * FROM demandes", conn);
+                MySqlDataAdapter msd = new MySqlDataAdapter("SELECT ID_DEMANDE as 'Identifiant' ,  region_demande as 'Region' , Hopital_demande as 'Hopital' , Numero_demande as 'Numero Demande ' ,  Date_Demande as 'Date Demande ' , Etat_demande as 'Etat Demande '   , Nombre_Respirateur_anesthesie as ' Respirateur anesthesie '  , Nombre_respirateur_reanimation as 'respirateur reanimation ' , nombre_pousse_seringe as 'pousse seringue' , nombre_defibrillateur as 'defibrillateur' , Nombre_respirateur_transport as 'Respirateur transport' , Nombre_Bistouri as 'Bistouri'  FROM demandes", conn);
                 msd.SelectCommand.CommandType = CommandType.Text;
                 msd.Fill(dd);
                 conn.Close();
@@ -1713,7 +1856,7 @@ namespace CetemLibrary
             try
             {
                 conn.Open();
-                MySqlDataAdapter msresp = new MySqlDataAdapter("SELECT * FROM intervention_respirateur", conn);
+                MySqlDataAdapter msresp = new MySqlDataAdapter("SELECT 	ID_intervention_resp as 'Identifiant' , 	Numero_intervention as 'Numero Intervention ' , Numero_demande as 'Numero Demande' , type_equip as 'Type Equipement',num_ser_interv as 'Numero Serie' , Date_intervention as 'Date Intervention' , Intervenant as 'Intervenant'  , Etat_intervention as 'Etat Intervention ' ,  Etat_equip as 'Etat Equipement ' , test_securite_electrique as 'Securite electrique ' , test_vc as ' Test VC' ,  test_pc as 'Test PC' , test_vac as 'Test VAC' , test_oxygene as 'Test Oxygene' , Commentaire as 'Commentaire'  FROM intervention_respirateur", conn);
                 msresp.SelectCommand.CommandType = CommandType.Text;
                 msresp.Fill(dresp);
                 conn.Close();
