@@ -24,14 +24,14 @@ namespace @interface
 
         private void ajoutserresp()
         {
-            comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(Databaseconnection.getserresp());
+           // comboBox2.Items.Clear();
+          //  comboBox2.Items.AddRange(Databaseconnection.getserresp());
         }
 
         private void ajoutdemande()
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.getdemande());
+            comboBox1.Items.AddRange(Databaseconnection.getdemanderesp());
         }
 
         private void ajoutintervenant()

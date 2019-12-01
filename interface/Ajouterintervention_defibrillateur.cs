@@ -18,19 +18,14 @@ namespace @interface
         InitializeComponent();
             ajoutintervenant();
             ajoutdemande();
-            ajoutserie();
+            
     }
 
-        private void ajoutserie()
-        {
-            comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.getseriedefib());
-        }
 
         private void ajoutdemande()
         {
             comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(Databaseconnection.getdemande());
+            comboBox2.Items.AddRange(Databaseconnection.getdemandedefibrill());
         }
 
         private void ajoutintervenant()
@@ -104,9 +99,9 @@ namespace @interface
             string enregistrementpapier = radioButton19.Checked ? radioButton19.Text : radioButton20.Text;
             string tauxperte = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
+           
 
-
-            var result = Databaseconnection.ajout_defibrillateur(textBox6.Text, textBox3.Text, etatintervention566, comboBox3.Text, testsecuriteelectrique556, testindicateursynchro, indicateurnormale, testtempscharge, testenergie, tauxperte, testmoniteur, enregistrementpapier, richTextBox1.Text, comboBox2.Text, textBox5.Text, etatequipement566);
+            var result = Databaseconnection.ajout_defibrillateur(textBox6.Text, dateTimePicker2.Text, etatintervention566, comboBox3.Text, testsecuriteelectrique556, testindicateursynchro, indicateurnormale, testtempscharge, testenergie, tauxperte, testmoniteur, enregistrementpapier, richTextBox1.Text, comboBox2.Text, comboBox4.Text, etatequipement566);
           if (result)
             {
                 MessageBox.Show("Défibrillateur ajouté avec succée");
@@ -122,14 +117,17 @@ namespace @interface
 
         }
 
-        private void Ajouterintervention_defibrillateur_Load(object sender, EventArgs e)
+        private void AjoutMarqueDefib(object sender, EventArgs e)
         {
+            comboBox4.Items.Clear();
+            comboBox4.Items.AddRange(Databaseconnection.getmarquedefibrillateur(comboBox2.SelectedItem.ToString()));
 
         }
 
-        private void DateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void ajoutmarquedefibrill(object sender, EventArgs e)
         {
-
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getserdefibrill(comboBox4.SelectedItem.ToString()));
         }
     }
 }

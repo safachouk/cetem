@@ -31,7 +31,7 @@ namespace @interface
         private void ajoutdemande()
         {
             comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(Databaseconnection.getdemande());
+            comboBox2.Items.AddRange(Databaseconnection.getdemandedefibrill());
         }
 
         private void ajoutintervenant()

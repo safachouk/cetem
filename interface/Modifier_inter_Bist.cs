@@ -25,7 +25,7 @@ namespace @interface
         private void ajoudemande()
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.getdemande());
+            comboBox1.Items.AddRange(Databaseconnection.getdemandebistouri());
         }
 
         private void ajoutserie()

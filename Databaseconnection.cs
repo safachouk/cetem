@@ -35,7 +35,211 @@ namespace CetemLibrary
 
         }
 
-        public static string[] getserresp()
+        public static String[] getdemandebistouri()
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var demand = new List<string>();
+                var cmd10 = new MySqlCommand("SELECT  DISTINCT d.Numero_demande FROM demandes d , intermediaire i , equipements e  where i.ID_Demande = d.ID_DEMANDE and  i.Id_equipement = e.NUM_SERIE and e.TYPE = 'Bistouri'", conn);
+                var reader = cmd10.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        demand.Add(reader.GetString("Numero_demande"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero demande trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return demand.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static String[] getdemandedefibrill()
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var demand = new List<string>();
+                var cmd10 = new MySqlCommand("SELECT  DISTINCT d.Numero_demande FROM demandes d , intermediaire i , equipements e  where i.ID_Demande = d.ID_DEMANDE and  i.Id_equipement = e.NUM_SERIE and e.TYPE = 'Défibrillateur'", conn);
+                var reader = cmd10.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        demand.Add(reader.GetString("Numero_demande"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero demande trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return demand.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static String[] getdemandepousse()
+        {
+              if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var demand = new List<string>();
+                var cmd10 = new MySqlCommand("SELECT  DISTINCT d.Numero_demande FROM demandes d , intermediaire i , equipements e  where i.ID_Demande = d.ID_DEMANDE and  i.Id_equipement = e.NUM_SERIE and e.TYPE = 'Pousse Seringue'", conn);
+                var reader = cmd10.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        demand.Add(reader.GetString("Numero_demande"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero demande trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return demand.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null ;
+            }
+            return null;
+        }
+
+        public static object[] getmodelbistouri(string numdemand25e)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var numserie1 = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT MARQUE FROM equipements e , intermediaire i , demandes d  where i.ID_Demande = d.ID_DEMANDE  and i.Id_equipement = e.NUM_SERIE and  d.Numero_demande = @iddemande", conn);
+                cmd11.Parameters.AddWithValue("@iddemande", numdemand25e);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        numserie1.Add(reader.GetString("MARQUE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pas de Bistouri trouve.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return numserie1.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+
+        }
+
+        public static object[] getseriebistouri(string modelbistouri)
+        {
+
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var typerspiet = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT NUM_SERIE FROM equipements e , demandes  d , intermediaire i where d.ID_DEMANDE = i.ID_DEMANDE and e.NUM_SERIE = i.Id_equipement and MARQUE= @marquedemande ", conn);
+                cmd11.Parameters.AddWithValue("@marquedemande", modelbistouri);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        typerspiet.Add(reader.GetString("NUM_SERIE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return typerspiet.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static String [] getserresp( string typedemande)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var typerspiet = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT NUM_SERIE FROM equipements e , demandes  d , intermediaire i where d.ID_DEMANDE = i.ID_DEMANDE and e.NUM_SERIE = i.Id_equipement and TYPE= @typdemande ", conn);
+                cmd11.Parameters.AddWithValue("@typdemande", typedemande);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        typerspiet.Add(reader.GetString("NUM_SERIE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return typerspiet.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static String[] gettyperesp(string iddemande)
         {
             if (conn == null)
                 DBConnect();
@@ -43,18 +247,19 @@ namespace CetemLibrary
             {
                 conn.Open();
                 var numserie = new List<string>();
-                var cmd11 = new MySqlCommand("SELECT  NUM_SERIE FROM equipements where 	TYPE = 'Respirateur anesthésie' || TYPE = 'Respirateur de reanimation' || TYPE = 'Respirateur de transport' ", conn);
+                var cmd11 = new MySqlCommand("SELECT TYPE FROM equipements e , intermediaire i , demandes d  where i.ID_Demande = d.ID_DEMANDE  and i.Id_equipement = e.NUM_SERIE and  d.Numero_demande = @iddemande", conn);
+                cmd11.Parameters.AddWithValue("@iddemande",iddemande);
                 var reader = cmd11.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        numserie.Add(reader.GetString("NUM_SERIE"));
+                        numserie.Add(reader.GetString("TYPE"));
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Erreur pas de Hopitaux trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Pas de Respirateur trouve.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
                 conn.Close();
@@ -68,6 +273,146 @@ namespace CetemLibrary
             return null;
         }
 
+        public static string [] getserdefibrill(string modeledef)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var typerspiet = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT NUM_SERIE FROM equipements e , demandes  d , intermediaire i where d.ID_DEMANDE = i.ID_DEMANDE and e.NUM_SERIE = i.Id_equipement and MARQUE= @marquedemande ", conn);
+                cmd11.Parameters.AddWithValue("@marquedemande", modeledef);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        typerspiet.Add(reader.GetString("NUM_SERIE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return typerspiet.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+        }
+
+        public static String[] getmarquedefibrillateur(string numdemande)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var numserie1 = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT MARQUE FROM equipements e , intermediaire i , demandes d  where i.ID_Demande = d.ID_DEMANDE  and i.Id_equipement = e.NUM_SERIE and  d.Numero_demande = @iddemande", conn);
+                cmd11.Parameters.AddWithValue("@iddemande", numdemande);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        numserie1.Add(reader.GetString("MARQUE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pas de Défibrillateur trouve.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return numserie1.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+
+        }
+
+        public static String[] getseriepousse(string marquedemande)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var typerspiet = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT NUM_SERIE FROM equipements e , demandes  d , intermediaire i where d.ID_DEMANDE = i.ID_DEMANDE and e.NUM_SERIE = i.Id_equipement and MARQUE= @marquedemande ", conn);
+                cmd11.Parameters.AddWithValue("@marquedemande", marquedemande);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        typerspiet.Add(reader.GetString("NUM_SERIE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return typerspiet.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+
+        public static String[] getmodelepousse(string iddemandde)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var numserie1 = new List<string>();
+                var cmd11 = new MySqlCommand("SELECT MARQUE FROM equipements e , intermediaire i , demandes d  where i.ID_Demande = d.ID_DEMANDE  and i.Id_equipement = e.NUM_SERIE and  d.Numero_demande = @iddemande", conn);
+                cmd11.Parameters.AddWithValue("@iddemande", iddemandde);
+                var reader = cmd11.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        numserie1.Add(reader.GetString("MARQUE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pas de Pousse Seringue trouve.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                reader.Close();
+                conn.Close();
+                return numserie1.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+        }
+
         public static object[] Getnumserie()
         {
             if (conn == null)
@@ -77,6 +422,40 @@ namespace CetemLibrary
                 conn.Open();
                 var numserie = new List<string>();
                 var cmd16 = new MySqlCommand("SELECT  NUM_SERIE FROM equipements", conn);
+                var reader = cmd16.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        numserie.Add(reader.GetString("NUM_SERIE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de numero de serie trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                reader.Close();
+                conn.Close();
+                return numserie.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
+        public static object[] GetnumserieByModel(string model)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var numserie = new List<string>();
+                var cmd16 = new MySqlCommand("SELECT  NUM_SERIE FROM equipements where modele=@model", conn);
+                cmd16.Parameters.AddWithValue("@model", model);
                 var reader = cmd16.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -135,6 +514,40 @@ namespace CetemLibrary
             }
             return null;
         }
+        public static object[] GetModeleByMarque(string marque)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var Modele = new List<string>();
+                var cmd15 = new MySqlCommand("SELECT DISTINCT  Modele FROM equipements WHERE marque=@marque", conn);
+                cmd15.Parameters.AddWithValue("@marque", marque);
+                var reader = cmd15.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Modele.Add(reader.GetString("Modele"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de modele trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                reader.Close();
+                conn.Close();
+                return Modele.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+        }
 
         public static string[] GetMarque()
         {
@@ -144,7 +557,7 @@ namespace CetemLibrary
             {
                 conn.Open();
                 var Marque = new List<string>();
-                var cmd14 = new MySqlCommand("SELECT  MARQUE FROM equipements", conn);
+                var cmd14 = new MySqlCommand("SELECT DISTINCT MARQUE FROM equipements", conn);
                 var reader = cmd14.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -157,7 +570,42 @@ namespace CetemLibrary
                 {
                     MessageBox.Show("Erreur pas de marque trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
+
+                reader.Close();
+                conn.Close();
+                return Marque.ToArray();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+        }
+        public static string[] GetMarqueByType(string type)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var Marque = new List<string>();
+                var cmd14 = new MySqlCommand("SELECT DISTINCT MARQUE FROM equipements where type=@type", conn);
+                cmd14.Parameters.AddWithValue("@type", type);
+                var reader = cmd14.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Marque.Add(reader.GetString("MARQUE"));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur pas de marque trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 reader.Close();
                 conn.Close();
                 return Marque.ToArray();
@@ -171,7 +619,7 @@ namespace CetemLibrary
 
         }
 
-            
+
 
 
         public static string[] getseriedefib()
@@ -275,15 +723,17 @@ namespace CetemLibrary
             return null;
         }
 
-        public static string[] getdemande()
+        public static String[] getdemanderesp()
         {
+
+
             if (conn == null)
                 DBConnect();
             try
             {
                 conn.Open();
                 var demand = new List<string>();
-                var cmd10 = new MySqlCommand("SELECT  Numero_demande FROM demandes", conn);
+                var cmd10 = new MySqlCommand("SELECT  DISTINCT d.Numero_demande FROM demandes d , intermediaire i , equipements e  where i.ID_Demande = d.ID_DEMANDE and  i.Id_equipement = e.NUM_SERIE and (e.TYPE = 'Respirateur Réanimation' or e.TYPE = 'Respirateur Anesthésie' or e.TYPE = 'Respiarteur Transport')", conn);
                 var reader = cmd10.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -306,6 +756,7 @@ namespace CetemLibrary
                 return null;
             }
             return null;
+
         }
 
         public static string[] getintervenant()
@@ -654,7 +1105,53 @@ namespace CetemLibrary
                     MessageBox.Show("Erreur dispositif introuvable", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 conn.Close();
-                
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+        }
+        public static Dispositifsbiomedicale getEquipementBySerial(string serial)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                var dbm = new Dispositifsbiomedicale();
+                conn.Open();
+                var cmd = new MySqlCommand("SELECT * FROM equipements WHERE NUM_SERIE=@serial", conn);
+                cmd.Parameters.AddWithValue("@serial", serial);
+                cmd.Prepare();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        dbm = new Dispositifsbiomedicale(
+                            reader.GetString("type"),
+                            reader.GetString("marque"),
+                            reader.GetString("NUM_SERIE"),
+                            reader.GetString("nom_de_hopital"),
+                            reader.GetString("Nom_de_service"),
+                            reader.GetString("Nom_Region"),
+                            reader.GetString("Modele"),
+                            reader.GetInt32("id_equipement"));
+                        reader.Close();
+                        conn.Close();
+
+                        return dbm;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur dispositif introuvable", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                conn.Close();
+
             }
             catch (Exception ex)
             {
@@ -987,9 +1484,9 @@ namespace CetemLibrary
             return null;
 
         }
-        //textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox7.Text, dateTimePicker1.Text, comboBox6.Text, textBox8.Text, comboBox9.Text, comboBox8.Text
+    
 
-        public static bool Ajouter_demande(string numbane, string numrea, string numpouss, string numdef, string numtranspo, string numbistou, string dattt, string etatt, string numerooo, string nomregionnn, string nomhopitalll)
+        public static bool Ajouter_demande(string numbane, string numrea, string numpouss, string numdef, string numtranspo, string numbistou, string dattt, string etatt, string numerooo, string nomregionnn, string nomhopitalll,List<string>series_equipement)
         {
 
             if (conn == null)
@@ -998,7 +1495,7 @@ namespace CetemLibrary
             {
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
-                var ademand = new MySqlCommand("INSERT INTO demandes (Nombre_Respirateur_anesthesie,Nombre_respirateur_reanimation,nombre_pousse_seringe,nombre_defibrillateur,Nombre_respirateur_transport,Nombre_bistouri,Date_Demande ,Etat_demande , Numero_demande , region_demande , Hopital_demande)" + "VALUES(@numberanest,@numberrea,@numberpouss,@numberdef,@numbertranspo,@numberbist, @Date , @Etat, @num, @nomregion, @nomhopital)", conn);
+                var ademand = new MySqlCommand("INSERT INTO demandes (Nombre_Respirateur_anesthesie,Nombre_respirateur_reanimation,nombre_pousse_seringe,nombre_defibrillateur,Nombre_respirateur_transport,Nombre_bistouri,Date_Demande ,Etat_demande , Numero_demande , region_demande , Hopital_demande)" + "VALUES(@numberanest,@numberrea,@numberpouss,@numberdef,@numbertranspo,@numberbist, @Date , @Etat, @num, @nomregion, @nomhopital); SELECT LAST_INSERT_ID();", conn);
                 ademand.Parameters.AddWithValue("@numberanest", numbane);
                 ademand.Parameters.AddWithValue("@numberrea", numrea);
                 ademand.Parameters.AddWithValue("@numberpouss", numpouss);
@@ -1010,10 +1507,15 @@ namespace CetemLibrary
                 ademand.Parameters.AddWithValue("@num", numerooo);
                 ademand.Parameters.AddWithValue("@nomregion", nomregionnn);
                 ademand.Parameters.AddWithValue("@nomhopital", nomhopitalll);
-                int rowCount = ademand.ExecuteNonQuery();
+                var rowid = ademand.ExecuteScalar();
 
                 conn.Close();
-                return rowCount == 1;
+                series_equipement.ForEach(ser =>
+                {
+                    if(!string.IsNullOrEmpty(ser.Trim()))
+                        insertDemandeEquipement(rowid.ToString(), ser);
+                });
+                return true;
 
             }
             catch
@@ -1025,6 +1527,28 @@ namespace CetemLibrary
 
             }
 
+        }
+
+        private static void insertDemandeEquipement(string rowid, string ser)
+        {
+            if (conn == null)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var ajpers = new MySqlCommand("INSERT INTO intermediaire (ID_Demande,Id_equipement)" + "VALUES(@iddemande , @idequipement)", conn);
+                ajpers.Parameters.AddWithValue("@iddemande", rowid);
+                ajpers.Parameters.AddWithValue("@idequipement", ser);
+                ajpers.ExecuteNonQuery();
+
+                conn.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+            }
         }
 
         public static bool Ajouter_intervenant(string nom, string prenom, string email, string password)

@@ -18,14 +18,9 @@ namespace @interface
         InitializeComponent();
             ajoutintervenant();
             ajoutdemande();
-            ajoutseriepousse();
+            
         }
 
-        private void ajoutseriepousse()
-        {
-            comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(Databaseconnection.getseriepouss());
-        }
 
         private void ajoutintervenant()
         {
@@ -36,7 +31,7 @@ namespace @interface
         private void ajoutdemande()
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.getdemande());
+            comboBox1.Items.AddRange(Databaseconnection.getdemandepousse());
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -80,7 +75,7 @@ namespace @interface
 
 
 
-            var result = Databaseconnection.intervention_pousse_seringe(textBox3.Text, dateTimePicker1.Text, etatintervention1, comboBox3.Text, etatsecurite1, testpremiervoie, testdeuxiemevoie, richTextBox1.Text, comboBox1.Text, etatequipement1, comboBox2.Text , textBox1.Text);
+            var result = Databaseconnection.intervention_pousse_seringe(textBox3.Text, dateTimePicker1.Text, etatintervention1, comboBox3.Text, etatsecurite1, testpremiervoie, testdeuxiemevoie, richTextBox1.Text, comboBox1.Text, etatequipement1, comboBox2.Text , comboBox4.Text);
             
             if (result)
             {
@@ -93,63 +88,17 @@ namespace @interface
 
         }
 
-        private void Ajouterintervention_Pousse_seringe_Load(object sender, EventArgs e)
+        private void ajouttypepousse(object sender, EventArgs e)
         {
+            comboBox4.Items.Clear();
+            comboBox4.Items.AddRange(Databaseconnection.getmodelepousse(comboBox1.SelectedItem.ToString()));
 
         }
 
-        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        private void Ajoutseriepousse(object sender, EventArgs e)
         {
-
-        }
-
-        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton8_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton10_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton9_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton12_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton11_CheckedChanged(object sender, EventArgs e)
-        {
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getseriepousse(comboBox4.SelectedItem.ToString()));
 
         }
     }

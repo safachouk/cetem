@@ -46,10 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,8 +54,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,7 +81,7 @@
             this.comboBox8.ForeColor = System.Drawing.Color.White;
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.ItemHeight = 21;
-            this.comboBox8.Location = new System.Drawing.Point(600, 108);
+            this.comboBox8.Location = new System.Drawing.Point(585, 69);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(222, 29);
@@ -90,7 +94,7 @@
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.Font = new System.Drawing.Font("Sitka Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label22.Location = new System.Drawing.Point(385, 108);
+            this.label22.Location = new System.Drawing.Point(370, 69);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(91, 30);
             this.label22.TabIndex = 127;
@@ -104,7 +108,7 @@
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.Font = new System.Drawing.Font("Sitka Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label20.Location = new System.Drawing.Point(385, 64);
+            this.label20.Location = new System.Drawing.Point(370, 25);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 30);
             this.label20.TabIndex = 126;
@@ -120,7 +124,7 @@
             this.comboBox9.ForeColor = System.Drawing.Color.White;
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.ItemHeight = 21;
-            this.comboBox9.Location = new System.Drawing.Point(600, 64);
+            this.comboBox9.Location = new System.Drawing.Point(585, 25);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(222, 29);
@@ -135,7 +139,7 @@
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.Font = new System.Drawing.Font("Sitka Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(385, 152);
+            this.label18.Location = new System.Drawing.Point(370, 113);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(203, 30);
             this.label18.TabIndex = 123;
@@ -148,7 +152,7 @@
             this.textBox8.BackColor = System.Drawing.Color.Navy;
             this.textBox8.Font = new System.Drawing.Font("Nirmala UI Semilight", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(600, 153);
+            this.textBox8.Location = new System.Drawing.Point(585, 114);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(221, 27);
             this.textBox8.TabIndex = 129;
@@ -160,7 +164,7 @@
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.Font = new System.Drawing.Font("Sitka Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label21.Location = new System.Drawing.Point(858, 82);
+            this.label21.Location = new System.Drawing.Point(843, 43);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(168, 30);
             this.label21.TabIndex = 138;
@@ -180,7 +184,7 @@
             "En instance",
             "En cours",
             "Terminé "});
-            this.comboBox6.Location = new System.Drawing.Point(1031, 126);
+            this.comboBox6.Location = new System.Drawing.Point(1016, 87);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(222, 29);
@@ -193,7 +197,7 @@
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.Font = new System.Drawing.Font("Sitka Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(858, 127);
+            this.label17.Location = new System.Drawing.Point(843, 88);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(165, 30);
             this.label17.TabIndex = 140;
@@ -282,6 +286,7 @@
             this.textBox2.Size = new System.Drawing.Size(67, 30);
             this.textBox2.TabIndex = 154;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -294,55 +299,6 @@
             this.textBox3.Size = new System.Drawing.Size(66, 30);
             this.textBox3.TabIndex = 155;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox4.BackColor = System.Drawing.Color.Navy;
-            this.textBox4.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(23, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(66, 30);
-            this.textBox4.TabIndex = 156;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
-            // 
-            // textBox5
-            // 
-            this.textBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox5.BackColor = System.Drawing.Color.Navy;
-            this.textBox5.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(23, 216);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(66, 30);
-            this.textBox5.TabIndex = 157;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox6.BackColor = System.Drawing.Color.Navy;
-            this.textBox6.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(23, 265);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(66, 30);
-            this.textBox6.TabIndex = 158;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.textBox7.BackColor = System.Drawing.Color.Navy;
-            this.textBox7.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(23, 315);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(66, 30);
-            this.textBox7.TabIndex = 159;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button10
             // 
@@ -367,7 +323,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(1032, 86);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1017, 47);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(221, 24);
             this.dateTimePicker1.TabIndex = 162;
@@ -378,7 +334,7 @@
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,6 +390,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label30);
@@ -443,29 +403,133 @@
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.label29);
-            this.panel3.Location = new System.Drawing.Point(251, 243);
+            this.panel3.Location = new System.Drawing.Point(251, 186);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1133, 480);
+            this.panel3.Size = new System.Drawing.Size(1133, 537);
             this.panel3.TabIndex = 172;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.BackColor = System.Drawing.Color.Navy;
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.ForeColor = System.Drawing.Color.White;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(684, 138);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(250, 28);
+            this.comboBox4.TabIndex = 176;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.Navy;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(684, 99);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(250, 28);
+            this.comboBox3.TabIndex = 175;
+            this.comboBox3.SelectionChangeCommitted += new System.EventHandler(this.GetSNbyMarque);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.Navy;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(684, 56);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(250, 28);
+            this.comboBox2.TabIndex = 174;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
+            this.comboBox2.SelectionChangeCommitted += new System.EventHandler(this.GetModelByMarque);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Navy;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Respirateur Anesthèsie",
+            "Respirateur Réanimation",
+            "Respirateur Transport",
+            "Défibrillateur",
+            "Bistouri",
+            "Pousse Seringue"});
+            this.comboBox1.Location = new System.Drawing.Point(684, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(250, 28);
+            this.comboBox1.TabIndex = 173;
+            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.UpdateMarque);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(733, 327);
+            this.button1.Location = new System.Drawing.Point(784, 426);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 97);
+            this.button1.Size = new System.Drawing.Size(96, 87);
             this.button1.TabIndex = 172;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(522, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(528, 184);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(537, 269);
+            this.dataGridView1.Size = new System.Drawing.Size(565, 236);
             this.dataGridView1.TabIndex = 171;
+            // 
+            // textBox1
+            // 
+            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.textBox1.BackColor = System.Drawing.Color.Navy;
+            this.textBox1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(24, 167);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(66, 30);
+            this.textBox1.TabIndex = 156;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.textBox4.BackColor = System.Drawing.Color.Navy;
+            this.textBox4.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(23, 218);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(66, 30);
+            this.textBox4.TabIndex = 157;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.textBox5.BackColor = System.Drawing.Color.Navy;
+            this.textBox5.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.White;
+            this.textBox5.Location = new System.Drawing.Point(24, 267);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(66, 30);
+            this.textBox5.TabIndex = 158;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.textBox6.BackColor = System.Drawing.Color.Navy;
+            this.textBox6.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.Color.White;
+            this.textBox6.Location = new System.Drawing.Point(24, 323);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(66, 30);
+            this.textBox6.TabIndex = 159;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ajout_une_demande
             // 
@@ -522,10 +586,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -536,5 +596,13 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }

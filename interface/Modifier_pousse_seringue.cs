@@ -27,7 +27,7 @@ namespace @interface
             ps = Databaseconnection.getPousse(id);
 
             textBox3.Text = ps.numero_intervention;
-            textBox2.Text = ps.date_intervention;
+            dateTimePicker1.Text = ps.date_intervention;
        
             switch (ps.Etat_intervention)
             {
@@ -121,6 +121,16 @@ namespace @interface
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

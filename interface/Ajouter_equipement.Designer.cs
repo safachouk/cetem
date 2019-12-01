@@ -45,8 +45,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,12 +62,12 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.ItemHeight = 30;
             this.comboBox2.Items.AddRange(new object[] {
-            "Respirateur de transport ",
+            "Respirateur Transport ",
             "Bistouri ",
             "Pousse seringe ",
             "Défibrillateur ",
-            "Respirateur anesthésie ",
-            "Respirateur de reanimation "});
+            "Respirateur Anesthésie ",
+            "Respirateur Réanimation "});
             this.comboBox2.Location = new System.Drawing.Point(422, 382);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
@@ -121,6 +121,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(238, 38);
             this.comboBox4.TabIndex = 70;
+          
             // 
             // comboBox3
             // 
@@ -297,6 +298,15 @@
             this.panel1.Size = new System.Drawing.Size(268, 752);
             this.panel1.TabIndex = 137;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Location = new System.Drawing.Point(0, 244);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(268, 520);
+            this.panel2.TabIndex = 4;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -309,15 +319,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "CRM SOUSSE\r\nAjouter un nouvel\r\n équipement\r\n\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(0, 244);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(268, 520);
-            this.panel2.TabIndex = 4;
             // 
             // Ajouter_equipement
             // 

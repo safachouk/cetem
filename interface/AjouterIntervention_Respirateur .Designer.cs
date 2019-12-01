@@ -31,7 +31,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox29 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -70,6 +69,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -117,34 +119,12 @@
             this.comboBox29.ForeColor = System.Drawing.Color.Black;
             this.comboBox29.FormattingEnabled = true;
             this.comboBox29.ItemHeight = 30;
-            this.comboBox29.Items.AddRange(new object[] {
-            "Respirateur de réanimation ",
-            "Respirateur de transport ",
-            "Respirateur anesthèsie "});
             this.comboBox29.Location = new System.Drawing.Point(890, 73);
             this.comboBox29.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox29.Name = "comboBox29";
             this.comboBox29.Size = new System.Drawing.Size(236, 38);
             this.comboBox29.TabIndex = 139;
-            this.comboBox29.SelectedIndexChanged += new System.EventHandler(this.ComboBox29_SelectedIndexChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 30;
-            this.comboBox1.Items.AddRange(new object[] {
-            "058265879"});
-            this.comboBox1.Location = new System.Drawing.Point(890, 23);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(237, 38);
-            this.comboBox1.TabIndex = 142;
+            this.comboBox29.SelectedValueChanged += new System.EventHandler(this.ajoutserresp);
             // 
             // comboBox2
             // 
@@ -178,7 +158,6 @@
             this.groupBox1.TabIndex = 147;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Etat Intervention ";
-            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // radioButton2
             // 
@@ -219,7 +198,6 @@
             this.groupBox2.TabIndex = 148;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Etat équipement ";
-            this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
             // radioButton4
             // 
@@ -246,7 +224,6 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Bon";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -261,7 +238,6 @@
             this.groupBox3.TabIndex = 149;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Test sécurite électrique ";
-            this.groupBox3.Enter += new System.EventHandler(this.GroupBox3_Enter);
             // 
             // radioButton6
             // 
@@ -303,7 +279,6 @@
             this.groupBox4.TabIndex = 150;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Test volume contrôlée  ";
-            this.groupBox4.Enter += new System.EventHandler(this.GroupBox4_Enter);
             // 
             // radioButton9
             // 
@@ -358,7 +333,6 @@
             this.groupBox5.TabIndex = 151;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Test pression contrôlée  ";
-            this.groupBox5.Enter += new System.EventHandler(this.GroupBox5_Enter);
             // 
             // radioButton10
             // 
@@ -413,7 +387,6 @@
             this.groupBox6.TabIndex = 152;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Test volume assisté Contrôlée  ";
-            this.groupBox6.Enter += new System.EventHandler(this.GroupBox6_Enter);
             // 
             // radioButton13
             // 
@@ -468,7 +441,6 @@
             this.groupBox7.TabIndex = 153;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Test Oxygéne ";
-            this.groupBox7.Enter += new System.EventHandler(this.GroupBox7_Enter);
             // 
             // radioButton16
             // 
@@ -580,7 +552,7 @@
             this.label20.Size = new System.Drawing.Size(231, 35);
             this.label20.TabIndex = 252;
             this.label20.Text = "Numéro Intervention ";
-            this.label20.Click += new System.EventHandler(this.Label20_Click);
+          
             // 
             // label6
             // 
@@ -642,7 +614,6 @@
             this.label13.Size = new System.Drawing.Size(249, 36);
             this.label13.TabIndex = 259;
             this.label13.Text = "Commentaire (S)";
-            this.label13.Click += new System.EventHandler(this.Label13_Click);
             // 
             // panel1
             // 
@@ -671,12 +642,40 @@
             this.panel2.Size = new System.Drawing.Size(669, 8);
             this.panel2.TabIndex = 260;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(963, 37);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 261;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(963, 37);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.TabIndex = 262;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(890, 37);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(236, 21);
+            this.comboBox5.TabIndex = 263;
+            this.comboBox5.SelectedValueChanged += new System.EventHandler(this.ajoutresptype);
+            // 
             // AjouterIntervention_Respirateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1205, 749);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
@@ -687,12 +686,10 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBox29);
             this.Controls.Add(this.textBox2);
             this.Name = "AjouterIntervention_Respirateur";
             this.Text = "ModifierIntervention";
-            this.Load += new System.EventHandler(this.AjouterIntervention_Respirateur_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -718,7 +715,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox29;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -757,5 +753,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }

@@ -19,15 +19,15 @@ namespace @interface
         InitializeComponent();
             ajoutintervenant();
             ajoutdemande();
-            ajoutserresp();
-
+            
         }
 
-        private void ajoutserresp()
+        private void ajoutdemande()
         {
-            comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(Databaseconnection.getserresp());
+            comboBox5.Items.Clear();
+            comboBox5.Items.AddRange(Databaseconnection.getdemanderesp());
         }
+
 
         private void ajoutintervenant()
         {
@@ -35,12 +35,7 @@ namespace @interface
             comboBox3.Items.AddRange(Databaseconnection.getintervenant());
         }
 
-        private void ajoutdemande()
-        {
-            comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.getdemande());
-        }
-
+    
         private void Button1_Click(object sender, EventArgs e)
         {
             if (!radioButton1.Checked && !radioButton2.Checked)
@@ -96,10 +91,7 @@ namespace @interface
             }
 
 
-           /* If(button1.is checked== false
-S= button2.checked ? ....
-Else
-S= button1.text...*/
+     
 
              string  etatintervention = radioButton1.Checked ? radioButton1.Text : radioButton2.Text;
              string  etatequipement = radioButton3.Checked ? radioButton3.Text : radioButton4.Text;
@@ -150,65 +142,18 @@ S= button1.text...*/
 
         }
 
-        private void ComboBox29_SelectedIndexChanged(object sender, EventArgs e)
+        private void ajoutresptype(object sender, EventArgs e)
         {
-          //  remplirListNumSerie(); select numero serie from equipemen where type equipement = type.text and id_hopital=(select id hopital from demande where num demande = numdemande.text) 
-
+            comboBox29.Items.Clear();
+            comboBox29.Items.AddRange(Databaseconnection.gettyperesp(comboBox5.SelectedItem.ToString()));
         }
 
-        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        private void ajoutserresp(object sender, EventArgs e)
         {
-
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getserresp(comboBox29.SelectedItem.ToString()));
         }
 
-        private void AjouterIntervention_Respirateur_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label20_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

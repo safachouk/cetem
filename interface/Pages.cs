@@ -591,5 +591,30 @@ namespace @interface
         {
 
         }
+
+        private void Panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
