@@ -20,7 +20,21 @@ namespace @interface
 
     {
         InitializeComponent();
+        ajoutintervenant();
+        ajoutdemande();
     }
+
+        private void ajoutintervenant()
+        {
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(Databaseconnection.getintervenant());
+        }
+
+        private void ajoutdemande()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getdemandepousse());
+        }
         Intervention_pousse_seringue ps;
        public void setpousseseringue(int id )
         {
@@ -78,7 +92,7 @@ namespace @interface
                     radioButton4.Select(); break;
             }
             comboBox2.Text = ps.num_ser_equip;
-
+            comboBox4.Text = ps.typeequipement;
 
         }
 
@@ -90,11 +104,11 @@ namespace @interface
             string etatsecurite11 = radioButton11.Checked ? radioButton11.Text : radioButton12.Text;
             string testpremiervoie1 = radioButton7.Checked ? radioButton7.Text : radioButton8.Text;
             string testdeuxiemevoie1 = radioButton9.Checked ? radioButton9.Text : radioButton10.Text;
+            //string numpousse , string datepousse1 , string etatpouss1 , string iterpouss1 , string tspouss1 , string tspvpou1 , string tsp2pouss1 , string compouss1 , string numpousse1 , string etatequip , string seriepouss1 , string typeequip , int id
 
 
 
-
-            var result = Databaseconnection.Modifier_interv_pousse_seringue(textBox3.Text, dateTimePicker1.Text, etatintervention11, comboBox3.Text, etatsecurite11, testpremiervoie1, testdeuxiemevoie1, richTextBox1.Text, comboBox1.Text, etatequipement11, comboBox2.Text, textBox1.Text , ps.id_pousse);
+            var result = Databaseconnection.Modifier_interv_pousse_seringue(textBox3.Text, dateTimePicker1.Text, etatintervention11, comboBox3.Text, etatsecurite11, testpremiervoie1, testdeuxiemevoie1, richTextBox1.Text, comboBox1.Text, etatequipement11, comboBox2.Text, comboBox4.Text , ps.id_pousse);
             if(result)
             {
                 MessageBox.Show("Pousse seringue modifié avec succée");
@@ -105,34 +119,17 @@ namespace @interface
                 MessageBox.Show("Problem de modification de Pousse seringue");
         }
 
-        private void Modifier_pousse_seringue_Load(object sender, EventArgs e)
+        private void Updatemarquepousse(object sender, EventArgs e)
         {
+            comboBox4.Items.Clear();
+            comboBox4.Items.AddRange(Databaseconnection.getmodelepousse(comboBox1.SelectedItem.ToString()));
 
         }
 
-        private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void updatenumeropousse(object sender, EventArgs e)
         {
-
-        }
-
-        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getseriepousse(comboBox4.SelectedItem.ToString()));
         }
     }
 

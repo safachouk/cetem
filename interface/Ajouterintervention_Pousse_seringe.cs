@@ -101,5 +101,7 @@ namespace @interface
             comboBox2.Items.AddRange(Databaseconnection.getseriepousse(comboBox4.SelectedItem.ToString()));
 
         }
+
+      
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -60,6 +59,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -67,16 +67,6 @@
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(863, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 29);
-            this.textBox1.TabIndex = 264;
             // 
             // comboBox3
             // 
@@ -93,12 +83,11 @@
             "anoir",
             "salah",
             "fawzi "});
-            this.comboBox3.Location = new System.Drawing.Point(265, 129);
+            this.comboBox3.Location = new System.Drawing.Point(253, 118);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(238, 33);
             this.comboBox3.TabIndex = 256;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -112,12 +101,11 @@
             this.comboBox2.ItemHeight = 25;
             this.comboBox2.Items.AddRange(new object[] {
             "08975/ss"});
-            this.comboBox2.Location = new System.Drawing.Point(862, 126);
+            this.comboBox2.Location = new System.Drawing.Point(846, 118);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(236, 33);
             this.comboBox2.TabIndex = 255;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -131,21 +119,22 @@
             this.comboBox1.ItemHeight = 25;
             this.comboBox1.Items.AddRange(new object[] {
             "058265879"});
-            this.comboBox1.Location = new System.Drawing.Point(862, 31);
+            this.comboBox1.Location = new System.Drawing.Point(847, 14);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(236, 33);
             this.comboBox1.TabIndex = 254;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.Updatemarquepousse);
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(265, 35);
+            this.textBox3.Location = new System.Drawing.Point(253, 12);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(238, 29);
+            this.textBox3.Size = new System.Drawing.Size(238, 35);
             this.textBox3.TabIndex = 253;
             // 
             // groupBox6
@@ -156,7 +145,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(670, 312);
+            this.groupBox6.Location = new System.Drawing.Point(689, 314);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(228, 93);
             this.groupBox6.TabIndex = 267;
@@ -196,7 +185,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(795, 203);
+            this.groupBox5.Location = new System.Drawing.Point(818, 203);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(218, 91);
             this.groupBox5.TabIndex = 269;
@@ -241,7 +230,6 @@
             this.groupBox4.TabIndex = 268;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Test première voie";
-            this.groupBox4.Enter += new System.EventHandler(this.GroupBox4_Enter);
             // 
             // radioButton7
             // 
@@ -275,7 +263,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(796, 70);
+            this.groupBox2.Location = new System.Drawing.Point(819, 70);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(217, 93);
             this.groupBox2.TabIndex = 266;
@@ -351,7 +339,7 @@
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(8, 61);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(454, 485);
+            this.richTextBox1.Size = new System.Drawing.Size(488, 506);
             this.richTextBox1.TabIndex = 271;
             this.richTextBox1.Text = "";
             // 
@@ -364,9 +352,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(468, 435);
+            this.button1.Location = new System.Drawing.Point(502, 442);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(609, 111);
+            this.button1.Size = new System.Drawing.Size(598, 125);
             this.button1.TabIndex = 272;
             this.button1.Text = "Modifier Protocole Pousse Seringue ";
             this.button1.UseVisualStyleBackColor = false;
@@ -375,7 +363,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(265, 83);
+            this.dateTimePicker1.Location = new System.Drawing.Point(253, 68);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(238, 29);
             this.dateTimePicker1.TabIndex = 279;
@@ -387,7 +375,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(27, 139);
+            this.label3.Location = new System.Drawing.Point(12, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 35);
             this.label3.TabIndex = 285;
@@ -400,7 +388,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(27, 87);
+            this.label1.Location = new System.Drawing.Point(12, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 35);
             this.label1.TabIndex = 284;
@@ -413,7 +401,7 @@
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label20.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(27, 35);
+            this.label20.Location = new System.Drawing.Point(12, 12);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(231, 35);
             this.label20.TabIndex = 283;
@@ -426,7 +414,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(612, 133);
+            this.label6.Location = new System.Drawing.Point(545, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 35);
             this.label6.TabIndex = 288;
@@ -439,11 +427,11 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(612, 81);
+            this.label5.Location = new System.Drawing.Point(545, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(235, 35);
+            this.label5.Size = new System.Drawing.Size(264, 35);
             this.label5.TabIndex = 287;
-            this.label5.Text = "Type Pousse Seringue \r\n";
+            this.label5.Text = "Marque Pousse Seringue \r\n";
             // 
             // label4
             // 
@@ -452,7 +440,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(612, 29);
+            this.label4.Location = new System.Drawing.Point(545, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 35);
             this.label4.TabIndex = 286;
@@ -470,18 +458,17 @@
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox6);
-            this.panel1.Location = new System.Drawing.Point(4, 191);
+            this.panel1.Location = new System.Drawing.Point(-5, 179);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1094, 555);
+            this.panel1.Size = new System.Drawing.Size(1120, 567);
             this.panel1.TabIndex = 289;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(462, 421);
+            this.panel2.Location = new System.Drawing.Point(487, 439);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(632, 8);
+            this.panel2.Size = new System.Drawing.Size(616, 8);
             this.panel2.TabIndex = 274;
             // 
             // label2
@@ -491,18 +478,38 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 12);
+            this.label2.Location = new System.Drawing.Point(99, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(249, 36);
             this.label2.TabIndex = 273;
             this.label2.Text = "Commentaire (S)";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.comboBox4.BackColor = System.Drawing.Color.White;
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.ForeColor = System.Drawing.Color.Black;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.ItemHeight = 25;
+            this.comboBox4.Items.AddRange(new object[] {
+            "058265879"});
+            this.comboBox4.Location = new System.Drawing.Point(847, 64);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(236, 33);
+            this.comboBox4.TabIndex = 290;
+            this.comboBox4.SelectedValueChanged += new System.EventHandler(this.updatenumeropousse);
             // 
             // Modifier_pousse_seringue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1116, 749);
+            this.ClientSize = new System.Drawing.Size(1094, 749);
+            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -511,14 +518,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Name = "Modifier_pousse_seringue";
             this.Text = "Modifier_pousse_seringue";
-            this.Load += new System.EventHandler(this.Modifier_pousse_seringue_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -537,7 +542,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -569,5 +573,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

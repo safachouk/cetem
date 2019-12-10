@@ -101,7 +101,7 @@ namespace @interface
 
            
 
-            var result = Databaseconnection.ajout_defibrillateur(textBox6.Text, dateTimePicker2.Text, etatintervention566, comboBox3.Text, testsecuriteelectrique556, testindicateursynchro, indicateurnormale, testtempscharge, testenergie, tauxperte, testmoniteur, enregistrementpapier, richTextBox1.Text, comboBox2.Text, comboBox4.Text, etatequipement566);
+            var result = Databaseconnection.ajout_defibrillateur(textBox6.Text, dateTimePicker2.Text, etatintervention566, comboBox3.Text, testsecuriteelectrique556, testindicateursynchro, indicateurnormale, testtempscharge, testenergie, tauxperte, testmoniteur, enregistrementpapier, richTextBox1.Text, comboBox2.Text, comboBox4.Text, etatequipement566 , comboBox1.Text);
           if (result)
             {
                 MessageBox.Show("Défibrillateur ajouté avec succée");

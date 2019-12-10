@@ -19,7 +19,7 @@ namespace @interface
             InitializeComponent();
             AjoutPersonnel();
             ajoudemande();
-            ajoutserie();
+            
         }
 
         private void ajoudemande()
@@ -28,12 +28,7 @@ namespace @interface
             comboBox1.Items.AddRange(Databaseconnection.getdemandebistouri());
         }
 
-        private void ajoutserie()
-        {
-            comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(Databaseconnection.getserie());
-        }
-
+       
         private void AjoutPersonnel()
         {
             comboBox3.Items.Clear();
@@ -56,7 +51,7 @@ namespace @interface
                     radioButton2.Select(); break;
             }
             comboBox3.Text = x.Intervenant;
-            textBox3.Text = x.typ_equipement;
+            comboBox4.Text = x.typ_equipement;
         
             switch (x.Test_securit_electrique)
             {
@@ -117,7 +112,7 @@ namespace @interface
             string testfuitepartieneutre1 = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
            
-         var result = Databaseconnection.Modifier_interv_bistouri(textBox1.Text, dateTimePicker1.Text, etatintervention33, comboBox3.Text, textBox3.Text, securitelectrique44, testmodes1, richTextBox1.Text, comboBox1.Text, testfuitepartieactive1, testfuitepartieneutre1, etatequipement33, comboBox2.Text, x.idintervention);
+         var result = Databaseconnection.Modifier_interv_bistouri(textBox1.Text, dateTimePicker1.Text, etatintervention33, comboBox3.Text, comboBox4.Text, securitelectrique44, testmodes1, richTextBox1.Text, comboBox1.Text, testfuitepartieactive1, testfuitepartieneutre1, etatequipement33, comboBox2.Text, x.idintervention);
           
           
             if(result)
@@ -131,6 +126,16 @@ namespace @interface
 
         }
 
+        private void updatemarquebist(object sender, EventArgs e)
+        {
+            comboBox4.Items.Clear();
+            comboBox4.Items.AddRange(Databaseconnection.getmodelbistouri(comboBox1.SelectedItem.ToString()));
+        }
 
+        private void updatenumerobist(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(Databaseconnection.getseriebistouri(comboBox4.SelectedItem.ToString()));
+        }
     }
 }

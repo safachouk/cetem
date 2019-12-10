@@ -135,6 +135,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(273, 38);
             this.comboBox1.TabIndex = 254;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.updatetyperesp);
             // 
             // comboBox29
             // 
@@ -151,6 +152,7 @@
             this.comboBox29.Name = "comboBox29";
             this.comboBox29.Size = new System.Drawing.Size(272, 38);
             this.comboBox29.TabIndex = 253;
+            this.comboBox29.SelectedValueChanged += new System.EventHandler(this.Updateserialresp);
             // 
             // textBox1
             // 
@@ -189,7 +191,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "finished";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
+
             // 
             // radioButton1
             // 
@@ -203,7 +205,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "In progress";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+          
             // 
             // groupBox2
             // 
@@ -231,7 +233,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "False";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.RadioButton4_CheckedChanged);
+          
             // 
             // radioButton3
             // 
@@ -245,7 +247,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "True";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
+       
             // 
             // groupBox3
             // 
@@ -463,7 +465,7 @@
             this.groupBox6.TabIndex = 272;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Test volume assisté Contrôlée  ";
-            this.groupBox6.Enter += new System.EventHandler(this.GroupBox6_Enter);
+           
             // 
             // radioButton13
             // 
@@ -512,7 +514,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(374, 513);
             this.richTextBox1.TabIndex = 274;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
+          
             // 
             // button1
             // 
@@ -603,7 +605,7 @@
             this.label2.Size = new System.Drawing.Size(195, 35);
             this.label2.TabIndex = 288;
             this.label2.Text = "Date Intervention ";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
+         
             // 
             // label20
             // 
@@ -678,7 +680,7 @@
             this.Controls.Add(this.comboBox29);
             this.Name = "Modifier_interv_resp";
             this.Text = "Modifier_interv_resp";
-            this.Load += new System.EventHandler(this.Modifier_interv_resp_Load);
+    
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

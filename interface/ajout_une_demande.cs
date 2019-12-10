@@ -223,7 +223,7 @@ namespace @interface
                 return;
             }
             
-            var result = Databaseconnection.Ajouter_demande(textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox1.Text, textBox6.Text, dateTimePicker1.Text, comboBox6.Text, textBox8.Text, comboBox9.Text, comboBox8.Text,rowlist.Select(r=> r[3].FormattedValue.ToString()).ToList());
+            var result = Databaseconnection.Ajouter_demande(textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox1.Text, textBox6.Text, dateTimePicker1.Text, textBox7.Text, textBox8.Text, comboBox9.Text, comboBox8.Text,rowlist.Select(r=> r[3].FormattedValue.ToString()).ToList());
 
             if (result)
             {
@@ -275,6 +275,11 @@ namespace @interface
         }
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

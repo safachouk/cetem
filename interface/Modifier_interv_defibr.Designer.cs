@@ -25,7 +25,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.radioButton19 = new System.Windows.Forms.RadioButton();
             this.radioButton20 = new System.Windows.Forms.RadioButton();
@@ -70,6 +69,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -94,10 +94,10 @@
             this.comboBox1.ItemHeight = 21;
             this.comboBox1.Items.AddRange(new object[] {
             "08975/ss"});
-            this.comboBox1.Location = new System.Drawing.Point(759, 101);
+            this.comboBox1.Location = new System.Drawing.Point(808, 96);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(240, 29);
+            this.comboBox1.Size = new System.Drawing.Size(244, 29);
             this.comboBox1.TabIndex = 257;
             // 
             // comboBox3
@@ -113,7 +113,7 @@
             "safa",
             "anoir",
             "salah"});
-            this.comboBox3.Location = new System.Drawing.Point(267, 93);
+            this.comboBox3.Location = new System.Drawing.Point(274, 99);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(243, 29);
@@ -130,29 +130,22 @@
             this.comboBox2.ItemHeight = 21;
             this.comboBox2.Items.AddRange(new object[] {
             "058265879"});
-            this.comboBox2.Location = new System.Drawing.Point(759, 15);
+            this.comboBox2.Location = new System.Drawing.Point(808, 14);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(244, 29);
             this.comboBox2.TabIndex = 254;
+            this.comboBox2.SelectedValueChanged += new System.EventHandler(this.updatemarquedefib);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(267, 18);
+            this.textBox1.Location = new System.Drawing.Point(274, 14);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 26);
+            this.textBox1.Size = new System.Drawing.Size(243, 28);
             this.textBox1.TabIndex = 265;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(759, 59);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 26);
-            this.textBox3.TabIndex = 267;
             // 
             // groupBox10
             // 
@@ -275,13 +268,12 @@
             this.groupBox7.Controls.Add(this.radioButton14);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(401, 268);
+            this.groupBox7.Location = new System.Drawing.Point(443, 268);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(276, 74);
             this.groupBox7.TabIndex = 274;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Test Taux De Perte";
-            this.groupBox7.Enter += new System.EventHandler(this.GroupBox7_Enter);
             // 
             // radioButton13
             // 
@@ -314,7 +306,7 @@
             this.groupBox5.Controls.Add(this.radioButton10);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(401, 175);
+            this.groupBox5.Location = new System.Drawing.Point(443, 175);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(276, 86);
             this.groupBox5.TabIndex = 273;
@@ -390,7 +382,7 @@
             this.groupBox3.Controls.Add(this.radioButton6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(401, 357);
+            this.groupBox3.Location = new System.Drawing.Point(443, 357);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(276, 68);
             this.groupBox3.TabIndex = 271;
@@ -434,7 +426,6 @@
             this.groupBox6.TabIndex = 270;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Test Sécurite électrique ";
-            this.groupBox6.Enter += new System.EventHandler(this.GroupBox6_Enter);
             // 
             // radioButton11
             // 
@@ -467,7 +458,7 @@
             this.groupBox2.Controls.Add(this.radioButton3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(400, 93);
+            this.groupBox2.Location = new System.Drawing.Point(442, 93);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(277, 76);
             this.groupBox2.TabIndex = 269;
@@ -506,7 +497,7 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(400, 11);
+            this.groupBox1.Location = new System.Drawing.Point(442, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(277, 76);
             this.groupBox1.TabIndex = 268;
@@ -539,16 +530,16 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(8, 50);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 50);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(371, 499);
+            this.richTextBox1.Size = new System.Drawing.Size(436, 499);
             this.richTextBox1.TabIndex = 279;
             this.richTextBox1.Text = "";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 59);
+            this.dateTimePicker1.Location = new System.Drawing.Point(274, 56);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(243, 26);
             this.dateTimePicker1.TabIndex = 287;
@@ -561,9 +552,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(378, 441);
+            this.button1.Location = new System.Drawing.Point(436, 452);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(706, 108);
+            this.button1.Size = new System.Drawing.Size(660, 97);
             this.button1.TabIndex = 289;
             this.button1.Text = "Modifier Protocole Défibrillateur ";
             this.button1.UseVisualStyleBackColor = false;
@@ -576,7 +567,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(21, 87);
+            this.label8.Location = new System.Drawing.Point(21, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 35);
             this.label8.TabIndex = 294;
@@ -589,7 +580,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label9.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(21, 50);
+            this.label9.Location = new System.Drawing.Point(21, 53);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(195, 35);
             this.label9.TabIndex = 293;
@@ -615,7 +606,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(555, 93);
+            this.label1.Location = new System.Drawing.Point(568, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 35);
             this.label1.TabIndex = 297;
@@ -628,11 +619,11 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(555, 50);
+            this.label2.Location = new System.Drawing.Point(568, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 35);
+            this.label2.Size = new System.Drawing.Size(235, 35);
             this.label2.TabIndex = 296;
-            this.label2.Text = "Type Défibrillateur \r\n";
+            this.label2.Text = "Marque Défibrillateur \r\n";
             // 
             // label3
             // 
@@ -641,7 +632,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(555, 11);
+            this.label3.Location = new System.Drawing.Point(568, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 35);
             this.label3.TabIndex = 295;
@@ -684,15 +675,15 @@
             this.panel1.Controls.Add(this.groupBox9);
             this.panel1.Location = new System.Drawing.Point(4, 143);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1087, 552);
+            this.panel1.Size = new System.Drawing.Size(1096, 552);
             this.panel1.TabIndex = 298;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(378, 438);
+            this.panel2.Location = new System.Drawing.Point(436, 438);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(709, 8);
+            this.panel2.Size = new System.Drawing.Size(660, 8);
             this.panel2.TabIndex = 291;
             // 
             // label4
@@ -708,10 +699,29 @@
             this.label4.TabIndex = 290;
             this.label4.Text = "Commentaire (S)";
             // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.comboBox4.BackColor = System.Drawing.Color.White;
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.ItemHeight = 21;
+            this.comboBox4.Items.AddRange(new object[] {
+            "058265879"});
+            this.comboBox4.Location = new System.Drawing.Point(808, 56);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(244, 29);
+            this.comboBox4.TabIndex = 299;
+            this.comboBox4.SelectedValueChanged += new System.EventHandler(this.updatenumerodefib);
+            // 
             // Modifier_interv_defibr
             // 
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1103, 693);
+            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -722,7 +732,6 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBox3);
@@ -730,7 +739,6 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Modifier_interv_defibr";
-            this.Load += new System.EventHandler(this.Modifier_interv_defibr_Load);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -763,7 +771,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.RadioButton radioButton19;
         private System.Windows.Forms.RadioButton radioButton20;
@@ -808,5 +815,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

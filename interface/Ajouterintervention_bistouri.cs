@@ -92,8 +92,8 @@ namespace @interface
             string testfuitepartieactive = radioButton9.Checked ? radioButton9.Text : radioButton10.Text;
             string testfuitepartieneutre = radioButton13.Checked ? radioButton13.Text : radioButton14.Text;
 
-
-            var result = Databaseconnection.ajout_boustri(dateTimePicker1.Text, textBox4.Text, etatintervention3, comboBox3.Text, comboBox4.Text, securitelectrique4, testmodes, richTextBox1.Text, comboBox1.Text, testfuitepartieactive, testfuitepartieneutre, etatequipement3, comboBox2.Text); 
+            //string numintervention2 , string dateintervent2 , string etatinterv2 , string intervenant2 , string typequip222 , string testsecuritu2 , string testmod2 , string comme2 , string numdemand2 , string testfuiteactive , string testfuiteneutre , string etat_equip2 ,string numdema//
+            var result = Databaseconnection.ajout_boustri(textBox4.Text , dateTimePicker1.Text, etatintervention3, comboBox3.Text, comboBox4.Text, securitelectrique4, testmodes, richTextBox2.Text, comboBox1.Text, testfuitepartieactive, testfuitepartieneutre, etatequipement3, comboBox2.Text); 
            
             if(result)
             {
@@ -106,30 +106,6 @@ namespace @interface
          
         }
 
-        private void Label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ajouterintervention_bistouri_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton13_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Addmarque(object sender, EventArgs e)
         {
@@ -143,5 +119,7 @@ namespace @interface
             comboBox2.Items.AddRange(Databaseconnection.getseriebistouri(comboBox4.SelectedItem.ToString()));
 
         }
+
+     
     }
 }

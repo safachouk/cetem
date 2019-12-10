@@ -90,9 +90,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(525, 456);
+            this.button1.Location = new System.Drawing.Point(518, 456);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(649, 99);
+            this.button1.Size = new System.Drawing.Size(687, 99);
             this.button1.TabIndex = 71;
             this.button1.Text = "Ajouter Protocole Respirateur ";
             this.button1.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@
             this.comboBox2.Location = new System.Drawing.Point(892, 129);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(237, 38);
+            this.comboBox2.Size = new System.Drawing.Size(234, 38);
             this.comboBox2.TabIndex = 144;
             // 
             // groupBox1
@@ -552,7 +552,6 @@
             this.label20.Size = new System.Drawing.Size(231, 35);
             this.label20.TabIndex = 252;
             this.label20.Text = "Numéro Intervention ";
-          
             // 
             // label6
             // 
@@ -609,7 +608,7 @@
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label13.Font = new System.Drawing.Font("Baskerville Old Face", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(42, 17);
+            this.label13.Location = new System.Drawing.Point(142, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(249, 36);
             this.label13.TabIndex = 259;
@@ -629,9 +628,9 @@
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox7);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(6, 188);
+            this.panel1.Location = new System.Drawing.Point(1, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1208, 603);
+            this.panel1.Size = new System.Drawing.Size(1213, 603);
             this.panel1.TabIndex = 260;
             // 
             // panel2
@@ -639,7 +638,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(518, 442);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(669, 8);
+            this.panel2.Size = new System.Drawing.Size(687, 8);
             this.panel2.TabIndex = 260;
             // 
             // comboBox1
@@ -660,10 +659,11 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(890, 37);
+            this.comboBox5.Location = new System.Drawing.Point(890, 26);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(236, 21);
+            this.comboBox5.Size = new System.Drawing.Size(236, 37);
             this.comboBox5.TabIndex = 263;
             this.comboBox5.SelectedValueChanged += new System.EventHandler(this.ajoutresptype);
             // 

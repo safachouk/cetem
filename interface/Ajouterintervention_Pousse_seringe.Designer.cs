@@ -78,7 +78,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(464, 434);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(624, 133);
+            this.button1.Size = new System.Drawing.Size(649, 133);
             this.button1.TabIndex = 146;
             this.button1.Text = "Ajouter Protocole Pousse Seringue ";
             this.button1.UseVisualStyleBackColor = false;
@@ -285,9 +285,9 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(10, 66);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 66);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(448, 483);
+            this.richTextBox1.Size = new System.Drawing.Size(455, 494);
             this.richTextBox1.TabIndex = 158;
             this.richTextBox1.Text = "";
             // 
@@ -306,7 +306,7 @@
             "anoir",
             "salah",
             "fawzi "});
-            this.comboBox3.Location = new System.Drawing.Point(307, 130);
+            this.comboBox3.Location = new System.Drawing.Point(307, 127);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(231, 33);
@@ -324,7 +324,7 @@
             this.comboBox2.ItemHeight = 25;
             this.comboBox2.Items.AddRange(new object[] {
             "08975/ss"});
-            this.comboBox2.Location = new System.Drawing.Point(821, 121);
+            this.comboBox2.Location = new System.Drawing.Point(862, 130);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 33);
@@ -342,7 +342,7 @@
             this.comboBox1.ItemHeight = 25;
             this.comboBox1.Items.AddRange(new object[] {
             "058265879"});
-            this.comboBox1.Location = new System.Drawing.Point(821, 29);
+            this.comboBox1.Location = new System.Drawing.Point(862, 28);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 33);
@@ -354,16 +354,18 @@
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(307, 33);
+            this.textBox3.Location = new System.Drawing.Point(307, 27);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 29);
+            this.textBox3.Size = new System.Drawing.Size(231, 35);
             this.textBox3.TabIndex = 161;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(307, 86);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(231, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(231, 31);
             this.dateTimePicker1.TabIndex = 254;
             // 
             // label3
@@ -373,7 +375,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(34, 131);
+            this.label3.Location = new System.Drawing.Point(34, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 35);
             this.label3.TabIndex = 260;
@@ -386,7 +388,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 76);
+            this.label1.Location = new System.Drawing.Point(34, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 35);
             this.label1.TabIndex = 259;
@@ -412,7 +414,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(570, 125);
+            this.label6.Location = new System.Drawing.Point(570, 122);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 35);
             this.label6.TabIndex = 263;
@@ -425,7 +427,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(570, 79);
+            this.label5.Location = new System.Drawing.Point(570, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(264, 35);
             this.label5.TabIndex = 262;
@@ -438,7 +440,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(570, 33);
+            this.label4.Location = new System.Drawing.Point(570, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 35);
             this.label4.TabIndex = 261;
@@ -456,9 +458,9 @@
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(2, 188);
+            this.panel1.Location = new System.Drawing.Point(-5, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 570);
+            this.panel1.Size = new System.Drawing.Size(1116, 570);
             this.panel1.TabIndex = 264;
             // 
             // panel2
@@ -497,7 +499,7 @@
             "anoir",
             "salah",
             "fawzi "});
-            this.comboBox4.Location = new System.Drawing.Point(821, 78);
+            this.comboBox4.Location = new System.Drawing.Point(862, 84);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(231, 33);
@@ -509,7 +511,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1109, 749);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);

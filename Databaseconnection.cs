@@ -1462,6 +1462,7 @@ namespace CetemLibrary
                             reader.GetString("Numero_demande10"),
                             reader.GetString("type_equip2"),
                             reader.GetString("etat_equip25"),
+                            reader.GetString("numser"),
                             reader.GetInt32("id_defib"));
                         reader.Close();
                         conn.Close();
@@ -1740,7 +1741,7 @@ namespace CetemLibrary
         }
             
         
-        public static bool ajout_defibrillateur(string numintervention5 , string dateintervention5 , string etatintervention5 , string intervenant5 , string testsecuriteelectrique5 , string testmodesynchro , string testmodenormale , string testtempscharge , string testmesureenergie , string testtauxperte , string testmoniteuretecg , string testenrgipapier , string commentaire6 , string numdemand6 , string typequip6 , string etatequip6 )
+        public static bool ajout_defibrillateur(string numintervention5 , string dateintervention5 , string etatintervention5 , string intervenant5 , string testsecuriteelectrique5 , string testmodesynchro , string testmodenormale , string testtempscharge , string testmesureenergie , string testtauxperte , string testmoniteuretecg , string testenrgipapier , string commentaire6 , string numdemand6 , string typequip6 , string etatequip6 , string numservdefib )
         {
 
             if (conn == null)
@@ -1751,7 +1752,7 @@ namespace CetemLibrary
 
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
-                var aintervrdefib = new MySqlCommand("INSERT INTO  intervention_defibrillateur(Numero_intervention6 , Date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_indicateur_mode_synchro , Test_indicateur_mode_normale , Test_temps_charge , Testmesureenergie , Test_taux_de_perte , Testmoniteurecg , Testenregistrementpapier , Commentaire , 	Numero_demande10 , type_equip2 , etat_equip25  )" + "VALUES(@Numero_intervention6 , @Date_intervention6 , @Etat_intervention6 , @Intervenant6 , @Test_securit_electrique6 , @Test_indicateur_mode_synchro , @Test_indicateur_mode_normale , @Test_temps_charge , @Test_mesure_energie , @Testtauxperte , @Testmoniteurecg , @Testenregistrementpapier , @Commentaire6 , @Numero_demande6 , @type_equip6 , @etat_equip6)", conn);
+                var aintervrdefib = new MySqlCommand("INSERT INTO  intervention_defibrillateur(Numero_intervention6 , Date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_indicateur_mode_synchro , Test_indicateur_mode_normale , Test_temps_charge , Testmesureenergie , Test_taux_de_perte , Testmoniteurecg , Testenregistrementpapier , Commentaire , 	Numero_demande10 , type_equip2 , etat_equip25 , numseri )" + "VALUES(@Numero_intervention6 , @Date_intervention6 , @Etat_intervention6 , @Intervenant6 , @Test_securit_electrique6 , @Test_indicateur_mode_synchro , @Test_indicateur_mode_normale , @Test_temps_charge , @Test_mesure_energie , @Testtauxperte , @Testmoniteurecg , @Testenregistrementpapier , @Commentaire6 , @Numero_demande6 , @type_equip6 , @etat_equip6 , @numserv)", conn);
 
                 aintervrdefib.Parameters.AddWithValue("@Numero_intervention6",numintervention5);
                 aintervrdefib.Parameters.AddWithValue("@Date_intervention6", dateintervention5);
@@ -1769,6 +1770,7 @@ namespace CetemLibrary
                 aintervrdefib.Parameters.AddWithValue("@Numero_demande6", numdemand6);
                 aintervrdefib.Parameters.AddWithValue("@type_equip6", typequip6);
                 aintervrdefib.Parameters.AddWithValue("@etat_equip6", etatequip6);
+                aintervrdefib.Parameters.AddWithValue("@numserv", numservdefib);
                 int rowCount = aintervrdefib.ExecuteNonQuery();
                 conn.Close();
                 return rowCount == 1;
@@ -2049,7 +2051,7 @@ namespace CetemLibrary
         }
 
 
-        public static bool Modifier_interv_defibrillateur(string numinterdef , string datedef , string etatdef , string intdef , string tsedef , string timsddef , string timnddef , string ttcddef , string tmeddef , string ttpddef , string tmecgddef , string tepddef , string comdef , string nmdeddef , string typdef , string etaadef , int id)
+        public static bool Modifier_interv_defibrillateur(string numinterdef , string datedef , string etatdef , string intdef , string tsedef , string timsddef , string timnddef , string ttcddef , string tmeddef , string ttpddef , string tmecgddef , string tepddef , string comdef , string nmdeddef , string typdef , string etaadef , string servic , int id)
 
         {
             if (conn == null)
@@ -2059,7 +2061,7 @@ namespace CetemLibrary
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
              
-                var Minterde = new MySqlCommand("update intervention_defibrillateur set Numero_intervention6=@nintd , Date_intervention=@dated , Etat_intervention=@etatd , Intervenant=@intde , Test_securit_electrique =@tsed , Test_indicateur_mode_synchro =@timsd1 , Test_indicateur_mode_normale=@timnd , Test_temps_charge =@ttcd , Testmesureenergie =@tmed , Test_taux_de_perte=@ttpd , Testmoniteurecg=@tmecgd , Testenregistrementpapier=@tepd , Commentaire=@comd , Numero_demande10=@nmded , type_equip2=@tydef , etat_equip25=@etdef where id_defib= @id", conn);
+                var Minterde = new MySqlCommand("update intervention_defibrillateur set Numero_intervention6=@nintd , Date_intervention=@dated , Etat_intervention=@etatd , Intervenant=@intde , Test_securit_electrique =@tsed , Test_indicateur_mode_synchro =@timsd1 , Test_indicateur_mode_normale=@timnd , Test_temps_charge =@ttcd , Testmesureenergie =@tmed , Test_taux_de_perte=@ttpd , Testmoniteurecg=@tmecgd , Testenregistrementpapier=@tepd , Commentaire=@comd , Numero_demande10=@nmded , type_equip2=@tydef , etat_equip25=@etdef , numseri=@numservi where id_defib= @id", conn);
                
 
                 Minterde.Parameters.AddWithValue("@nintd", numinterdef);
@@ -2078,6 +2080,7 @@ namespace CetemLibrary
                 Minterde.Parameters.AddWithValue("@nmded", nmdeddef);
                 Minterde.Parameters.AddWithValue("@tydef", typdef);
                 Minterde.Parameters.AddWithValue("@etdef", etaadef);
+                Minterde.Parameters.AddWithValue("@numservi", servic);
                 Minterde.Parameters.AddWithValue("@id", id);
 
                 int rowCount = Minterde.ExecuteNonQuery();
@@ -2134,7 +2137,7 @@ namespace CetemLibrary
                     conn.Open();
               
 
-                var Minterpouss = new MySqlCommand("update intervention_pousse_seringe set numero_intervention=@nintpous , date_intervention=@datpouss , Etat_intervention=@etatpouss , Intervenant=@intervpouss , Test_securit_electrique=@tsepouss , Test_performance_premiere_voie=@tspvpou , Test_performance_deuxieme_voie=@tsp2pouss , Commentaire=@compouss , Numero_demande=@numpouss , etat_equip=@etatequip , num_ser_equip=@seriepouss , typeequipement1=@typeequi1235 where id_pousse= @id", conn);
+                var Minterpouss = new MySqlCommand("update intervention_pousse_seringe set numero_intervention=@nintpous , date_intervention=@datpouss , Etat_intervention=@etatpouss , Intervenant=@intervpouss , Test_securit_electrique=@tsepouss , Test_performance_premiere_voie=@tspvpou , Test_performance_deuxieme_voie=@tsp2pouss , Commentaire=@compouss , Numero_demande=@numpouss , etat_equip=@etatequip , num_ser_equip=@seriepouss , typeequipement=@typeequi1235 where id_pousse= @id", conn);
               
 
                 Minterpouss.Parameters.AddWithValue("@nintpous", numpousse);

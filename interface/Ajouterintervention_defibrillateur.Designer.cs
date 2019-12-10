@@ -104,9 +104,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(396, 498);
+            this.button1.Location = new System.Drawing.Point(414, 498);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(645, 88);
+            this.button1.Size = new System.Drawing.Size(627, 95);
             this.button1.TabIndex = 181;
             this.button1.Text = "Ajouter  Protocole Défibrillateur ";
             this.button1.UseVisualStyleBackColor = false;
@@ -207,10 +207,10 @@
             this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
             this.comboBox3.BackColor = System.Drawing.Color.White;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.ForeColor = System.Drawing.Color.Black;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 21;
+            this.comboBox3.ItemHeight = 25;
             this.comboBox3.Items.AddRange(new object[] {
             "safa",
             "anoir",
@@ -218,7 +218,7 @@
             this.comboBox3.Location = new System.Drawing.Point(265, 105);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(229, 29);
+            this.comboBox3.Size = new System.Drawing.Size(243, 33);
             this.comboBox3.TabIndex = 220;
             // 
             // comboBox2
@@ -227,16 +227,16 @@
             this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
             this.comboBox2.BackColor = System.Drawing.Color.White;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.ForeColor = System.Drawing.Color.Black;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 21;
+            this.comboBox2.ItemHeight = 25;
             this.comboBox2.Items.AddRange(new object[] {
             "058265879"});
-            this.comboBox2.Location = new System.Drawing.Point(741, 26);
+            this.comboBox2.Location = new System.Drawing.Point(776, 25);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(226, 29);
+            this.comboBox2.Size = new System.Drawing.Size(240, 33);
             this.comboBox2.TabIndex = 218;
             this.comboBox2.SelectedValueChanged += new System.EventHandler(this.AjoutMarqueDefib);
             // 
@@ -246,8 +246,9 @@
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.Black;
             this.textBox6.Location = new System.Drawing.Point(265, 26);
+            this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(228, 26);
+            this.textBox6.Size = new System.Drawing.Size(242, 35);
             this.textBox6.TabIndex = 215;
             // 
             // groupBox1
@@ -258,7 +259,7 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(405, 21);
+            this.groupBox1.Location = new System.Drawing.Point(422, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(207, 85);
             this.groupBox1.TabIndex = 223;
@@ -296,7 +297,7 @@
             this.groupBox2.Controls.Add(this.radioButton3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(405, 115);
+            this.groupBox2.Location = new System.Drawing.Point(422, 115);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(212, 81);
             this.groupBox2.TabIndex = 224;
@@ -372,7 +373,7 @@
             this.groupBox3.Controls.Add(this.radioButton6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(410, 390);
+            this.groupBox3.Location = new System.Drawing.Point(427, 390);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(290, 78);
             this.groupBox3.TabIndex = 226;
@@ -486,7 +487,7 @@
             this.groupBox7.Controls.Add(this.radioButton14);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(410, 202);
+            this.groupBox7.Location = new System.Drawing.Point(427, 202);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(207, 81);
             this.groupBox7.TabIndex = 229;
@@ -524,7 +525,7 @@
             this.groupBox8.Controls.Add(this.radioButton16);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(410, 290);
+            this.groupBox8.Location = new System.Drawing.Point(427, 290);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(274, 81);
             this.groupBox8.TabIndex = 230;
@@ -635,9 +636,9 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(8, 65);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 65);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(382, 531);
+            this.richTextBox1.Size = new System.Drawing.Size(405, 531);
             this.richTextBox1.TabIndex = 232;
             this.richTextBox1.Text = "";
             // 
@@ -647,23 +648,24 @@
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 21;
+            this.comboBox1.ItemHeight = 25;
             this.comboBox1.Items.AddRange(new object[] {
             "08975/ss"});
-            this.comboBox1.Location = new System.Drawing.Point(741, 104);
+            this.comboBox1.Location = new System.Drawing.Point(776, 103);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 29);
+            this.comboBox1.Size = new System.Drawing.Size(240, 33);
             this.comboBox1.TabIndex = 234;
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(265, 67);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(229, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(243, 31);
             this.dateTimePicker2.TabIndex = 259;
             // 
             // label8
@@ -712,7 +714,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(501, 103);
+            this.label6.Location = new System.Drawing.Point(536, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 35);
             this.label6.TabIndex = 294;
@@ -725,7 +727,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(501, 62);
+            this.label5.Location = new System.Drawing.Point(536, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(235, 35);
             this.label5.TabIndex = 293;
@@ -738,7 +740,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(501, 18);
+            this.label4.Location = new System.Drawing.Point(536, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 35);
             this.label4.TabIndex = 292;
@@ -769,9 +771,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(389, 484);
+            this.panel2.Location = new System.Drawing.Point(407, 484);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 8);
+            this.panel2.Size = new System.Drawing.Size(642, 8);
             this.panel2.TabIndex = 276;
             // 
             // label3
@@ -781,7 +783,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 16);
+            this.label3.Location = new System.Drawing.Point(66, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(249, 36);
             this.label3.TabIndex = 275;
@@ -793,16 +795,16 @@
             this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
             this.comboBox4.BackColor = System.Drawing.Color.White;
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.ForeColor = System.Drawing.Color.Black;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 21;
+            this.comboBox4.ItemHeight = 25;
             this.comboBox4.Items.AddRange(new object[] {
             "058265879"});
-            this.comboBox4.Location = new System.Drawing.Point(741, 65);
+            this.comboBox4.Location = new System.Drawing.Point(776, 64);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(226, 29);
+            this.comboBox4.Size = new System.Drawing.Size(240, 33);
             this.comboBox4.TabIndex = 296;
             this.comboBox4.SelectedValueChanged += new System.EventHandler(this.ajoutmarquedefibrill);
             // 
@@ -811,7 +813,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1041, 749);
+            this.ClientSize = new System.Drawing.Size(1052, 749);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);

@@ -19,14 +19,9 @@ namespace @interface
         InitializeComponent();
             ajoutintervenant();
             ajoutdemande();
-            ajoutserie();
+            
         }
 
-        private void ajoutserie()
-        {
-            comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(Databaseconnection.getseriedefib());
-        }
 
         private void ajoutdemande()
         {
@@ -129,7 +124,8 @@ namespace @interface
             }
             richTextBox1.Text = de.Commentaire;
             comboBox2.Text = de.Numero_demande10;
-            textBox3.Text = de.type_equip2;
+            comboBox4.Text = de.type_equip2;
+            comboBox1.Text = de.numser;
             
             switch (de.etat_equip25)
             {
@@ -144,20 +140,7 @@ namespace @interface
 
         }
 
-        private void Modifier_interv_defibr_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -174,7 +157,7 @@ namespace @interface
 
 
 
-            var result = Databaseconnection.Modifier_interv_defibrillateur(textBox1.Text, dateTimePicker1.Text, etatintervention5661, comboBox3.Text, testsecuriteelectrique5561, testindicateursynchro1, indicateurnormale1, testtempscharge1, testenergie1, tauxperte1, testmoniteur1, enregistrementpapier1, richTextBox1.Text, comboBox2.Text, textBox3.Text, etatequipement5661, de.id_defib);
+            var result = Databaseconnection.Modifier_interv_defibrillateur(textBox1.Text, dateTimePicker1.Text, etatintervention5661, comboBox3.Text, testsecuriteelectrique5561, testindicateursynchro1, indicateurnormale1, testtempscharge1, testenergie1, tauxperte1, testmoniteur1, enregistrementpapier1, richTextBox1.Text, comboBox2.Text, comboBox4.Text, etatequipement5661 , comboBox1.Text, de.id_defib);
         
             if (result)
             {
@@ -184,6 +167,19 @@ namespace @interface
             }
             else
                 MessageBox.Show("Problem de modification de Défibrillateur");
+        }
+
+        private void updatemarquedefib(object sender, EventArgs e)
+        {
+            comboBox4.Items.Clear();
+            comboBox4.Items.AddRange(Databaseconnection.getmarquedefibrillateur(comboBox2.SelectedItem.ToString()));
+
+        }
+
+        private void updatenumerodefib(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(Databaseconnection.getserdefibrill(comboBox4.SelectedItem.ToString()));
         }
     }
 }

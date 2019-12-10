@@ -40,7 +40,7 @@ namespace @interface
             demm = Databaseconnection.getdemande(id);
             textBox8.Text= demm.Nombre_Respirateur_anesthesie ;
             textBox1.Text = demm.Date_Demande;
-            comboBox6.Text = demm.Etat_demande;
+            textBox2.Text = demm.Etat_demande;
             textBox1.Text = demm.Numero_demande;
             comboBox9.Text = demm.region_demande;
             comboBox8.Text = demm.Hopital_demande;
@@ -55,7 +55,7 @@ namespace @interface
         private void Button10_Click(object sender, EventArgs e)
         {
 
-            var result = Databaseconnection.Modifier_Demande(textBox8.Text, dateTimePicker1.Text, comboBox6.Text, textBox1.Text, comboBox9.Text, comboBox8.Text, textBox9.Text, textBox11.Text, textBox12.Text, textBox10.Text, textBox13.Text, demm.ID_DEMANDE);
+            var result = Databaseconnection.Modifier_Demande(textBox8.Text, dateTimePicker1.Text, textBox2.Text, textBox1.Text, comboBox9.Text, comboBox8.Text, textBox9.Text, textBox11.Text, textBox12.Text, textBox10.Text, textBox13.Text, demm.ID_DEMANDE);
          
          
             if (result)
