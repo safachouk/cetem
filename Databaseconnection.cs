@@ -21,7 +21,7 @@ namespace CetemLibrary
         static string username = "root";
         static string password = "";
 
-        
+
 
         public static void DBConnect()
         {
@@ -37,7 +37,7 @@ namespace CetemLibrary
 
         public static String[] getdemandebistouri()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -70,7 +70,7 @@ namespace CetemLibrary
 
         public static String[] getdemandedefibrill()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -103,7 +103,7 @@ namespace CetemLibrary
 
         public static String[] getdemandepousse()
         {
-              if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -129,14 +129,14 @@ namespace CetemLibrary
             catch (Exception ex)
             {
                 conn.Close();
-                return null ;
+                return null;
             }
             return null;
         }
 
         public static object[] getmodelbistouri(string numdemand25e)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -173,7 +173,7 @@ namespace CetemLibrary
         public static object[] getseriebistouri(string modelbistouri)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -205,9 +205,9 @@ namespace CetemLibrary
             return null;
         }
 
-        public static String [] getserresp( string typedemande)
+        public static String[] getserresp(string typedemande)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -241,14 +241,14 @@ namespace CetemLibrary
 
         public static String[] gettyperesp(string iddemande)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
                 conn.Open();
                 var numserie = new List<string>();
                 var cmd11 = new MySqlCommand("SELECT TYPE FROM equipements e , intermediaire i , demandes d  where i.ID_Demande = d.ID_DEMANDE  and i.Id_equipement = e.NUM_SERIE and  d.Numero_demande = @iddemande", conn);
-                cmd11.Parameters.AddWithValue("@iddemande",iddemande);
+                cmd11.Parameters.AddWithValue("@iddemande", iddemande);
                 var reader = cmd11.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -273,9 +273,9 @@ namespace CetemLibrary
             return null;
         }
 
-        public static string [] getserdefibrill(string modeledef)
+        public static string[] getserdefibrill(string modeledef)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -310,7 +310,7 @@ namespace CetemLibrary
 
         public static String[] getmarquedefibrillateur(string numdemande)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -346,7 +346,7 @@ namespace CetemLibrary
 
         public static String[] getseriepousse(string marquedemande)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -380,7 +380,7 @@ namespace CetemLibrary
 
         public static String[] getmodelepousse(string iddemandde)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -415,7 +415,7 @@ namespace CetemLibrary
 
         public static object[] Getnumserie()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -448,7 +448,7 @@ namespace CetemLibrary
         }
         public static object[] GetnumserieByModel(string model)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -483,7 +483,7 @@ namespace CetemLibrary
 
         public static object[] GetModele()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -516,7 +516,7 @@ namespace CetemLibrary
         }
         public static object[] GetModeleByMarque(string marque)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -551,7 +551,7 @@ namespace CetemLibrary
 
         public static string[] GetMarque()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -585,7 +585,7 @@ namespace CetemLibrary
         }
         public static string[] GetMarqueByType(string type)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -624,7 +624,7 @@ namespace CetemLibrary
 
         public static string[] getseriedefib()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -655,11 +655,11 @@ namespace CetemLibrary
             return null;
         }
 
-       
+
 
         public static string[] getseriepouss()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -692,7 +692,7 @@ namespace CetemLibrary
 
         public static string[] getserie()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -727,7 +727,7 @@ namespace CetemLibrary
         {
 
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -761,7 +761,7 @@ namespace CetemLibrary
 
         public static string[] getintervenant()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -794,7 +794,7 @@ namespace CetemLibrary
 
         public static string[] gethopital()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -826,7 +826,7 @@ namespace CetemLibrary
         }
         public static string[] gethopital(string region)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -862,7 +862,7 @@ namespace CetemLibrary
 
         public static string[] getEquipement()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -896,7 +896,7 @@ namespace CetemLibrary
 
         public static string[] getservice()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -929,7 +929,7 @@ namespace CetemLibrary
 
         public static string[] GetRegions()
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -962,7 +962,7 @@ namespace CetemLibrary
 
         public static bool se_connecter(string nom, string pass)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1008,7 +1008,7 @@ namespace CetemLibrary
         public static bool Ajouter_equipement(string Ty, string marq, string mod, string nu, string nareg, string nahop, string naserv)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1039,10 +1039,10 @@ namespace CetemLibrary
         }
 
 
-        public static bool Ajouter_listequip(string typ , string model , string marq , string num)
+        public static bool Ajouter_listequip(string typ, string model, string marq, string num)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1052,8 +1052,8 @@ namespace CetemLibrary
                 atypequip.Parameters.AddWithValue("@type", typ);
                 atypequip.Parameters.AddWithValue("@modele", model);
                 atypequip.Parameters.AddWithValue("@marque", marq);
-                atypequip.Parameters.AddWithValue("@num_serie" , num);
-              
+                atypequip.Parameters.AddWithValue("@num_serie", num);
+
 
 
 
@@ -1071,7 +1071,7 @@ namespace CetemLibrary
         }
         public static Dispositifsbiomedicale getEquipement(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1115,9 +1115,53 @@ namespace CetemLibrary
             return null;
 
         }
+        public static List<string[]> getDemandeEquipements(string id_demande)
+        {
+            if (conn == null || conn.State == ConnectionState.Open)
+                DBConnect();
+            try
+            {
+                conn.Open();
+                var cmd = new MySqlCommand("SELECT * FROM equipements e  JOIN intermediaire i ON e.NUM_SERIE = i.Id_equipement where ID_Demande = @idDemande", conn);
+                cmd.Parameters.AddWithValue("@idDemande", id_demande);
+                cmd.Prepare();
+                var reader = cmd.ExecuteReader();
+                var liste_equip = new List<string[]>();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        var eq = new List<string> {reader.GetString("type"),
+                            reader.GetString("marque"),
+                            reader.GetString("Modele"),
+                            reader.GetString("NUM_SERIE") };
+                        liste_equip.Add(eq.ToArray());
+                    }
+
+                    reader.Close();
+
+                    return liste_equip;
+                }
+
+                else
+                {
+                    MessageBox.Show("Erreur dispositif introuvable", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return null;
+            }
+            return null;
+
+        }
         public static Dispositifsbiomedicale getEquipementBySerial(string serial)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1166,7 +1210,7 @@ namespace CetemLibrary
         public static Utilisateur getPersonnel(int id)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1180,7 +1224,7 @@ namespace CetemLibrary
                 {
                     while (reader.Read())
                     {
-                       
+
                         dbp = new Utilisateur(
                             reader.GetString("Nom_technicien"),
                             reader.GetString("prenom_technicen"),
@@ -1213,7 +1257,7 @@ namespace CetemLibrary
 
         public static Demande_class getdemande(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1243,7 +1287,7 @@ namespace CetemLibrary
                             reader.GetInt32("ID_DEMANDE"));
                         reader.Close();
                         conn.Close();
-                    
+
 
                         return dbd;
                     }
@@ -1265,9 +1309,9 @@ namespace CetemLibrary
 
 
 
-       public static Intervention_respirateur_class getrespirateur (int id)
+        public static Intervention_respirateur_class getrespirateur(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1318,9 +1362,9 @@ namespace CetemLibrary
             return null;
         }
 
-       public static Intervention_bistouri getbistouri (int id)
+        public static Intervention_bistouri getbistouri(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1373,10 +1417,10 @@ namespace CetemLibrary
         }
 
 
-        public static Intervention_pousse_seringue getPousse (int id)
+        public static Intervention_pousse_seringue getPousse(int id)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1428,10 +1472,10 @@ namespace CetemLibrary
         }
 
 
-       public static Intervention_defibrillateur getdefibrillateur (int id)
+        public static Intervention_defibrillateur getdefibrillateur(int id)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1462,7 +1506,7 @@ namespace CetemLibrary
                             reader.GetString("Numero_demande10"),
                             reader.GetString("type_equip2"),
                             reader.GetString("etat_equip25"),
-                            reader.GetString("numser"),
+                            reader.GetString("numseri"),
                             reader.GetInt32("id_defib"));
                         reader.Close();
                         conn.Close();
@@ -1485,12 +1529,12 @@ namespace CetemLibrary
             return null;
 
         }
-    
 
-        public static bool Ajouter_demande(string numbane, string numrea, string numpouss, string numdef, string numtranspo, string numbistou, string dattt, string etatt, string numerooo, string nomregionnn, string nomhopitalll,List<string>series_equipement)
+
+        public static bool Ajouter_demande(string numbane, string numrea, string numpouss, string numdef, string numtranspo, string numbistou, string dattt, string etatt, string numerooo, string nomregionnn, string nomhopitalll, List<string> series_equipement)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1513,7 +1557,7 @@ namespace CetemLibrary
                 conn.Close();
                 series_equipement.ForEach(ser =>
                 {
-                    if(!string.IsNullOrEmpty(ser.Trim()))
+                    if (!string.IsNullOrEmpty(ser.Trim()))
                         insertDemandeEquipement(rowid.ToString(), ser);
                 });
                 return true;
@@ -1532,7 +1576,7 @@ namespace CetemLibrary
 
         private static void insertDemandeEquipement(string rowid, string ser)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1544,7 +1588,7 @@ namespace CetemLibrary
                 ajpers.ExecuteNonQuery();
 
                 conn.Close();
-                
+
             }
             catch (Exception ex)
             {
@@ -1555,7 +1599,7 @@ namespace CetemLibrary
         public static bool Ajouter_intervenant(string nom, string prenom, string email, string password)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1586,7 +1630,7 @@ namespace CetemLibrary
         public static bool Ajouter_Hopital(string Nomregion, string nomHopital)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
 
@@ -1613,9 +1657,9 @@ namespace CetemLibrary
             }
         }
 
-        public static bool intervention_respirateur(string numintervention, string dateintervent, string intervena , string numdemand, string typequip, string numser, string etatinterv, string testsecrurti, string tetstvc, string testetatequip, string testoxyg, string testpc, string tetsvac, string comm)
+        public static bool intervention_respirateur(string numintervention, string dateintervent, string intervena, string numdemand, string typequip, string numser, string etatinterv, string testsecrurti, string tetstvc, string testetatequip, string testoxyg, string testpc, string tetsvac, string comm)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
 
@@ -1654,19 +1698,19 @@ namespace CetemLibrary
 
 
 
-        public static bool intervention_pousse_seringe( string numintervention1 , string dateintervent1 , string etatinterv1 , string intervenant12 , string testsecu1 , string testvoie1 , string testvoie2 , string comme1 , string numdemand1 , string etatequip1 , string num_ser_equip1 , string typeequipement1)
+        public static bool intervention_pousse_seringe(string numintervention1, string dateintervent1, string etatinterv1, string intervenant12, string testsecu1, string testvoie1, string testvoie2, string comme1, string numdemand1, string etatequip1, string num_ser_equip1, string typeequipement1)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
-                
+
             {
 
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
-                var aintervrpouss = new MySqlCommand("INSERT INTO  intervention_pousse_seringe(numero_intervention , date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_performance_premiere_voie , Test_performance_deuxieme_voie , Commentaire , Numero_demande , etat_equip , num_ser_equip , typeequipement )" + "VALUES(@numero_intervention , @date_intervention , @Etat_intervention , @Intervenant , @Test_securit_electrique , @Test_performance_premiere_voie , @Test_performance_deuxieme_voie , @Commentaire , @Numero_demande , @etat_equip  , @num_ser_equip ,@typeequipement12)", conn); 
-               aintervrpouss.Parameters.AddWithValue("@numero_intervention", numintervention1);
+                var aintervrpouss = new MySqlCommand("INSERT INTO  intervention_pousse_seringe(numero_intervention , date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_performance_premiere_voie , Test_performance_deuxieme_voie , Commentaire , Numero_demande , etat_equip , num_ser_equip , typeequipement )" + "VALUES(@numero_intervention , @date_intervention , @Etat_intervention , @Intervenant , @Test_securit_electrique , @Test_performance_premiere_voie , @Test_performance_deuxieme_voie , @Commentaire , @Numero_demande , @etat_equip  , @num_ser_equip ,@typeequipement12)", conn);
+                aintervrpouss.Parameters.AddWithValue("@numero_intervention", numintervention1);
                 aintervrpouss.Parameters.AddWithValue("@date_intervention", dateintervent1);
                 aintervrpouss.Parameters.AddWithValue("@Etat_intervention", etatinterv1);
                 aintervrpouss.Parameters.AddWithValue("@Intervenant", intervenant12);
@@ -1692,15 +1736,15 @@ namespace CetemLibrary
                 return false;
             }
         }
-        
 
-        public static bool ajout_boustri (string numintervention2 , string dateintervent2 , string etatinterv2 , string intervenant2 , string typequip222 , string testsecuritu2 , string testmod2 , string comme2 , string numdemand2 , string testfuiteactive , string testfuiteneutre , string etat_equip2 ,string numdema)
+
+        public static bool ajout_boustri(string numintervention2, string dateintervent2, string etatinterv2, string intervenant2, string typequip222, string testsecuritu2, string testmod2, string comme2, string numdemand2, string testfuiteactive, string testfuiteneutre, string etat_equip2, string numdema)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
-            
+
             {
 
                 if (conn.State != System.Data.ConnectionState.Open)
@@ -1739,12 +1783,12 @@ namespace CetemLibrary
 
 
         }
-            
-        
-        public static bool ajout_defibrillateur(string numintervention5 , string dateintervention5 , string etatintervention5 , string intervenant5 , string testsecuriteelectrique5 , string testmodesynchro , string testmodenormale , string testtempscharge , string testmesureenergie , string testtauxperte , string testmoniteuretecg , string testenrgipapier , string commentaire6 , string numdemand6 , string typequip6 , string etatequip6 , string numservdefib )
+
+
+        public static bool ajout_defibrillateur(string numintervention5, string dateintervention5, string etatintervention5, string intervenant5, string testsecuriteelectrique5, string testmodesynchro, string testmodenormale, string testtempscharge, string testmesureenergie, string testtauxperte, string testmoniteuretecg, string testenrgipapier, string commentaire6, string numdemand6, string typequip6, string etatequip6, string numservdefib)
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
 
@@ -1754,7 +1798,7 @@ namespace CetemLibrary
                     conn.Open();
                 var aintervrdefib = new MySqlCommand("INSERT INTO  intervention_defibrillateur(Numero_intervention6 , Date_intervention , Etat_intervention , Intervenant , Test_securit_electrique , Test_indicateur_mode_synchro , Test_indicateur_mode_normale , Test_temps_charge , Testmesureenergie , Test_taux_de_perte , Testmoniteurecg , Testenregistrementpapier , Commentaire , 	Numero_demande10 , type_equip2 , etat_equip25 , numseri )" + "VALUES(@Numero_intervention6 , @Date_intervention6 , @Etat_intervention6 , @Intervenant6 , @Test_securit_electrique6 , @Test_indicateur_mode_synchro , @Test_indicateur_mode_normale , @Test_temps_charge , @Test_mesure_energie , @Testtauxperte , @Testmoniteurecg , @Testenregistrementpapier , @Commentaire6 , @Numero_demande6 , @type_equip6 , @etat_equip6 , @numserv)", conn);
 
-                aintervrdefib.Parameters.AddWithValue("@Numero_intervention6",numintervention5);
+                aintervrdefib.Parameters.AddWithValue("@Numero_intervention6", numintervention5);
                 aintervrdefib.Parameters.AddWithValue("@Date_intervention6", dateintervention5);
                 aintervrdefib.Parameters.AddWithValue("@Etat_intervention6", etatintervention5);
                 aintervrdefib.Parameters.AddWithValue("@Intervenant6", intervenant5);
@@ -1785,9 +1829,9 @@ namespace CetemLibrary
         }
 
 
-        public static bool Modifier_equipmement(string marq1, string Ty1, string mod1, string numserie1 , string hopital2 , string nomservice1 , string region1 , int id )
+        public static bool Modifier_equipmement(string marq1, string Ty1, string mod1, string numserie1, string hopital2, string nomservice1, string region1, int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1795,7 +1839,7 @@ namespace CetemLibrary
                     conn.Open();
                 var Mequip = new MySqlCommand("update equipements set MARQUE=@marqeq , TYPE=@typeq , Modele = @modeq , NUM_SERIE = @serieequ , nom_de_hopital = @nohopeq , Nom_de_service = @nservequ , Nom_region = @nregeq  where ID_EQUIPEMENT= @id", conn);
 
-                Equipement_class e; 
+                Equipement_class e;
 
                 Mequip.Parameters.AddWithValue("@marqeq", marq1);
                 Mequip.Parameters.AddWithValue("@typeq", Ty1);
@@ -1824,7 +1868,7 @@ namespace CetemLibrary
 
         public static bool supprimer_equipement(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1847,12 +1891,12 @@ namespace CetemLibrary
         }
 
 
-            public static bool Modifier_Personnel(string nomtech12, string prenomtech123 , string @mail23 , string password123 , int id )
+        public static bool Modifier_Personnel(string nomtech12, string prenomtech123, string @mail23, string password123, int id)
 
         {
 
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1860,7 +1904,7 @@ namespace CetemLibrary
                     conn.Open();
                 var Mpersonn = new MySqlCommand("update techniciens set Nom_technicien=@nomtech1 , prenom_technicen=@prenomtech1 , e_mail = @mail23 , password = @password123 where ID_Tech= @id", conn);
 
-                
+
                 Mpersonn.Parameters.AddWithValue("@nomtech1", nomtech12);
                 Mpersonn.Parameters.AddWithValue("@prenomtech1", prenomtech123);
                 Mpersonn.Parameters.AddWithValue("@mail23", @mail23);
@@ -1886,7 +1930,7 @@ namespace CetemLibrary
 
         public static bool supprimer_personnel(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1910,53 +1954,73 @@ namespace CetemLibrary
 
 
 
-        public static bool Modifier_Demande(string nresan, string datedem, string etatdem, string numdemand, string regdeman, string hopdeman, string nrerea, string nbrpou, string nbrdeb, string nbrresptra, string nbrbist, int id)
-
+        public static bool Modifier_Demande(string nresan, string datedem, string etatdem, string numdemand, string regdeman, string hopdeman, string nrerea, string nbrpou, string nbrdeb, string nbrresptra, string nbrbist, List<string> series_equipement, int id)
         {
-
-
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
                 if (conn.State != System.Data.ConnectionState.Open)
-             
+
                     conn.Open();
 
-                    var Mdemand = new MySqlCommand("update demandes set Nombre_Respirateur_anesthesie = @nran , Date_Demande = @dateres , Etat_demande = @etatdem , Numero_demande = @numdem , region_demande = @regideman , 	Hopital_demande = @hopidem , Nombre_respirateur_reanimation = @nrr , nombre_pousse_seringe = @nps , 	nombre_defibrillateur = @npd , 	Nombre_respirateur_transport = @nrt , Nombre_bistouri = @nbs where ID_DEMANDE= @id", conn);
-                    Mdemand.Parameters.AddWithValue("@nran", nresan);
-                    Mdemand.Parameters.AddWithValue("@dateres", datedem);
-                    Mdemand.Parameters.AddWithValue("@etatdem", etatdem);
-                    Mdemand.Parameters.AddWithValue("@numdem", numdemand);
-                    Mdemand.Parameters.AddWithValue("@regideman", regdeman);
-                    Mdemand.Parameters.AddWithValue("@hopidem", hopdeman);
-                    Mdemand.Parameters.AddWithValue("@nrr", nrerea);
-                    Mdemand.Parameters.AddWithValue("@nps", nbrpou);
-                    Mdemand.Parameters.AddWithValue("@npd", nbrdeb);
-                    Mdemand.Parameters.AddWithValue("@nrt", nbrresptra);
-                    Mdemand.Parameters.AddWithValue("@nbs", nbrbist);
-                    Mdemand.Parameters.AddWithValue("@id", id);
-                    int rowCount = Mdemand.ExecuteNonQuery();
-                    conn.Close();
-                    return rowCount == 1;
+                var Mdemand = new MySqlCommand("update demandes set Nombre_Respirateur_anesthesie = @nran , Date_Demande = @dateres , Etat_demande = @etatdem , Numero_demande = @numdem , region_demande = @regideman , 	Hopital_demande = @hopidem , Nombre_respirateur_reanimation = @nrr , nombre_pousse_seringe = @nps , 	nombre_defibrillateur = @npd , 	Nombre_respirateur_transport = @nrt , Nombre_bistouri = @nbs where ID_DEMANDE= @id", conn);
+                Mdemand.Parameters.AddWithValue("@nran", nresan);
+                Mdemand.Parameters.AddWithValue("@dateres", datedem);
+                Mdemand.Parameters.AddWithValue("@etatdem", etatdem);
+                Mdemand.Parameters.AddWithValue("@numdem", numdemand);
+                Mdemand.Parameters.AddWithValue("@regideman", regdeman);
+                Mdemand.Parameters.AddWithValue("@hopidem", hopdeman);
+                Mdemand.Parameters.AddWithValue("@nrr", nrerea);
+                Mdemand.Parameters.AddWithValue("@nps", nbrpou);
+                Mdemand.Parameters.AddWithValue("@npd", nbrdeb);
+                Mdemand.Parameters.AddWithValue("@nrt", nbrresptra);
+                Mdemand.Parameters.AddWithValue("@nbs", nbrbist);
+                Mdemand.Parameters.AddWithValue("@id", id);
+                int rowCount = Mdemand.ExecuteNonQuery();
+                conn.Close();
+                nettoyerdemandeEquipement(id);
+                series_equipement.ForEach(ser =>
+                {
+                    if (!string.IsNullOrEmpty(ser.Trim()))
+                        insertDemandeEquipement(id.ToString(), ser);
+                });
+                return true;
+            }
 
 
-                }
-
-
-                catch (Exception ex)
+            catch (Exception ex)
             {
                 conn.Close();
                 return false;
             }
-
-      
         }
 
+        public static void nettoyerdemandeEquipement(int id)
+        {
 
+            if (conn == null || conn.State == ConnectionState.Open)
+                DBConnect();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                var Ddemande = new MySqlCommand("delete from intermediaire where ID_DEMANDE = @id", conn);
+                Ddemande.Parameters.AddWithValue("@id", id);
+                int rowCount = Ddemande.ExecuteNonQuery();
+
+                conn.Close();
+
+
+            }
+            catch
+            {
+                conn.Close();
+            }
+        }
         public static bool supprime_demande (int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -1971,20 +2035,17 @@ namespace CetemLibrary
 
 
             }
-            catch (Exception ex)
+            catch
             {
                 conn.Close();
                 return false;
             }
         }
 
-
-
-
         public static bool Modifier_interv_bistouri(string numintbi , string datinb , string etatintb , string interb , string typb1 , string tseb2 , string tsm , string commbstri , string numdem , string tspa , string tpn , string etbost ,string numbistou, int id)
 
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2027,7 +2088,7 @@ namespace CetemLibrary
 
         public static bool supprimer_interv_bistouri(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2054,7 +2115,7 @@ namespace CetemLibrary
         public static bool Modifier_interv_defibrillateur(string numinterdef , string datedef , string etatdef , string intdef , string tsedef , string timsddef , string timnddef , string ttcddef , string tmeddef , string ttpddef , string tmecgddef , string tepddef , string comdef , string nmdeddef , string typdef , string etaadef , string servic , int id)
 
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2101,7 +2162,7 @@ namespace CetemLibrary
 
         public static bool supprimer_interv_defibrillateur(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2129,7 +2190,7 @@ namespace CetemLibrary
         public static bool Modifier_interv_pousse_seringue(string numpousse , string datepousse1 , string etatpouss1 , string iterpouss1 , string tspouss1 , string tspvpou1 , string tsp2pouss1 , string compouss1 , string numpousse1 , string etatequip , string seriepouss1 , string typeequip , int id)
 
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2173,7 +2234,7 @@ namespace CetemLibrary
 
         public static bool supprimer_interv_pousse_seringue(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2199,7 +2260,7 @@ namespace CetemLibrary
         public static bool Modifier_interv_respirateur( string numresp , string datresp , string interresp1 , string numresp123 , string typresp , string numinresp1 , string etatresp1 , string testresp1 , string vcresp , string etatequipresp1 , string oxygresp , string pcresp , string vacresp , string comresp , int id)
 
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2240,7 +2301,7 @@ namespace CetemLibrary
 
         public static bool supprimer_interv_respirateur(int id)
         {
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2271,7 +2332,7 @@ namespace CetemLibrary
 
         {
 
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2312,7 +2373,7 @@ namespace CetemLibrary
         public static DataTable fillEquipement()
         {
             var dt = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2335,7 +2396,7 @@ namespace CetemLibrary
         public static DataTable fillpersonnel()
         {
             var dp = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2356,7 +2417,7 @@ namespace CetemLibrary
         public static DataTable filldemande()
         {
             var dd = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2378,7 +2439,7 @@ namespace CetemLibrary
         public static DataTable fillinterventionresp()
         {
             var dresp = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2400,7 +2461,7 @@ namespace CetemLibrary
         public static DataTable fillinterventbistouri()
         {
             var dbistrou = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2423,7 +2484,7 @@ namespace CetemLibrary
         public static DataTable fillinterventpousseseringue()
         {
             var dbpouss = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {
@@ -2446,7 +2507,7 @@ namespace CetemLibrary
         public static DataTable fillinterventdefibrillateur()
         {
             var dbdefib = new DataTable();
-            if (conn == null)
+            if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try
             {

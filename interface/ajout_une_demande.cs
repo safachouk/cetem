@@ -236,7 +236,7 @@ namespace @interface
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(comboBox4.SelectedItem.ToString().Trim()))
+            if (comboBox4.SelectedItem == null || string.IsNullOrEmpty(comboBox4.SelectedItem.ToString().Trim()))
                 return;
             var eq = Databaseconnection.getEquipementBySerial(comboBox4.SelectedItem.ToString());
             string[] row = new string[4];
@@ -280,6 +280,11 @@ namespace @interface
         }
 
         private void Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

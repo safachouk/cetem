@@ -202,13 +202,15 @@ namespace @interface
              "Problem d'ajout de l'hopital");
         }
 
-      
+
 
 
 
         private void UpdateListsEquipement()
         {
             dataGridView1.DataSource = Databaseconnection.fillEquipement();
+            dataGridView1.Columns[0].Visible = false;
+
             dataGridView1.Refresh();
             dataGridView1.Update();
         }
