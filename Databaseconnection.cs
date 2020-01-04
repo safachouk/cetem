@@ -16,8 +16,8 @@ namespace CetemLibrary
         public static Utilisateur Utilisateur_courant = null;
 
         static string host = "localhost";
-        static int port = 3306;
-        static string database = "ctm_bh_application";
+        static int port = 3308;
+        static string database = "helloarwa";
         static string username = "root";
         static string password = "";
 
@@ -962,6 +962,7 @@ namespace CetemLibrary
 
         public static bool se_connecter(string nom, string pass)
         {
+            return true;
             if (conn == null || conn.State == ConnectionState.Open)
                 DBConnect();
             try

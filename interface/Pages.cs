@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,19 +23,14 @@ namespace @interface
         public Pages()
         {
             InitializeComponent();
-            remplirMonCompte();
-            UpdateListsEquipement();
-            UpdateListsPersonnel();
-            UpdateListsdemande();
-            UpdateListsinterventionresp();
-            UpdateListsinterventionbist();
-            UpdateListsinterventionpouss();
-            UpdateListsinterventiondefib();
-            setPersonnelVisibility(Databaseconnection.Utilisateur_courant.type == "Admin");
-
-
+            //remplirMonCompte();
+            //UpdateListsEquipement();
+            //UpdateListsPersonnel();
+            //UpdateListsdemande();
+            //setPersonnelVisibility(Databaseconnection.Utilisateur_courant.type == "Admin");
 
         }
+        
         public void remplirMonCompte()
         {
             if (Databaseconnection.Utilisateur_courant != null)
@@ -229,34 +225,6 @@ namespace @interface
             dataGridView3.Refresh();
             dataGridView3.Update();
         }
-        private void UpdateListsinterventionresp()
-        {
-            dataGridView4.DataSource = Databaseconnection.fillinterventionresp();
-            dataGridView4.Refresh();
-            dataGridView4.Update();
-        }
-
-        public void UpdateListsinterventionbist()
-        {
-            dataGridView5.DataSource = Databaseconnection.fillinterventbistouri();
-            dataGridView5.Refresh();
-            dataGridView5.Update();
-        }
-
-        public void UpdateListsinterventionpouss()
-        {
-            dataGridView6.DataSource = Databaseconnection.fillinterventpousseseringue();
-            dataGridView6.Refresh();
-            dataGridView6.Update();
-        }
-        public void UpdateListsinterventiondefib()
-        {
-
-            dataGridView7.DataSource = Databaseconnection.fillinterventdefibrillateur();
-            dataGridView7.Refresh();
-            dataGridView7.Update();
-        }
-
     
         private void mdim_FormClosed (object sender, FormClosedEventArgs e)
         {
@@ -335,13 +303,11 @@ namespace @interface
             AjouterIntervention_Respirateur Arespir = new AjouterIntervention_Respirateur();
             Arespir.Tag = this;
             Arespir.Show(this);
-            UpdateListsinterventionresp();
         }
 
 
         private void Aresp_FormClosed(object sender, EventArgs e)
         {
-            UpdateListsinterventionresp();
         }
 
         private void Button4_Click_5(object sender, EventArgs e)
@@ -353,43 +319,7 @@ namespace @interface
            
         }
 
-        private void Button6_Click_4(object sender, EventArgs e)
-        {
-
-            if (dataGridView4.SelectedRows.Count == 1)
-            {
-                var selectedrow = dataGridView4.SelectedRows[0];
-
-                Modifier_interv_resp Mresp = new Modifier_interv_resp();
-                Mresp.setResp((int)selectedrow.Cells[0].Value);
-
-                Mresp.Tag = this;
-                Mresp.Show(this);
-                Mresp.FormClosed += Aresp_FormClosed;
-
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-        }
-
-        private void Button7_Click_4(object sender, EventArgs e)
-        {
-            bool? result = null;
-            if (dataGridView4.SelectedRows.Count == 1)
-            {
-                var selectedrow7 = dataGridView4.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_respirateur((int)selectedrow7.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "Respirateur supprimé." : "erreur de suppression de respirateur.");
-            UpdateListsinterventionresp();
-        }
+        
 
         private void Button18_Click_3(object sender, EventArgs e)
         {
@@ -402,46 +332,7 @@ namespace @interface
 
         private void Abist_FormClosed(object sender, FormClosedEventArgs e)
         {
-            UpdateListsinterventionbist();
         }
-
-        private void Button19_Click_1(object sender, EventArgs e)
-        {
-            if (dataGridView5.SelectedRows.Count == 1)
-            {
-                var selectedrow = dataGridView5.SelectedRows[0];
-
-                Modifier_inter_Bist Mbistr = new Modifier_inter_Bist();
-                Mbistr.setbistouri((int)selectedrow.Cells[0].Value);
-
-                Mbistr.Tag = this;
-                Mbistr.Show(this);
-                Mbistr.FormClosed += Abist_FormClosed;
-
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-        }
-
-        private void Button20_Click_2(object sender, EventArgs e)
-        {
-            bool? result = null;
-            if (dataGridView5.SelectedRows.Count == 1)
-            {
-                var selectedrow9 = dataGridView5.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_bistouri((int)selectedrow9.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "Bistouri supprimé." : "erreur de suppression de bistouri.");
-            UpdateListsinterventionbist();
-        }
-
         private void Button24_Click(object sender, EventArgs e)
         {
             Ajouterintervention_Pousse_seringe Apoussser = new Ajouterintervention_Pousse_seringe();
@@ -453,46 +344,9 @@ namespace @interface
 
         private void Apoussser_FormClosed(object sender, FormClosedEventArgs e)
         {
-            UpdateListsinterventionpouss();
         }
 
-        private void Button25_Click_1(object sender, EventArgs e)
-        {
-            if (dataGridView6.SelectedRows.Count == 1)
-            {
-                var selectedrow = dataGridView6.SelectedRows[0];
-
-                Modifier_pousse_seringue mpoussseri = new Modifier_pousse_seringue();
-                mpoussseri.setpousseseringue((int)selectedrow.Cells[0].Value);
-
-                mpoussseri.Tag = this;
-                mpoussseri.Show(this);
-                mpoussseri.FormClosed += Apoussser_FormClosed;
-
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-        }
-
-        private void Button26_Click_1(object sender, EventArgs e)
-        {
-            bool? result = null;
-            if (dataGridView6.SelectedRows.Count == 1)
-            {
-                var selectedrow9 = dataGridView6.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_pousse_seringue((int)selectedrow9.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "Pousse seringue supprimé." : "erreur de suppression du pousse seringue.");
-            UpdateListsinterventionpouss();
-        }
-
+        
         private void Button21_Click_2(object sender, EventArgs e)
         {
             Ajouterintervention_defibrillateur Adefib = new Ajouterintervention_defibrillateur();
@@ -504,44 +358,6 @@ namespace @interface
 
         private void Adefib_FormCloesd(object sender, FormClosedEventArgs e)
         {
-            UpdateListsinterventiondefib();
-        }
-
-        private void Button22_Click_1(object sender, EventArgs e)
-        {
-            if (dataGridView7.SelectedRows.Count == 1)
-            {
-                var selectedrow = dataGridView7.SelectedRows[0];
-
-                Modifier_interv_defibr mdefib = new Modifier_interv_defibr();
-                mdefib.setdefibrillateur((int)selectedrow.Cells[0].Value);
-
-                mdefib.Tag = this;
-                mdefib.Show(this);
-                mdefib.FormClosed += Adefib_FormCloesd;
-
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-        }
-
-        private void Button23_Click_1(object sender, EventArgs e)
-        {
-            bool? result = null;
-            if (dataGridView7.SelectedRows.Count == 1)
-            {
-                var selectedrow10 = dataGridView7.SelectedRows[0];
-                result = Databaseconnection.supprimer_interv_defibrillateur((int)selectedrow10.Cells[0].Value);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez selectionnez une ligne entiére.");
-            }
-            if (result.HasValue)
-                MessageBox.Show(result.Value ? "défibrillateur supprimé." : "erreur de suppression du défibrillateur.");
-            UpdateListsinterventiondefib();
         }
 
         private void Button16_Click(object sender, EventArgs e)
@@ -615,6 +431,20 @@ namespace @interface
         }
 
         private void DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            var text = textBox1.Text;
+            MyWebRequest rq = new MyWebRequest("https://account.snatchbot.me/channels/api/api/id86672/apparwaid/apsarwa?user_id=123456","POST",text);
+            listBox1.Items.Add("moi : " + text);
+            listBox1.Items.Add("Bot : " + rq.GetResponse());
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -73,6 +73,7 @@
     <Compile Include="Modeles\Intervention_defibrillateur.cs" />
     <Compile Include="Modeles\Intervention_pousse_seringue.cs" />
     <Compile Include="Modeles\Intervention_respirateur_class.cs" />
+    <Compile Include="Modeles\MyWebRequest.cs" />
     <Compile Include="myaccoumpt.cs" />
     <Compile Include="Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
